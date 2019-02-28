@@ -21,6 +21,7 @@ namespace Catan_Asp._Net.Views.Catan
           int ten = 2;
           int eleven = 2;
           int twelve = 1;
+        int lastnumber;
 
         public void MakeNumber()
         {
@@ -29,7 +30,7 @@ namespace Catan_Asp._Net.Views.Catan
             number = r.Next(2, 13);
 
             //Make sure all numbers are assigned\\
-            while ((number == 7 )|| (number == 2 && two == 0) || (number == 3 && three == 0) || (number == 4 && four == 0) || (number == 5 && five == 0) || (number == 6 && six == 0) || (number == 8 && eight == 0) || (number == 9 && nine == 0) || (number == 10 && ten == 0) || (number == 11 && eleven == 0) || (number == 12 && twelve == 0))
+            while ((number == 7) || (number == 2 && two == 0) || (number == 3 && three == 0) || (number == 4 && four == 0) || (number == 5 && five == 0) || (number == 6 && six == 0) || (number == 8 && eight == 0) || (number == 9 && nine == 0) || (number == 10 && ten == 0) || (number == 11 && eleven == 0) || (number == 12 && twelve == 0) || ((number == 6 || number == 8) && (lastnumber == 6 || lastnumber == 8)))
             {
                 number = r.Next(2, 13);
                 if (two == 0 &&  three == 0 &&  four == 0 && five == 0 && six == 0 && eight == 0 && nine == 0 && ten == 0 && eleven == 0 && twelve == 0)
@@ -71,6 +72,7 @@ namespace Catan_Asp._Net.Views.Catan
                         twelve--;
                         break;
             }
+            lastnumber = number;
         }          
     }
 }
