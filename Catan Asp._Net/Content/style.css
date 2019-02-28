@@ -1,0 +1,270 @@
+﻿
+
+.item7 {
+    grid-area: footer;
+}
+
+img {
+    border-radius: 200px;
+}
+.grid-container {
+    margin-top: 150px;
+    margin-left: -80px;
+    display: grid;
+    grid-gap: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    zoom: .7;
+}
+
+    .grid-container > div {
+        text-align: center;
+        padding: 16px 0;
+        font-size: 16px;
+    }
+
+#hexagondesert {
+    width: 100px;
+    height: 55px;
+    background: #FFBD4F;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+}
+
+    #hexagondesert:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #FFBD4F; /*color top*/
+    }
+
+    #hexagondesert:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #FFBD4F; /*color bottom*/
+    }
+
+
+#hexagonwood {
+    width: 100px;
+    height: 55px;
+    background: #32d300;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+}
+
+    #hexagonwood:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #32d300; /*color top*/
+    }
+
+    #hexagonwood:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #32d300; /*color bottom*/
+    }
+
+#hexagonore {
+    width: 100px;
+    height: 55px;
+    background: #c9bba0;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+}
+
+    #hexagonore:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #c9bba0; /*color top*/
+    }
+
+    #hexagonore:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #c9bba0; /*color bottom*/
+    }
+
+#hexagonstone {
+    width: 100px;
+    height: 55px;
+    background: #ff0000;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+}
+
+    #hexagonstone:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #ff0000; /*color top*/
+    }
+
+    #hexagonstone:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #ff0000; /*color bottom*/
+    }
+
+#hexagonwool {
+    width: 100px;
+    height: 55px;
+    background: #adff00;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+}
+
+    #hexagonwool:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #adff00; /*color top*/
+    }
+
+    #hexagonwool:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #adff00; /*color bottom*/
+    }
+
+#hexagongrain {
+    width: 100px;
+    height: 55px;
+    background: #FFDA37;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+}
+
+    #hexagongrain:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #FFDA37; /*color top*/
+    }
+
+    #hexagongrain:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #FFDA37; /*color bottom*/
+    }
+
+#hexagonblue {
+    width: 100px;
+    height: 55px;
+    background: #00BDFF;
+    position: relative;
+    margin: 10px auto;
+}
+
+    #hexagonblue:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 25px solid #00BDFF;
+    }
+
+    #hexagonblue:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid #00BDFF; /*color bottom*/
+    }
+
+.circle-text {
+    display: table-cell;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #fff;
+    grid-area: footer;
+    z-index: 1;
+    border-style: solid;
+    border-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+body, html, canvas {
+    margin: 0;
+    padding: 0;
+}
