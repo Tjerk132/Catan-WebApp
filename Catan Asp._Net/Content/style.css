@@ -4,9 +4,6 @@
     grid-area: footer;
 }
 
-img {
-    border-radius: 200px;
-}
 .grid-container {
     margin-top: 150px;
     margin-left: -80px;
@@ -255,16 +252,24 @@ img {
     width: 55px;
     text-align: center;
     vertical-align: middle;
-    border-radius: 50%;
+    border-radius: 32px;
     background: #fff;
     grid-area: footer;
+    border: 2px solid #01A2D9;
     z-index: 1;
-    border-style: solid;
-    border-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: 'bold_game_font_7';
+    font-size: 22px !important;
 }
-
+@font-face {
+    font-family: 'bold_game_font_7';
+    src: url('../fonts/bold_game_font_7.ttf') format('truetype');
+}
 body, html, canvas {
     margin: 0;
     padding: 0;
+    background-color: #01A2D9;
+}
+
+.robber {
+    zoom: 65%;
 }

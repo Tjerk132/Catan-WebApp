@@ -8,9 +8,6 @@
     Drawnumber drawnumber = new Drawnumber();
 }
 
-<h2>Index</h2>
-
-<h2>Catan Map Generator</h2>
 @{
     int margin_left = 203;  //Start x-position for 1st row
     int margin_top = -62;   //Start y-position for 1st row
@@ -18,6 +15,7 @@
     string px = "px";
 }
 <body>
+    <div class="zoom">
     <div class="grid-container">
         @for (int i = 0; i < 37; i++)
         {
@@ -62,7 +60,7 @@
                 }
                 if (materialchooser.MaterialChooser == 1)
                 {
-                <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px"><img src="~/Images/rover.jpg" alt="rover" width="30" height="40"></div>
+                <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px;"><img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40"></div>
                 }
                 if (materialchooser.MaterialChooser != 1)
                 {
@@ -70,7 +68,7 @@
                     drawnumber.MakeNumber();
                   
                     {
-                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px">@drawnumber.number</div>
+                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; "><p>@drawnumber.number</p></div>
 
                         if (drawnumber.number == 6 || drawnumber.number == 8)
                         {
@@ -78,7 +76,7 @@
                         }
                         if (drawnumber.number == 2 || drawnumber.number == 12)
                         {
-                        <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; font-size: 13px">@drawnumber.number</div>
+                        <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; font-size: 13px;">@drawnumber.number</div>
                         }
                     }
                 }
@@ -90,4 +88,5 @@
             }
         }
     </div>
+        </div>
 </body>
