@@ -95,6 +95,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\rover.jpg" />
+    <Content Include="Images\Web 1920 – 1%402x.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\bold_game_font_7.ttf" />

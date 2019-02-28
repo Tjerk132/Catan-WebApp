@@ -1,14 +1,16 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-
+    background-image:url('../Images/Web 1920 – 1@2x.png');
+    background-size:cover;
+    
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #01A2D9;
+    
 }
 
     .body-content h2 {
