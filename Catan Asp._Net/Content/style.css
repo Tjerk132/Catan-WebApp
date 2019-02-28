@@ -23,7 +23,7 @@
 
 #hexagondesert {
     width: 100px;
-    height: 55px;
+    height: 60px;
     background: #FFBD4F;
     position: relative;
     margin: 10px auto; /*color middle*/
@@ -34,11 +34,11 @@
         width: 0;
         height: 0;
         position: absolute;
-        top: -25px;
+        top: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 25px solid #FFBD4F; /*color top*/
+        border-bottom: 27px solid #FFBD4F; /*color top*/
     }
 
     #hexagondesert:after {
@@ -46,17 +46,17 @@
         width: 0;
         height: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid #FFBD4F; /*color bottom*/
+        border-top: 27px solid #FFBD4F; /*color bottom*/
     }
 
 
 #hexagonwood {
     width: 100px;
-    height: 55px;
+    height: 60px;
     background: #32d300;
     position: relative;
     margin: 10px auto; /*color middle*/
@@ -67,11 +67,11 @@
         width: 0;
         height: 0;
         position: absolute;
-        top: -25px;
+        top: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 25px solid #32d300; /*color top*/
+        border-bottom: 27px solid #32d300; /*color top*/
     }
 
     #hexagonwood:after {
@@ -79,16 +79,16 @@
         width: 0;
         height: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid #32d300; /*color bottom*/
+        border-top: 27px solid #32d300; /*color bottom*/
     }
 
 #hexagonore {
     width: 100px;
-    height: 55px;
+    height: 60px;
     background: #c9bba0;
     position: relative;
     margin: 10px auto; /*color middle*/
@@ -99,11 +99,11 @@
         width: 0;
         height: 0;
         position: absolute;
-        top: -25px;
+        top: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 25px solid #c9bba0; /*color top*/
+        border-bottom: 27px solid #c9bba0; /*color top*/
     }
 
     #hexagonore:after {
@@ -111,16 +111,16 @@
         width: 0;
         height: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid #c9bba0; /*color bottom*/
+        border-top: 27px solid #c9bba0; /*color bottom*/
     }
 
 #hexagonstone {
     width: 100px;
-    height: 55px;
+    height: 60px;
     background: #ff0000;
     position: relative;
     margin: 10px auto; /*color middle*/
@@ -131,11 +131,11 @@
         width: 0;
         height: 0;
         position: absolute;
-        top: -25px;
+        top: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 25px solid #ff0000; /*color top*/
+        border-bottom: 27px solid #ff0000; /*color top*/
     }
 
     #hexagonstone:after {
@@ -143,16 +143,16 @@
         width: 0;
         height: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid #ff0000; /*color bottom*/
+        border-top: 27px solid #ff0000; /*color bottom*/
     }
 
 #hexagonwool {
     width: 100px;
-    height: 55px;
+    height: 60px;
     background: #adff00;
     position: relative;
     margin: 10px auto; /*color middle*/
@@ -163,11 +163,11 @@
         width: 0;
         height: 0;
         position: absolute;
-        top: -25px;
+        top: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 25px solid #adff00; /*color top*/
+        border-bottom: 27px solid #adff00; /*color top*/
     }
 
     #hexagonwool:after {
@@ -175,16 +175,16 @@
         width: 0;
         height: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid #adff00; /*color bottom*/
+        border-top: 27px solid #adff00; /*color bottom*/
     }
 
 #hexagongrain {
     width: 100px;
-    height: 55px;
+    height: 60px;
     background: #FFDA37;
     position: relative;
     margin: 10px auto; /*color middle*/
@@ -195,11 +195,11 @@
         width: 0;
         height: 0;
         position: absolute;
-        top: -25px;
+        top: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 25px solid #FFDA37; /*color top*/
+        border-bottom: 27px solid #FFDA37; /*color top*/
     }
 
     #hexagongrain:after {
@@ -207,16 +207,16 @@
         width: 0;
         height: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid #FFDA37; /*color bottom*/
+        border-top: 27px solid #FFDA37; /*color bottom*/
     }
 
 #hexagonblue {
     width: 100px;
-    height: 55px;
+    height: 60px;
     background: #00BDFF;
     position: relative;
     margin: 10px auto;
@@ -227,11 +227,11 @@
         width: 0;
         height: 0;
         position: absolute;
-        top: -25px;
+        top: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 25px solid #00BDFF;
+        border-bottom: 27px solid #00BDFF;
     }
 
     #hexagonblue:after {
@@ -239,17 +239,17 @@
         width: 0;
         height: 0;
         position: absolute;
-        bottom: -25px;
+        bottom: -27px;
         left: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid #00BDFF; /*color bottom*/
+        border-top: 27px solid #00BDFF; /*color bottom*/
     }
 
 .circle-text {
     display: table-cell;
-    height: 55px;
-    width: 55px;
+    height: 60px;
+    width: 60px;
     text-align: center;
     vertical-align: middle;
     border-radius: 32px;
@@ -258,8 +258,13 @@
     border: 2px solid #01A2D9;
     z-index: 1;
     font-family: 'bold_game_font_7';
-    font-size: 22px !important;
+    font-size: 27px !important;
 }
+
+.number_position {
+    margin-top: -5px;
+}
+
 @font-face {
     font-family: 'bold_game_font_7';
     src: url('../fonts/bold_game_font_7.ttf') format('truetype');
@@ -271,5 +276,8 @@ body, html, canvas {
 }
 
 .robber {
-    zoom: 65%;
+    /*zoom: 65%;*/
+    width: 20px;
+    height: 37.5px;
+    margin-top: -15px;
 }
