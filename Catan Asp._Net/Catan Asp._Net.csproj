@@ -94,6 +94,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\background.jpg" />
     <Content Include="Images\rover.jpg" />
     <Content Include="Images\Web 1920 – 1%402x.png" />
     <Content Include="Scripts\bootstrap.js" />
