@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-size: cover;
-    background-color: #FFF492;
+    background-color: #f8f8f8;
     color: #ffffff;
     font-family: Helvetica;
     margin: 0px;
@@ -14,7 +14,6 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #FFF492;
     float: left;
 }
 
@@ -33,20 +32,26 @@ textarea {
 
 
 /*Vertical menu*/
+@font-face {
+    font-family: 'Roman SD';
+    src: url('../fonts/Roman SD.ttf') format('truetype');
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 320px;
+    width: 220px;
     background-image: linear-gradient(#BF141A, #F46102);
     height: 100%;
     float: left;
-    border-right: 1px solid black;
-    box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.5);
+    border-right: 1px solid #BF141A;
+    box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.4);
 }
 
     ul p {
         color: #FBC527;
+        font-family: 'Roman SD';
+        margin-top: 40px;
     }
 
 li a {
@@ -85,3 +90,15 @@ li a {
 }
 
 
+hr {
+    background-color: #FBC527;
+    border: 2px solid #FBC527;
+    margin-top: -12px;
+    margin-bottom: -36px;
+    width: 190px;
+    border-radius: 2px;
+}
+
+.generate-controller {
+    padding: 64px;
+}
