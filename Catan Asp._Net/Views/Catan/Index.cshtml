@@ -38,53 +38,55 @@
                 {
                     if (materialchooser.MaterialChooser == 1)
                     {
-                    <div id="hexagondesert" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                        <div id="hexagondesert" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
                     }
                     if (materialchooser.MaterialChooser == 2)
                     {
-                    <div id="hexagonwood" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                        <div id="hexagonwood" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
 
                     }
                     if (materialchooser.MaterialChooser == 3)
                     {
-                    <div id="hexagonore" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                        <div id="hexagonore" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
 
                     }
                     if (materialchooser.MaterialChooser == 4)
                     {
-                    <div id="hexagonstone" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                        <div id="hexagonstone" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
 
                     }
                     if (materialchooser.MaterialChooser == 5)
                     {
-                    <div id="hexagonwool" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                        <div id="hexagonwool" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
 
                     }
                     if (materialchooser.MaterialChooser == 6)
                     {
-                    <div id="hexagongrain" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                        <div id="hexagongrain" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
                     }
                 }
                 if (materialchooser.MaterialChooser == 1)
                 {
-                <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px;"><img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40"></div>
+                    drawnumber.waardes.Add(0);
+                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px;"><img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40"></div>
                 }
                 if (materialchooser.MaterialChooser != 1)
                 {
 
                     drawnumber.MakeNumber();
+
                     
 
                     {
-                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; "><p class="number_position">@drawnumber.number</p></div>
+                        <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; "><p class="number_position">@drawnumber.number</p></div>
 
                         if (drawnumber.number == 6 || drawnumber.number == 8)
                         {
-                        <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; color:red"><p class="number_position">@drawnumber.number</p></div>
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; color:red"><p class="number_position">@drawnumber.number</p></div>
                         }
                         if (drawnumber.number == 2 || drawnumber.number == 12)
                         {
-                        <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; font-size: 13px;"><p class="number_position">@drawnumber.number</p></div>
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@position.margin_leftnumber@px; font-size: 13px;"><p class="number_position">@drawnumber.number</p></div>
                         }
                     }
                 }
@@ -94,6 +96,13 @@
             {
                 <div id="hexagonblue" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
             }
+            if (i == 36)
+            {
+
+
+                drawnumber.CalculatePoints();
+            }
         }
+        
     </div>
 </body>

@@ -10,6 +10,10 @@ namespace Catan_Asp._Net.Views.Catan
         Random r = new Random();
         public int number;  //random int for number assignment
         private List<int> numbers = new List<int>();
+        public List<int> waardes = new List<int>();
+        private List<int> punten = new List<int>();
+        private List<int> topdrie = new List<int>();
+        int waarde;
         int position = 1;
         //Numbers\\
           int two = 1;
@@ -29,6 +33,7 @@ namespace Catan_Asp._Net.Views.Catan
             if (position == 1)
             {
                 numbers.Add(0);
+                waardes.Add(0);
             }
             
 
@@ -84,7 +89,68 @@ namespace Catan_Asp._Net.Views.Catan
             }
             lastnumber = number;
             numbers.Add(number);
+            if (number == 2 || number == 12)
+            {
+                waarde = 1;
+            }
+            else if (number == 3 || number == 11)
+            {
+                waarde = 2;
+            }
+            else if (number == 4 || number == 10)
+            {
+                waarde = 3;
+            }
+            else if (number == 5 || number == 9)
+            {
+                waarde = 4;
+            }
+            else if (number == 6 || number == 8)
+            {
+                waarde = 5;
+            }
+            else if (number == 7)
+            {
+                waarde = 0;
+            }
+            waardes.Add(waarde);
             position++;
-        }          
+        }  
+        
+        public void CalculatePoints()
+        {
+            for (int i = 1; i < 25; i++)
+            {
+                if (i == 1) { punten.Add(waardes[1] + waardes[4] + waardes[5]); }
+                else if (i == 2) { punten.Add(waardes[1] + waardes[2] + waardes[5]); }
+                else if (i == 3) { punten.Add(waardes[2] + waardes[4] + waardes[5]); }
+                else if (i == 4) { punten.Add(waardes[2] + waardes[3] + waardes[6]); }
+                else if (i == 5) { punten.Add(waardes[3] + waardes[6] + waardes[7]); }
+                else if (i == 6) { punten.Add(waardes[4] + waardes[8] + waardes[9]); }
+                else if (i == 7) { punten.Add(waardes[4] + waardes[5] + waardes[9]); }
+                else if (i == 8) { punten.Add(waardes[5] + waardes[9] + waardes[10]); }
+                else if (i == 9) { punten.Add(waardes[5] + waardes[6] + waardes[10]); }
+                else if (i == 10) { punten.Add(waardes[6] + waardes[10] + waardes[11]); }
+                else if (i == 11) { punten.Add(waardes[6] + waardes[7] + waardes[11]); }
+                else if (i == 12) { punten.Add(waardes[7] + waardes[11] + waardes[12]); }
+                else if (i == 13) { punten.Add(waardes[8] + waardes[9] + waardes[13]); }
+                else if (i == 14) { punten.Add(waardes[9] + waardes[13] + waardes[14]); }
+                else if (i == 15) { punten.Add(waardes[9] + waardes[10] + waardes[14]); }
+                else if (i == 16) { punten.Add(waardes[10] + waardes[14] + waardes[15]); }
+                else if (i == 17) { punten.Add(waardes[10] + waardes[11] + waardes[15]); }
+                else if (i == 18) { punten.Add(waardes[11] + waardes[15] + waardes[16]); }
+                else if (i == 19) { punten.Add(waardes[11] + waardes[12] + waardes[16]); }
+                else if (i == 20) { punten.Add(waardes[13] + waardes[14] + waardes[17]); }
+                else if (i == 21) { punten.Add(waardes[14] + waardes[17] + waardes[18]); }
+                else if (i == 22) { punten.Add(waardes[14] + waardes[15] + waardes[18]); }
+                else if (i == 23) { punten.Add(waardes[15] + waardes[18] + waardes[19]); }
+                else if (i == 24) { punten.Add(waardes[15] + waardes[16] + waardes[19]); }
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                topdrie.Add(punten.Max());
+                punten.Remove(punten.Max());
+            }
+        }
     }
 }
