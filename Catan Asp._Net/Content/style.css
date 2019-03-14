@@ -273,7 +273,13 @@
 }
 
 .number_position {
-    margin-top: -5px;
+    margin-top: -13px;
+}
+
+.dot_position {
+    margin: -20px;
+    font-size: 15px;
+    color: black;
 }
 
 @font-face {
