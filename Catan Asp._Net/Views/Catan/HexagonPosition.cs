@@ -7,15 +7,9 @@ namespace Catan_Asp._Net.Views.Catan
 {
     public class HexagonPosition
     {
-        public int NewMaterialchooser;  //random int for material assignment
-
-        public int new_margin_left;
-        public int new_margin_top;
-
-        public int margin_leftnumber;
-        public void Margin_Left(int i, int margin_left)
+        public int Margin_Left(int i, int margin_left)
         {
-            margin_left += 107; //leave 104px between all tiles
+            margin_left += 107; //leave 107px between all tiles
             switch (i)
             {
                 case 4:
@@ -37,10 +31,15 @@ namespace Catan_Asp._Net.Views.Catan
                     { margin_left = 311; }  //7th row
                     break;
             }
-            new_margin_left = margin_left;
-            margin_leftnumber = margin_left + 20;
+            return margin_left;
         }
-        public void Margin_Top(int i, int margin_top)
+        public int Margin_LeftNumbers(int margin_left)
+        {
+            int margin_leftnumber;
+            margin_leftnumber = margin_left + 20;
+            return margin_leftnumber;
+        }
+        public int Margin_Top(int i, int margin_top)
         {
             switch (i)
             {
@@ -63,7 +62,8 @@ namespace Catan_Asp._Net.Views.Catan
                     { margin_top = 496; }  //7th row
                     break;
             }
-            new_margin_top = margin_top;
+            return margin_top;
         }
     }
+
 }
