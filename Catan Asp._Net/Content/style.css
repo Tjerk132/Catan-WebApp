@@ -1,6 +1,4 @@
-﻿
-
-.item7 {
+﻿.item7 {
     grid-area: footer;
 }
 
@@ -277,7 +275,7 @@
 
 .dot_position {
     margin: -20px;
-    font-size: 15px;
+    font-size: 20px;
     color: black;
 }
 

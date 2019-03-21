@@ -22,74 +22,84 @@
         <p style="font-size: 28px">Alpha v0.2.4</p>
     </div>
 
-        <div class="grid-container">
-            @for (int i = 0; i < 37; i++)
+    <div class="grid-container">
+        @for (int i = 0; i < 37; i++)
+        {
+            margin_left = position.Margin_Left(i, margin_left);
+            margin_top = position.Margin_Top(i, margin_top);
+            margin_leftnumber = position.Margin_LeftNumbers(margin_left);
+
+            if (i > 4 && i != 8 && i != 9 && i != 14 && i != 15 && i != 21 && i != 22 && i != 27 && i != 28 && i < 32)
             {
-                margin_left = position.Margin_Left(i, margin_left);
-                margin_top = position.Margin_Top(i, margin_top);
-                margin_leftnumber = position.Margin_LeftNumbers(margin_left);
-
-                if (i > 4 && i != 8 && i != 9 && i != 14 && i != 15 && i != 21 && i != 22 && i != 27 && i != 28 && i < 32)
+                materialchooser.ChooseMaterial();
+                if (materialchooser.count > 0)
                 {
-                    materialchooser.ChooseMaterial();
-                    if (materialchooser.count > 0)
-                    {
-                        if (materialchooser.MaterialChooser == 1)
-                        {
-                            <div id="hexagondesert" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-                        }
-                        if (materialchooser.MaterialChooser == 2)
-                        {
-                            <div id="hexagonwood" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-
-                        }
-                        if (materialchooser.MaterialChooser == 3)
-                        {
-                            <div id="hexagonore" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-
-                        }
-                        if (materialchooser.MaterialChooser == 4)
-                        {
-                            <div id="hexagonstone" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-
-                        }
-                        if (materialchooser.MaterialChooser == 5)
-                        {
-                            <div id="hexagonwool" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-
-                        }
-                        if (materialchooser.MaterialChooser == 6)
-                        {
-                            <div id="hexagongrain" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-                        }
-                    }
                     if (materialchooser.MaterialChooser == 1)
                     {
-                        <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px;"><img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40"></div>
+                        <div id="hexagondesert" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
                     }
-                    if (materialchooser.MaterialChooser != 1)
+                    if (materialchooser.MaterialChooser == 2)
                     {
+                        <div id="hexagonwood" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
 
-                        drawnumber.MakeNumber();
+                    }
+                    if (materialchooser.MaterialChooser == 3)
+                    {
+                        <div id="hexagonore" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+
+                    }
+                    if (materialchooser.MaterialChooser == 4)
+                    {
+                        <div id="hexagonstone" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+
+                    }
+                    if (materialchooser.MaterialChooser == 5)
+                    {
+                        <div id="hexagonwool" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+
+                    }
+                    if (materialchooser.MaterialChooser == 6)
+                    {
+                        <div id="hexagongrain" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                    }
+                }
+                if (materialchooser.MaterialChooser == 1)
+                {
+                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px;"><img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40"></div>
+                }
+                else
+                {
+
+                    drawnumber.MakeNumber();
+                    {
+                        if (drawnumber.number == 3)
                         {
-                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px "><p class="number_position">@drawnumber.number</p></div>
-
-                            if (drawnumber.number == 6 || drawnumber.number == 8)
-                            {
-                                <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; color:red; font-size: 25px"><p class="number_position">@drawnumber.number</p><p class="dot_position">*****</p></div>
-                            }
-                            if (drawnumber.number == 2 || drawnumber.number == 12)
-                            {
-                                <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px"><p class="number_position">@drawnumber.number</p></div>
-                            }
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px "><p class="number_position">@drawnumber.number</p><p class="dot_position">**</p></div>
+                        }
+                        if (drawnumber.number == 4 || drawnumber.number == 10 || drawnumber.number == 11)
+                        {
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px "><p class="number_position">@drawnumber.number</p><p class="dot_position">***</p></div>
+                        }
+                        if (drawnumber.number == 5 || drawnumber.number == 9)
+                        {
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px "><p class="number_position">@drawnumber.number</p><p class="dot_position">****</p></div>
+                        }
+                        if (drawnumber.number == 6 || drawnumber.number == 8)
+                        {
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; color:red; font-size: 25px"><p class="number_position">@drawnumber.number</p><p class="dot_position">*****</p></div>
+                        }
+                        if (drawnumber.number == 2 || drawnumber.number == 12)
+                        {
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px"><p class="number_position" style="font-size:20px">@drawnumber.number</p><p class="dot_position">*</p></div>
                         }
                     }
                 }
-                //Make Surrounding Hexagons Blue\\
-                else //if tile is not a playground hexagon
-                {
-                    <div id="hexagonblue" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-                }
             }
-        </div>
+            //Make Surrounding Hexagons Blue\\
+            else //if tile is not a playground hexagon
+            {
+                <div id="hexagonblue" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+            }
+        }
+    </div>
 </body>
