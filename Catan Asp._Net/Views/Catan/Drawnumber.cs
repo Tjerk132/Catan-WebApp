@@ -128,30 +128,82 @@ namespace Catan_Asp._Net.Views.Catan
         {
             for (int i = 1; i < 25; i++)
             {
-                if (i == 1) { punten.Add(waardes[1] + waardes[4] + waardes[5]); }
-                else if (i == 2) { punten.Add(waardes[1] + waardes[2] + waardes[5]); }
-                else if (i == 3) { punten.Add(waardes[2] + waardes[4] + waardes[5]); }
-                else if (i == 4) { punten.Add(waardes[2] + waardes[3] + waardes[6]); }
-                else if (i == 5) { punten.Add(waardes[3] + waardes[6] + waardes[7]); }
-                else if (i == 6) { punten.Add(waardes[4] + waardes[8] + waardes[9]); }
-                else if (i == 7) { punten.Add(waardes[4] + waardes[5] + waardes[9]); }
-                else if (i == 8) { punten.Add(waardes[5] + waardes[9] + waardes[10]); }
-                else if (i == 9) { punten.Add(waardes[5] + waardes[6] + waardes[10]); }
-                else if (i == 10) { punten.Add(waardes[6] + waardes[10] + waardes[11]); }
-                else if (i == 11) { punten.Add(waardes[6] + waardes[7] + waardes[11]); }
-                else if (i == 12) { punten.Add(waardes[7] + waardes[11] + waardes[12]); }
-                else if (i == 13) { punten.Add(waardes[8] + waardes[9] + waardes[13]); }
-                else if (i == 14) { punten.Add(waardes[9] + waardes[13] + waardes[14]); }
-                else if (i == 15) { punten.Add(waardes[9] + waardes[10] + waardes[14]); }
-                else if (i == 16) { punten.Add(waardes[10] + waardes[14] + waardes[15]); }
-                else if (i == 17) { punten.Add(waardes[10] + waardes[11] + waardes[15]); }
-                else if (i == 18) { punten.Add(waardes[11] + waardes[15] + waardes[16]); }
-                else if (i == 19) { punten.Add(waardes[11] + waardes[12] + waardes[16]); }
-                else if (i == 20) { punten.Add(waardes[13] + waardes[14] + waardes[17]); }
-                else if (i == 21) { punten.Add(waardes[14] + waardes[17] + waardes[18]); }
-                else if (i == 22) { punten.Add(waardes[14] + waardes[15] + waardes[18]); }
-                else if (i == 23) { punten.Add(waardes[15] + waardes[18] + waardes[19]); }
-                else if (i == 24) { punten.Add(waardes[15] + waardes[16] + waardes[19]); }
+                switch(i)
+                {
+                    case 1:
+                        punten.Add(waardes[1] + waardes[4] + waardes[5]);
+                        break;
+                    case 2:
+                        punten.Add(waardes[1] + waardes[2] + waardes[5]);
+                        break;
+                    case 3:
+                        punten.Add(waardes[2] + waardes[4] + waardes[5]);
+                        break;
+                    case 4:
+                        punten.Add(waardes[2] + waardes[3] + waardes[6]);
+                        break;
+                    case 5:
+                        punten.Add(waardes[3] + waardes[6] + waardes[7]);
+                        break;
+                    case 6:
+                        punten.Add(waardes[4] + waardes[8] + waardes[9]);
+                        break;
+                    case 7:
+                        punten.Add(waardes[4] + waardes[5] + waardes[9]);
+                        break;
+                    case 8:
+                        punten.Add(waardes[5] + waardes[9] + waardes[10]);
+                        break;
+                    case 9:
+                        punten.Add(waardes[5] + waardes[6] + waardes[10]);
+                        break;
+                    case 10:
+                        punten.Add(waardes[6] + waardes[10] + waardes[11]);
+                        break;
+                    case 11:
+                        punten.Add(waardes[6] + waardes[7] + waardes[11]);
+                        break;
+                    case 12:
+                        punten.Add(waardes[7] + waardes[11] + waardes[12]);
+                        break;
+                    case 13:
+                        punten.Add(waardes[8] + waardes[9] + waardes[13]);
+                        break;
+                    case 14:
+                        punten.Add(waardes[9] + waardes[13] + waardes[14]);
+                        break;
+                    case 15:
+                        punten.Add(waardes[9] + waardes[10] + waardes[14]);
+                        break;
+                    case 16:
+                        punten.Add(waardes[10] + waardes[14] + waardes[15]);
+                        break;
+                    case 17:
+                        punten.Add(waardes[10] + waardes[11] + waardes[15]);
+                        break;
+                    case 18:
+                        punten.Add(waardes[11] + waardes[15] + waardes[16]);
+                        break;
+                    case 19:
+                        punten.Add(waardes[11] + waardes[12] + waardes[16]);
+                        break;
+                    case 20:
+                        punten.Add(waardes[13] + waardes[14] + waardes[17]);
+                        break;
+                    case 21:
+                        punten.Add(waardes[14] + waardes[17] + waardes[18]);
+                        break;
+                    case 22:
+                        punten.Add(waardes[14] + waardes[15] + waardes[18]);
+                        break;
+                    case 23:
+                        punten.Add(waardes[15] + waardes[18] + waardes[19]);
+                        break;
+                    case 24:
+                        punten.Add(waardes[15] + waardes[16] + waardes[19]);
+                        break;
+
+                }
             }
             for (int i = 0; i < 3; i++)
             {
