@@ -19,9 +19,26 @@
 
 <body>
     <div class="box">
-        <p style="font-size: 28px">Alpha v0.2.4</p>
+        <p style="font-size: 28px; transform: rotate(90deg); " >:^)</p>
     </div>
 
+    <div class="save-container">
+    <div class="saves">
+        <form>
+            <p>Save 1</p>
+            <p>20-3-2019</p>
+            <input class="ctn-btn" type="submit" value="Load">
+        </form>
+    </div>
+
+    <div class="saves">
+        <form>
+            <p>Save 2</p>
+            <p>21-3-2019</p>
+            <input class="ctn-btn" type="submit" value="Load">
+        </form>
+    </div>
+    </div>
     <div class="grid-container">
         @for (int i = 0; i < 37; i++)
         {
@@ -88,8 +105,8 @@
                         if (drawnumber.number == 4 || drawnumber.number == 10)
                         {
                             <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px ">
-                                 <p class="number_position">@drawnumber.number</p>
-                                 <p class="dot_position">•••</p>
+                                <p class="number_position">@drawnumber.number</p>
+                                <p class="dot_position">•••</p>
                             </div>
                         }
                         if (drawnumber.number == 5 || drawnumber.number == 9)
