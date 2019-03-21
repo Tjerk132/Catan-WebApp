@@ -65,7 +65,9 @@
                 }
                 if (materialchooser.MaterialChooser == 1)
                 {
-                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px;"><img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40"></div>
+                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px;">
+                        <img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40">
+                    </div>
                 }
                 else
                 {
@@ -78,23 +80,38 @@
                     {
                         if (drawnumber.number == 3)
                         {
-                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px "><p class="number_position">@drawnumber.number</p><p class="dot_position">**</p></div>
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px ">
+                                <p class="number_position">@drawnumber.number</p>
+                                <p class="dot_position">••</p>
+                            </div>
                         }
                         if (drawnumber.number == 4 || drawnumber.number == 10 || drawnumber.number == 11)
                         {
-                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px "><p class="number_position">@drawnumber.number</p><p class="dot_position">***</p></div>
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px ">
+                                 <p class="number_position">@drawnumber.number</p>
+                                 <p class="dot_position">•••</p>
+                            </div>
                         }
                         if (drawnumber.number == 5 || drawnumber.number == 9)
                         {
-                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px "><p class="number_position">@drawnumber.number</p><p class="dot_position">****</p></div>
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; font-size: 25px ">
+                                <p class="number_position">@drawnumber.number</p>
+                                <p class="dot_position">••••</p>
+                            </div>
                         }
                         if (drawnumber.number == 6 || drawnumber.number == 8)
                         {
-                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; color:red; font-size: 25px"><p class="number_position">@drawnumber.number</p><p class="dot_position">*****</p></div>
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px; color:red; font-size: 25px">
+                                <p class="number_position">@drawnumber.number</p>
+                                <p class="dot_position">•••••</p>
+                            </div>
                         }
                         if (drawnumber.number == 2 || drawnumber.number == 12)
                         {
-                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px"><p class="number_position" style="font-size:20px">@drawnumber.number</p><p class="dot_position">*</p></div>
+                            <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px">
+                                <p class="number_position" style="font-size:20px">@drawnumber.number</p>
+                                <p class="dot_position">•</p>
+                            </div>
                         }
                     }
                 }
