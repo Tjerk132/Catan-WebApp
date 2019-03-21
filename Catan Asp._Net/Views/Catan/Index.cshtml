@@ -70,7 +70,12 @@
                 else
                 {
 
-                    drawnumber.MakeNumber();
+                    bool makenumber = drawnumber.MakeNumber();
+                    if (makenumber)
+                    {
+                        Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
+                    }
+
                     {
                         if (drawnumber.number == 3)
                         {
