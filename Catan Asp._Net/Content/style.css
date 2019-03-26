@@ -334,3 +334,30 @@ body, html, canvas {
         color: black;
         
     }
+
+.backgroundHexagonPosition {
+    position: absolute;
+    top: 146px;
+    left: 486px; /*change*/
+}
+
+.backgroundHexagonLeft {
+    float: left;
+    border-right: 110px solid #ff3399; /*change*/
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+}
+
+.backgroundHexagonMiddle {
+    float: left;
+    width: 241px;
+    height: 399px;
+    background: #ff3399;
+}
+
+.backgroundHexagonRight {
+    float: left;
+    border-left: 110px solid #ff3399; /*change*/
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+}
