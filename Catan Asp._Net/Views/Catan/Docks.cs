@@ -32,45 +32,33 @@ namespace Catan_Asp._Net.Views.Catan
             switch(randomDock)
             {
                 case 1:
-                if (woodDock != 0)
-                { randomDock++; }
-                if (woodDock == 0)
-                { trade = "../Images/WoodDock.png"; woodDock++; }
+                if (woodDock != 0) { goto case 2; }
+                if (woodDock == 0) { trade = "../Images/WoodDock.png"; woodDock++; }
                      break;
 
                 case 2:
-                if (stoneDock != 0)
-                { randomDock++; }
-                if (stoneDock == 0)
-                { trade = "../Images/StoneDock.png"; stoneDock++; }
+                if (stoneDock != 0) { goto case 3; }
+                if (stoneDock == 0) { trade = "../Images/StoneDock.png"; stoneDock++; }
                     break;
 
                 case 3:
-                if (sheepDock != 0)
-                { randomDock++; }
-                if (sheepDock == 0)
-                { trade = "../Images/SheepDock.png"; sheepDock++; }
+                if (sheepDock != 0) { goto case 4; }
+                if (sheepDock == 0) { trade = "../Images/SheepDock.png"; sheepDock++; }
                     break;
 
                 case 4:
-                if (grainDock != 0)
-                { randomDock++; }
-                if (grainDock == 0)
-                { trade = "../Images/GrainDock.png"; grainDock++; }
+                if (grainDock != 0){ goto case 5; }
+                if (grainDock == 0) { trade = "../Images/GrainDock.png"; grainDock++; }
                     break;
 
                 case 5:
-                if (oreDock != 0)
-                { randomDock++; }
-                if (oreDock == 0)
-                { trade = "../Images/OreDock.png"; oreDock++; }
+                if (oreDock != 0) { goto case 6; }
+                if (oreDock == 0) { trade = "../Images/OreDock.png"; oreDock++; }
                     break;
 
                 case 6:
-                if (generalDock > 0)
-                { randomDock = 1; }
-                if (generalDock == 0)
-                { trade = "../Images/GeneralDock.png"; generalDock++; }
+                if (generalDock > 0) { goto case 1; }
+                if (generalDock == 0) { trade = "../Images/GeneralDock.png"; generalDock++; }
                     break;
             }
 
