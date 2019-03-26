@@ -1,5 +1,6 @@
 ﻿<link rel="stylesheet" href="../Content/style.css" type="text/css">
 @using Catan_Asp._Net.Views.Catan
+@using Catan_Asp._Net.Models
 @{
     //ViewBag.Title = "Catan";
 
@@ -58,10 +59,11 @@
 
             if (i > 4 && i != 8 && i != 9 && i != 14 && i != 15 && i != 21 && i != 22 && i != 27 && i != 28 && i < 32)
             {
+                HexagonTile hexagon = new HexagonTile();
                 if (materialchooser.ChooseMaterial() > 0)
                 {
-                    string id = materialchooser.returnHexagon(materialchooser.MaterialChooser);
-                    <div id="@id" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
+                    hexagon.Id  = materialchooser.ReturnHexagon(materialchooser.MaterialChooser, hexagon);
+                    <div id="@hexagon.Id" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
                 }
                 if (materialchooser.MaterialChooser == 1)
                 {
@@ -75,10 +77,10 @@
                     {
                         Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
                     }
-                    string number = drawnumber.SetNumbers(drawnumber.number);
+                    drawnumber.MakeHexagon(drawnumber.number, hexagon);
                     <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px">
-                        <p class="number_position" style="font-size:20px">@drawnumber.number</p>
-                        <p class="dot_position">@number</p>
+                        <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@drawnumber.number</p>
+                        <p class="dot_position">@hexagon.Hexagonnumber</p>
                     </div>
                 }
             }
@@ -90,8 +92,9 @@
                 List<int> positions = docks.DockPatternPositions(i, dockRandom);
                 if (positions.Contains(i))
                 {
+                     string path = docks.DockType();
                     <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px">
-                        <img src=@docks.DockType() style="max-width:170%; max-height:170%; margin-top:-9px" />
+                        <img src=@path style="max-width:170%; max-height:170%; margin-top:-9px" />
                     </div>
                 }
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
+using Catan_Asp._Net.Models;
 
 namespace Catan_Asp._Net.Views.Catan
 {
@@ -49,35 +50,34 @@ namespace Catan_Asp._Net.Views.Catan
 
         }
 
-        public string returnHexagon(int Materialchooser)
+        public string ReturnHexagon(int Materialchooser, HexagonTile hexagon)
         {
-            string id = "";
             if (MaterialChooser == 1)
             {
-                id = "hexagondesert";
+                hexagon.Id = "hexagondesert";
             }
             if (MaterialChooser == 2)
             {
-                id = "hexagonwood";
+                hexagon.Id = "hexagonwood";
             }
             if (MaterialChooser == 3)
             {
-                id = "hexagonore";
+                hexagon.Id = "hexagonore";
             }
             if (MaterialChooser == 4)
             {
-                id = "hexagonstone";
+                hexagon.Id = "hexagonstone";
             }
             if (MaterialChooser == 5)
             {
-                id = "hexagonwool";
+                hexagon.Id = "hexagonwool";
 
             }
             if (MaterialChooser == 6)
             {
-                id = "hexagongrain";
+                hexagon.Id = "hexagongrain";
             }
-            return id;
+            return hexagon.Id;
         }
     }
 }
