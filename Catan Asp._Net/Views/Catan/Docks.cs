@@ -32,45 +32,33 @@ namespace Catan_Asp._Net.Views.Catan
             switch(randomDock)
             {
                 case 1:
-                if (woodDock != 0)
-                { randomDock++; }
-                if (woodDock == 0)
-                { trade = "../Images/WoodDock.png"; woodDock++; }
+                    if (woodDock != 0) { goto case 2; }
+                    if (woodDock == 0) { trade = "../Images/WoodDock.png"; woodDock++; }
                      break;
 
                 case 2:
-                if (stoneDock != 0)
-                { randomDock++; }
-                if (stoneDock == 0)
-                { trade = "../Images/StoneDock.png"; stoneDock++; }
+                    if (stoneDock != 0) { goto case 3; }
+                    if (stoneDock == 0) { trade = "../Images/StoneDock.png"; stoneDock++; }
                     break;
 
                 case 3:
-                if (sheepDock != 0)
-                { randomDock++; }
-                if (sheepDock == 0)
-                { trade = "../Images/SheepDock.png"; sheepDock++; }
+                    if (sheepDock != 0) { goto case 4; }
+                    if (sheepDock == 0) { trade = "../Images/SheepDock.png"; sheepDock++; }
                     break;
 
                 case 4:
-                if (grainDock != 0)
-                { randomDock++; }
-                if (grainDock == 0)
-                { trade = "../Images/GrainDock.png"; grainDock++; }
+                    if (grainDock != 0) { goto case 5; }
+                    if (grainDock == 0) { trade = "../Images/GrainDock.png"; grainDock++; }
                     break;
 
                 case 5:
-                if (oreDock != 0)
-                { randomDock++; }
-                if (oreDock == 0)
-                { trade = "../Images/OreDock.png"; oreDock++; }
+                    if (oreDock != 0) { goto case 6; }
+                    if (oreDock == 0) { trade = "../Images/OreDock.png"; oreDock++; }
                     break;
 
                 case 6:
-                if (generalDock > 0)
-                { randomDock = 1; }
-                if (generalDock == 0)
-                { trade = "../Images/GeneralDock.png"; generalDock++; }
+                    if (generalDock >= 4) { goto case 1; }
+                    if (generalDock < 4) { trade = "../Images/GeneralDock.png"; generalDock++; }
                     break;
             }
 
@@ -82,27 +70,11 @@ namespace Catan_Asp._Net.Views.Catan
             List<int> positions = new List<int>();
             if (dockRandom == 1 && (i == 0 || i == 2 || i == 8 || i == 9 || i == 21 || i == 22 || i == 32 || i == 33 || i == 35))
             {
-                positions.Add(0);
-                positions.Add(2);
-                positions.Add(8);
-                positions.Add(9);
-                positions.Add(21);
-                positions.Add(22);
-                positions.Add(32);
-                positions.Add(33);
-                positions.Add(35);
+                positions.Add(i);
             }
             else if (dockRandom == 2 && (i == 1 || i == 3 || i == 4 || i == 14 || i == 15 || i == 27 || i == 28 || i == 34 || i == 36))
             {
-                positions.Add(1);
-                positions.Add(3);
-                positions.Add(4);
-                positions.Add(14);
-                positions.Add(15);
-                positions.Add(27);
-                positions.Add(28);
-                positions.Add(34);
-                positions.Add(36);
+                positions.Add(i);
             }
             return positions;
         }
