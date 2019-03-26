@@ -1,5 +1,6 @@
 ﻿<link rel="stylesheet" href="../Content/style.css" type="text/css">
 @using Catan_Asp._Net.Views.Catan
+@using Catan_Asp._Net.Models
 @{
     //ViewBag.Title = "Catan";
 
@@ -75,10 +76,10 @@
                     {
                         Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
                     }
-                    string number = drawnumber.SetNumbers(drawnumber.number);
+                    HexagonTile hexagon = drawnumber.MakeHexagon(drawnumber.number);
                     <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px">
-                        <p class="number_position" style="font-size:20px">@drawnumber.number</p>
-                        <p class="dot_position">@number</p>
+                        <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@drawnumber.number</p>
+                        <p class="dot_position">@hexagon.Hexagonnumber</p>
                     </div>
                 }
             }
