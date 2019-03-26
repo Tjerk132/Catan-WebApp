@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace Catan_Asp._Net.Views.Catan
 {
@@ -48,6 +49,35 @@ namespace Catan_Asp._Net.Views.Catan
 
         }
 
+        public string returnHexagon(int Materialchooser)
+        {
+            string id = "";
+            if (MaterialChooser == 1)
+            {
+                id = "hexagondesert";
+            }
+            if (MaterialChooser == 2)
+            {
+                id = "hexagonwood";
+            }
+            if (MaterialChooser == 3)
+            {
+                id = "hexagonore";
+            }
+            if (MaterialChooser == 4)
+            {
+                id = "hexagonstone";
+            }
+            if (MaterialChooser == 5)
+            {
+                id = "hexagonwool";
 
+            }
+            if (MaterialChooser == 6)
+            {
+                id = "hexagongrain";
+            }
+            return id;
+        }
     }
 }

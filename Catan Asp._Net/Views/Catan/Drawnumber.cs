@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace Catan_Asp._Net.Views.Catan
 {
@@ -16,16 +17,16 @@ namespace Catan_Asp._Net.Views.Catan
         int waarde;
         int position = 1;
         //Numbers\\
-          int two = 1;
-          int three = 2;
-          int four = 2;
-          int five = 2;
-          int six = 2;
-          int eight = 2;
-          int nine = 2;
-          int ten = 2;
-          int eleven = 2;
-          int twelve = 1;
+        int two = 1;
+        int three = 2;
+        int four = 2;
+        int five = 2;
+        int six = 2;
+        int eight = 2;
+        int nine = 2;
+        int ten = 2;
+        int eleven = 2;
+        int twelve = 1;
         int lastnumber;
         int x;
 
@@ -36,13 +37,13 @@ namespace Catan_Asp._Net.Views.Catan
                 numbers.Add(0);
                 waardes.Add(0);
             }
-            
+
 
             //numbercircles\\
             number = r.Next(2, 13);
 
             //Make sure all numbers are assigned and 6 and 8 are not next to eachother\\
-            while ((number == 7) || (number == 2 && two == 0) || (number == 3 && three == 0) || (number == 4 && four == 0) || (number == 5 && five == 0) || (number == 6 && six == 0) || (number == 8 && eight == 0) || (number == 9 && nine == 0) || (number == 10 && ten == 0) || (number == 11 && eleven == 0) || (number == 12 && twelve == 0) || ((number == 6 || number == 8) && (lastnumber == 6 || lastnumber == 8))|| (position == 4 && (number == 6 || number == 8) && (numbers[1] == 6 || numbers[1] == 8))|| (position == 5 && (number == 6 || number == 8) && ((numbers[1] == 6 || numbers[1] == 8) || (numbers[2] == 6 || numbers[2] == 8)))|| (position == 6 && (number == 6 || number == 8) && ((numbers[2] == 6 || numbers[2] == 8) || (numbers[3] == 6 || numbers[3] == 8)))|| (position == 7 && (number == 6 || number == 8) && (numbers[3] == 6 || numbers[3] == 8))|| (position == 8 && (number == 6 || number == 8) && (numbers[4] == 6 || numbers[4] == 8))|| (position == 9 && (number == 6 || number == 8) && ((numbers[4] == 6 || numbers[4] == 8) || (numbers[5] == 6 || numbers[5] == 8)))|| (position == 10 && (number == 6 || number == 8) && ((numbers[5] == 6 || numbers[5] == 8) || (numbers[6] == 6 || numbers[6] == 8)))|| (position == 11 && (number == 6 || number == 8) && ((numbers[6] == 6 || numbers[6] == 8) || (numbers[7] == 6 || numbers[7] == 8)))|| (position == 12 && (number == 6 || number == 8) && (numbers[7] == 6 || numbers[7] == 8))|| (position == 13 && (number == 6 || number == 8) && ((numbers[8] == 6 || numbers[8] == 8) || (numbers[9] == 6 || numbers[9] == 8)))|| (position == 14 && (number == 6 || number == 8) && ((numbers[9] == 6 || numbers[9] == 8) || (numbers[10] == 6 || numbers[10] == 8)))|| (position == 15 && (number == 6 || number == 8) && ((numbers[10] == 6 || numbers[10] == 8) || (numbers[11] == 6 || numbers[11] == 8)))|| (position == 16 && (number == 6 || number == 8) && ((numbers[11] == 6 || numbers[11] == 8) || (numbers[12] == 6 || numbers[12] == 8)))|| (position == 17 && (number == 6 || number == 8) && ((numbers[13] == 6 || numbers[13] == 8) || (numbers[14] == 6 || numbers[14] == 8)))|| (position == 18 && (number == 6 || number == 8) && ((numbers[14] == 6 || numbers[14] == 8) || (numbers[15] == 6 || numbers[15] == 8)))|| (position == 19 && (number == 6 || number == 8) && ((numbers[15] == 6 || numbers[15] == 8) || (numbers[16] == 6 || numbers[16] == 8))))
+            while ((number == 7) || (number == 2 && two == 0) || (number == 3 && three == 0) || (number == 4 && four == 0) || (number == 5 && five == 0) || (number == 6 && six == 0) || (number == 8 && eight == 0) || (number == 9 && nine == 0) || (number == 10 && ten == 0) || (number == 11 && eleven == 0) || (number == 12 && twelve == 0) || ((number == 6 || number == 8) && (lastnumber == 6 || lastnumber == 8)) || (position == 4 && (number == 6 || number == 8) && (numbers[1] == 6 || numbers[1] == 8)) || (position == 5 && (number == 6 || number == 8) && ((numbers[1] == 6 || numbers[1] == 8) || (numbers[2] == 6 || numbers[2] == 8))) || (position == 6 && (number == 6 || number == 8) && ((numbers[2] == 6 || numbers[2] == 8) || (numbers[3] == 6 || numbers[3] == 8))) || (position == 7 && (number == 6 || number == 8) && (numbers[3] == 6 || numbers[3] == 8)) || (position == 8 && (number == 6 || number == 8) && (numbers[4] == 6 || numbers[4] == 8)) || (position == 9 && (number == 6 || number == 8) && ((numbers[4] == 6 || numbers[4] == 8) || (numbers[5] == 6 || numbers[5] == 8))) || (position == 10 && (number == 6 || number == 8) && ((numbers[5] == 6 || numbers[5] == 8) || (numbers[6] == 6 || numbers[6] == 8))) || (position == 11 && (number == 6 || number == 8) && ((numbers[6] == 6 || numbers[6] == 8) || (numbers[7] == 6 || numbers[7] == 8))) || (position == 12 && (number == 6 || number == 8) && (numbers[7] == 6 || numbers[7] == 8)) || (position == 13 && (number == 6 || number == 8) && ((numbers[8] == 6 || numbers[8] == 8) || (numbers[9] == 6 || numbers[9] == 8))) || (position == 14 && (number == 6 || number == 8) && ((numbers[9] == 6 || numbers[9] == 8) || (numbers[10] == 6 || numbers[10] == 8))) || (position == 15 && (number == 6 || number == 8) && ((numbers[10] == 6 || numbers[10] == 8) || (numbers[11] == 6 || numbers[11] == 8))) || (position == 16 && (number == 6 || number == 8) && ((numbers[11] == 6 || numbers[11] == 8) || (numbers[12] == 6 || numbers[12] == 8))) || (position == 17 && (number == 6 || number == 8) && ((numbers[13] == 6 || numbers[13] == 8) || (numbers[14] == 6 || numbers[14] == 8))) || (position == 18 && (number == 6 || number == 8) && ((numbers[14] == 6 || numbers[14] == 8) || (numbers[15] == 6 || numbers[15] == 8))) || (position == 19 && (number == 6 || number == 8) && ((numbers[15] == 6 || numbers[15] == 8) || (numbers[16] == 6 || numbers[16] == 8))))
             {
                 x++;
                 if (x == 30)
@@ -50,7 +51,7 @@ namespace Catan_Asp._Net.Views.Catan
                     return true;
                 }
                 number = r.Next(2, 13);
-                if (two == 0 &&  three == 0 &&  four == 0 && five == 0 && six == 0 && eight == 0 && nine == 0 && ten == 0 && eleven == 0 && twelve == 0)
+                if (two == 0 && three == 0 && four == 0 && five == 0 && six == 0 && eight == 0 && nine == 0 && ten == 0 && eleven == 0 && twelve == 0)
                 {
                     break;
                 }
@@ -58,40 +59,40 @@ namespace Catan_Asp._Net.Views.Catan
 
             //while ((position == 4 && (number == 6|| number == 8) && (numbers[1] == 6 || numbers[1] == 8)))
 
-            
+
 
             switch (number)
             {
-                    case 2: 
-                        two--;
-                        break;
-                    case 3:
-                        three--;
-                        break;
-                    case 4:
-                        four--;
-                        break;
-                    case 5:
-                        five--;
-                        break;
-                    case 9:
-                        nine--;
-                        break;
-                    case 10:
-                        ten--;
-                        break;
-                    case 11:
-                        eleven--;
-                        break;
-                    case 6:
-                        six--;
-                        break;
-                    case 8:
-                        eight--;
-                        break;
-                    case 12:
-                        twelve--;
-                        break;
+                case 2:
+                    two--;
+                    break;
+                case 3:
+                    three--;
+                    break;
+                case 4:
+                    four--;
+                    break;
+                case 5:
+                    five--;
+                    break;
+                case 9:
+                    nine--;
+                    break;
+                case 10:
+                    ten--;
+                    break;
+                case 11:
+                    eleven--;
+                    break;
+                case 6:
+                    six--;
+                    break;
+                case 8:
+                    eight--;
+                    break;
+                case 12:
+                    twelve--;
+                    break;
             }
             lastnumber = number;
             numbers.Add(number);
@@ -122,13 +123,13 @@ namespace Catan_Asp._Net.Views.Catan
             waardes.Add(waarde);
             position++;
             return false;
-        }  
-        
+        }
+
         public void CalculatePoints()
         {
             for (int i = 1; i < 25; i++)
             {
-                switch(i)
+                switch (i)
                 {
                     case 1:
                         punten.Add(waardes[1] + waardes[4] + waardes[5]);
@@ -210,6 +211,31 @@ namespace Catan_Asp._Net.Views.Catan
                 topdrie.Add(punten.Max());
                 punten.Remove(punten.Max());
             }
+        }
+        public string SetNumbers(int number)
+        {
+            string hexagonnumber = "";
+            if (number == 2 || number == 12)
+            {
+                 hexagonnumber = "•";
+            }
+            if (number == 3 || number == 11)
+            {
+                 hexagonnumber = "••";
+            }
+            if (number == 4 || number == 10)
+            {
+                 hexagonnumber = "•••";
+            }
+            if (number == 5 || number == 9)
+            {
+                 hexagonnumber = "••••";
+            }
+            if (number == 6 || number == 8)
+            {
+                 hexagonnumber = "•••••";
+            }
+            return hexagonnumber;
         }
     }
 }
