@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
+using Catan_Asp._Net.Models;
 
 namespace Catan_Asp._Net.Views.Catan
 {
@@ -212,30 +213,40 @@ namespace Catan_Asp._Net.Views.Catan
                 punten.Remove(punten.Max());
             }
         }
-        public string SetNumbers(int number)
+        public HexagonTile MakeHexagon(int number)
         {
-            string hexagonnumber = "";
+            HexagonTile hexagon = new HexagonTile();
+            if (number != 2 && number != 12)
+            {
+                hexagon.Font_size = 20;
+            }
+            if (number != 6 && number != 8)
+            {
+                hexagon.Color = "black";
+            }
             if (number == 2 || number == 12)
             {
-                 hexagonnumber = "•";
+                hexagon.Hexagonnumber = "•";
+                hexagon.Font_size = 16;
             }
             if (number == 3 || number == 11)
             {
-                 hexagonnumber = "••";
+                hexagon.Hexagonnumber = "••";
             }
             if (number == 4 || number == 10)
             {
-                 hexagonnumber = "•••";
+                hexagon.Hexagonnumber = "•••";
             }
             if (number == 5 || number == 9)
             {
-                 hexagonnumber = "••••";
+                hexagon.Hexagonnumber = "••••";
             }
             if (number == 6 || number == 8)
             {
-                 hexagonnumber = "•••••";
+                hexagon.Hexagonnumber = "•••••";
+                hexagon.Color = "red";
             }
-            return hexagonnumber;
+            return hexagon;
         }
     }
 }
