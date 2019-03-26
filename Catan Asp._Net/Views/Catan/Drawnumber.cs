@@ -76,6 +76,12 @@ namespace Catan_Asp._Net.Views.Catan
                 case 5:
                     five--;
                     break;
+                case 6:
+                    six--;
+                    break;
+                case 8:
+                    eight--;
+                    break;
                 case 9:
                     nine--;
                     break;
@@ -84,12 +90,6 @@ namespace Catan_Asp._Net.Views.Catan
                     break;
                 case 11:
                     eleven--;
-                    break;
-                case 6:
-                    six--;
-                    break;
-                case 8:
-                    eight--;
                     break;
                 case 12:
                     twelve--;

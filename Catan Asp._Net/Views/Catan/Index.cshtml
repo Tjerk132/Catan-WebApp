@@ -1,6 +1,7 @@
 ﻿<link rel="stylesheet" href="../Content/style.css" type="text/css">
 @using Catan_Asp._Net.Views.Catan
 @using Catan_Asp._Net.Models
+@model Catan_Asp._Net.Models.Viewmodel.CatanViewmodel
 @{
     //ViewBag.Title = "Catan";
 
@@ -25,21 +26,16 @@
     </div>
 
     <div class="save-container">
-        <div class="saves">
-            <form>
-                <p>Save 1</p>
-                <p>20-3-2019</p>
-                <input class="ctn-btn" type="submit" value="Load">
-            </form>
-        </div>
-
-        <div class="saves">
-            <form>
-                <p>Save 2</p>
-                <p>21-3-2019</p>
-                <input class="ctn-btn" type="submit" value="Load">
-            </form>
-        </div>
+        @foreach (Save save in Model.Saves)
+         {
+            <div class="saves">
+                <form>
+                    <p>@save.Name</p>
+                    <p>@save.Time.ToString("dd-MM-yyyy")</p>
+                    <input class="ctn-btn" type="submit" value="Load">
+                </form>
+            </div>
+         }
     </div>
 
     <div class="backgroundHexagonPosition">

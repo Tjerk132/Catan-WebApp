@@ -57,8 +57,8 @@ namespace Catan_Asp._Net.Views.Catan
                     break;
 
                 case 6:
-                if (generalDock > 0) { goto case 1; }
-                if (generalDock == 0) { trade = "../Images/GeneralDock.png"; generalDock++; }
+                if (generalDock >= 4) { goto case 1; }
+                if (generalDock < 4) { trade = "../Images/GeneralDock.png"; generalDock++; }
                     break;
             }
 
