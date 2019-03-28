@@ -26,7 +26,7 @@
     </div>
 
     <div class="save-container">
-        @foreach (Save save in Model.Saves)
+        @*@foreach (Save save in Model.Saves)
          {
             <div class="saves">
                 <form>
@@ -35,7 +35,7 @@
                     <input class="ctn-btn" type="submit" value="Load">
                 </form>
             </div>
-         }
+         }*@
     </div>
 
     <div class="backgroundHexagonPosition">
@@ -45,7 +45,6 @@
     </div>
 
     <div class="grid-container">
-        @{int dockRandom = docks.DockPattern(); }
 
         @for (int i = 0; i < 37; i++)
         {
@@ -85,7 +84,7 @@
             {
                 <div id="hexagonblue" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
 
-                List<int> positions = docks.DockPatternPositions(i, dockRandom);
+                List<int> positions = docks.DockPatternPositions(i);
                 if (positions.Contains(i))
                 {
                      string path = docks.DockType();

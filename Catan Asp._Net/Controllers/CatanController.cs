@@ -22,31 +22,31 @@ namespace Catan_Asp._Net.Controllers
         // GET: Catan
         public ActionResult Index()
         {
-            CatanViewmodel viewmodel = new CatanViewmodel
-            {
-                Saves = new List<Save>()
-            };
-            using (conn)
-            {
-                conn.Open();
-                string query = "SELECT * FROM [Saves]";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                DataTable dtResult = new DataTable();
-                dtResult.Load(cmd.ExecuteReader());
-                conn.Close();
-                foreach (DataRow dr in dtResult.Rows)
-                {
-                    Save save = new Save();
+            //CatanViewmodel viewmodel = new CatanViewmodel
+            //{
+            //    Saves = new List<Save>()
+            //};
+            //using (conn)
+            //{
+            //    conn.Open();
+            //    string query = "SELECT * FROM [Saves]";
+            //    SqlCommand cmd = new SqlCommand(query, conn);
+            //    DataTable dtResult = new DataTable();
+            //    dtResult.Load(cmd.ExecuteReader());
+            //    conn.Close();
+            //    foreach (DataRow dr in dtResult.Rows)
+            //    {
+            //        Save save = new Save();
 
-                    save.Name = dr[1].ToString();
+            //        save.Name = dr[1].ToString();
 
-                    DateTime.TryParse(dr[2].ToString(), out DateTime Date);
-                    save.Time = Date;
+            //        DateTime.TryParse(dr[2].ToString(), out DateTime Date);
+            //        save.Time = Date;
 
-                    viewmodel.Saves.Add(save);
-                }
-                return View(viewmodel);
-            }
+            //        viewmodel.Saves.Add(save);
+            //    }
+            //}
+            return View(/*viewmodel*/);
         }
     }
 }

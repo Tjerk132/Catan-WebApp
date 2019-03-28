@@ -17,12 +17,6 @@ namespace Catan_Asp._Net.Views.Catan
         int oreDock = 0;
         int generalDock = 0;
 
-        public int DockPattern()
-        {
-            Random random = new Random();
-            dockPattern = random.Next(1, 3);
-            return dockPattern;
-        }
 
         public string DockType()
         {
@@ -65,17 +59,14 @@ namespace Catan_Asp._Net.Views.Catan
             return trade;
         }
 
-        public List<int> DockPatternPositions(int i, int dockRandom)
+        public List<int> DockPatternPositions(int i)
         {
             List<int> positions = new List<int>();
-            if (dockRandom == 1 && (i == 0 || i == 2 || i == 8 || i == 9 || i == 21 || i == 22 || i == 32 || i == 33 || i == 35))
+            if (i == 0 || i == 2 || i == 8 || i == 9 || i == 21 || i == 22 || i == 32 || i == 33 || i == 35)
             {
                 positions.Add(i);
             }
-            else if (dockRandom == 2 && (i == 1 || i == 3 || i == 4 || i == 14 || i == 15 || i == 27 || i == 28 || i == 34 || i == 36))
-            {
-                positions.Add(i);
-            }
+
             return positions;
         }
     }
