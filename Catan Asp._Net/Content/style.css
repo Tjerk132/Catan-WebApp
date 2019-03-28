@@ -3,11 +3,15 @@
 }
 
 .grid-container {
+    margin-left:-190px;
+    padding: 140px ;
+    /*top&bottom, left&right*/
     display: grid;
     grid-gap: 5px;
-    height: 930px;
-    zoom: 0.8;
+    /*height: 1230px;*/
+    zoom:0.9;
     position: absolute;
+    /*transform: scale(1,4); /* Equal to scaleX(0.7) scaleY(0.7) */
 }
 
 .box {
@@ -310,7 +314,6 @@ body, html, canvas {
     /*zoom: 65%;*/
     width: 20px;
     height: 37.5px;
-    margin-top: -7px;
 }
 
 .ctn-btn {
@@ -331,33 +334,32 @@ body, html, canvas {
 
     .ctn-btn:hover {
         background-color: #FBC527;
-        color: black;
-        
+        color: black;       
     }
 
 .backgroundHexagonPosition {
     position: absolute;
-    top: 146px;
-    left: 486px; /*change*/
-}
-
-.backgroundHexagonLeft {
-    float: left;
-    border-right: 110px solid #ff3399; /*change*/
-    border-top: 200px solid transparent;
-    border-bottom: 200px solid transparent;
+    top: 128px;
+    left: 445px; /*change*/
 }
 
 .backgroundHexagonMiddle {
     float: left;
-    width: 241px;
-    height: 399px;
-    background: #ff3399;
+    width: 300px;
+    height: 450px;
+    /*background: black;*/
+}
+
+.backgroundHexagonLeft {
+    float: left;
+    /*border-right: 117px solid black; /*change*/
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
 }
 
 .backgroundHexagonRight {
     float: left;
-    border-left: 110px solid #ff3399; /*change*/
+    /*border-left: 117px solid black; /*change*/
     border-top: 200px solid transparent;
-    border-bottom: 200px solid transparent;
+    border-bottom: 192px solid transparent;
 }

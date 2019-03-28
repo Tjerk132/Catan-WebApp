@@ -3,55 +3,76 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Catan_Asp._Net.Views.Catan;
 using Catan_Asp._Net.Models.Viewmodel;
 using Catan_Asp._Net.Models;
 using System.Data.SqlClient;
 using System.Data;
+using Catan_Asp._Net.Controllers.CreateHexagons;
 
 namespace Catan_Asp._Net.Controllers
 {
     public class CatanController : Controller
     {
+        HexagonPosition position = new HexagonPosition();
+        Materials materialchooser = new Materials();
+        Drawnumber drawnumber = new Drawnumber();
+        Docks docks = new Docks();
+
         // GET: Catan
         public ActionResult Index()
         {
-            using (SqlConnection sqlCon = new SqlConnection
-            (
-                @"Server=studmysql01.fhict.local;
-                database=dbi404906;
-                UID=dbi404906;
-                password=138751"
-            ))
+            int[] playgroundhexes = new int[] { 5, 6, 7, 10, 11, 12, 13, 16, 17, 18, 19, 20, 23, 24, 25, 26, 29, 30, 31 };
+            int[] harborhexes = new int[] { 0, 2, 8, 9, 21, 22, 32, 33, 35 };
 
+            CatanViewmodel viewmodel = new CatanViewmodel
             {
-                sqlCon.Open();
-                string query = "SELECT * FROM myquests";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                Saves = new List<Save>(),
+                Hexagons = new List<HexagonTile>()
+            };
 
-                CatanViewmodel viewmodel = new CatanViewmodel
+            List<int> HarborPositions = new List<int>();
+            HarborPositions.AddRange(harborhexes);
+
+            List<int> PlaygroundHexes = new List<int>();
+            PlaygroundHexes.AddRange(playgroundhexes);
+
+            for(int i = 0; i < 37; i++)
+            {
+                HexagonTile hexagon = new HexagonTile
                 {
-                    Saves = new List<Save>()
+                    Margin_left = position.Margin_Left(i),
+                    Margin_top = position.Margin_Top(i)
                 };
-
-                SqlCommand cmd = new SqlCommand(query, sqlCon);
-                DataTable dtResult = new DataTable();
-                dtResult.Load(cmd.ExecuteReader());
-                sqlCon.Close();
-                foreach (DataRow dr in dtResult.Rows)
+                if (PlaygroundHexes.Contains(i))
                 {
-                    Save save = new Save();
-
-                    save.Name = dr[1].ToString();
-
-                    DateTime.TryParse(dr[2].ToString(), out DateTime Date);
-                    save.Time = Date;
-
-                    viewmodel.Saves.Add(save);
+                    string HexagonId = materialchooser.ChooseMaterial();
+                    hexagon.Margin_leftNumbers = position.Margin_LeftNumbers(hexagon.Margin_left);
+                    if (HexagonId != "hexagondesert")
+                    {
+                        hexagon.Id = HexagonId;
+                        hexagon.Number = drawnumber.MakeNumber();
+                        drawnumber.MakeHexagon(hexagon);
+                    }
+                    else
+                    {
+                        hexagon.Id = HexagonId;
+                        hexagon.Class = "rover";
+                    }
                 }
-                //}
-                return View(viewmodel);
+                //Make Surrounding Hexagons Blue\\
+                else
+                {
+                    hexagon.Id = "hexagonblue";
+                    hexagon.Image_Margin_left = hexagon.Margin_left + 20;
+
+                    if (HarborPositions.Contains(i))
+                    {       
+                        hexagon.Image = docks.DockType();
+                    }
+                }
+                viewmodel.Hexagons.Add(hexagon);
             }
+            return View(viewmodel);         
         }
     }
 }

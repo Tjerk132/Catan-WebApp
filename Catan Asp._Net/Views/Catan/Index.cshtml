@@ -1,40 +1,28 @@
 ﻿<link rel="stylesheet" href="../Content/style.css" type="text/css">
-@using Catan_Asp._Net.Views.Catan
-@using Catan_Asp._Net.Models
+@using Catan_Asp._Net.Models;
 @model Catan_Asp._Net.Models.Viewmodel.CatanViewmodel
 @{
-    //ViewBag.Title = "Catan";
-
-    HexagonPosition position = new HexagonPosition();
-    Materials materialchooser = new Materials();
-    Drawnumber drawnumber = new Drawnumber();
-    Docks docks = new Docks();
-}
-
-@{
-    int margin_left = 203;  //Start x-position for 1st row
-    int margin_top = -62;   //Start y-position for 1st row
-    int margin_leftnumber;
+    ViewBag.Title = "Catan";
 
     string px = "px";
 }
 
 <body>
     <div class="box">
-        <p style="font-size: 28px; transform: rotate(90deg); ">:^)</p>
+        <p style="font-size: 28px; transform: rotate(90deg); ">:)</p>
     </div>
 
     <div class="save-container">
-        @foreach (Save save in Model.Saves)
-         {
-            <div class="saves">
-                <form>
-                    <p>@save.Name</p>
-                    <p>@save.Time.ToString("dd-MM-yyyy")</p>
-                    <input class="ctn-btn" type="submit" value="Load">
-                </form>
-            </div>
-         }
+        @*@foreach (Save save in Model.Saves)
+            {
+               <div class="saves">
+                   <form>
+                       <p>@save.Name</p>
+                       <p>@save.Time.ToString("dd-MM-yyyy")</p>
+                       <input class="ctn-btn" type="submit" value="Load">
+                   </form>
+               </div>
+            }*@
     </div>
 
     <div class="backgroundHexagonPosition">
@@ -45,50 +33,26 @@
 
     <div class="grid-container">
 
-        @for (int i = 0; i < 37; i++)
+        @foreach (HexagonTile hexagon in Model.Hexagons)
         {
-            margin_left = position.Margin_Left(i, margin_left);
-            margin_top = position.Margin_Top(i, margin_top);
-            margin_leftnumber = position.Margin_LeftNumbers(margin_left);
-
-            if (i > 4 && i != 8 && i != 9 && i != 14 && i != 15 && i != 21 && i != 22 && i != 27 && i != 28 && i < 32)
+            <div id="@hexagon.Id" class="item7" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_left@px"></div>
+            if (hexagon.Id != "hexagonblue")
             {
-                HexagonTile hexagon = new HexagonTile();
-                if (materialchooser.ChooseMaterial() > 0)
-                {
-                    hexagon.Id  = materialchooser.ReturnHexagon(materialchooser.MaterialChooser, hexagon);
-                    <div id="@hexagon.Id" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-                }
-                if (materialchooser.MaterialChooser == 1)
-                {
-                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px;">
-                        <img class="robber" src="~/Images/rover.jpg" alt="rover" width="30" height="40">
-                    </div>
-                }
-                else
-                {
-                    if (drawnumber.MakeNumber())
+                <div class="circle-text" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_leftNumbers@px">
+                    <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@hexagon.Number</p>
+                    <p class="dot_position">@hexagon.Hexagonnumber</p>
+                    @if (hexagon.Class == "rover")
                     {
-                        Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
+                        <img class="@hexagon.Class" src="~/Images/rover.jpg" alt="rover" width="25" height="40" style="margin-top:14px">
                     }
-                    drawnumber.MakeHexagon(drawnumber.number, hexagon);
-                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px">
-                        <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@drawnumber.number</p>
-                        <p class="dot_position">@hexagon.Hexagonnumber</p>
-                    </div>
-                }
+                </div>
             }
-            //Make Surrounding Hexagons Blue\\
-            else //if tile is not a playground hexagon
+            else
             {
-                <div id="hexagonblue" class="item7" style="margin-top:@margin_top@px; margin-left:@margin_left@px"></div>
-
-                List<int> positions = docks.DockPatternPositions(i);
-                if (positions.Contains(i))
+                if (hexagon.Image != null)
                 {
-                     string path = docks.DockType();
-                    <div class="circle-text" style="margin-top:@margin_top@px; margin-left:@margin_leftnumber@px">
-                        <img src=@path style="max-width:170%; max-height:170%; margin-top:-9px" />
+                    <div class="circle-text" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Image_Margin_left@px">
+                        <img src=@hexagon.Image style="max-width:170%; max-height:170%; margin-top:-9px" />
                     </div>
                 }
             }

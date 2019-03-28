@@ -9,5 +9,6 @@ namespace Catan_Asp._Net.Models.Viewmodel
     public class CatanViewmodel
     {
         public List<Save> Saves { get; set; }
+        public List<HexagonTile> Hexagons { get; set; }
     }
 }

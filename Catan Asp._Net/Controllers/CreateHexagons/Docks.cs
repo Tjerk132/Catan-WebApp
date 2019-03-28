@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Catan_Asp._Net.Views.Catan
+namespace Catan_Asp._Net.Controllers.CreateHexagons
 {
     public class Docks
     {
-        int dockPattern;
         int randomDock;
         string trade;
         int woodDock = 0;
@@ -26,48 +25,36 @@ namespace Catan_Asp._Net.Views.Catan
             switch(randomDock)
             {
                 case 1:
-                if (woodDock != 0) { goto case 2; }
+                if (woodDock != 0) { randomDock = 1; goto case 2; }
                 if (woodDock == 0) { trade = "../Images/WoodDock.png"; woodDock++; }
                      break;
 
                 case 2:
-                if (stoneDock != 0) { goto case 3; }
+                if (stoneDock != 0) { randomDock = 2; goto case 3; }
                 if (stoneDock == 0) { trade = "../Images/StoneDock.png"; stoneDock++; }
                     break;
 
                 case 3:
-                if (sheepDock != 0) { goto case 4; }
+                if (sheepDock != 0) { randomDock = 3; goto case 4; }
                 if (sheepDock == 0) { trade = "../Images/SheepDock.png"; sheepDock++; }
                     break;
 
                 case 4:
-                if (grainDock != 0){ goto case 5; }
+                if (grainDock != 0){ randomDock = 4; goto case 5; }
                 if (grainDock == 0) { trade = "../Images/GrainDock.png"; grainDock++; }
                     break;
 
                 case 5:
-                if (oreDock != 0) { goto case 6; }
+                if (oreDock != 0) { randomDock = 5; goto case 6; }
                 if (oreDock == 0) { trade = "../Images/OreDock.png"; oreDock++; }
                     break;
 
                 case 6:
-                if (generalDock >= 4) { goto case 1; }
+                if (generalDock >= 4) { randomDock = 6; goto case 1; }
                 if (generalDock < 4) { trade = "../Images/GeneralDock.png"; generalDock++; }
                     break;
             }
-
             return trade;
-        }
-
-        public List<int> DockPatternPositions(int i)
-        {
-            List<int> positions = new List<int>();
-            if (i == 0 || i == 2 || i == 8 || i == 9 || i == 21 || i == 22 || i == 32 || i == 33 || i == 35)
-            {
-                positions.Add(i);
-            }
-
-            return positions;
         }
     }
 }
