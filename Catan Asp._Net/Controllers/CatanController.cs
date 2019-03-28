@@ -13,40 +13,45 @@ namespace Catan_Asp._Net.Controllers
 {
     public class CatanController : Controller
     {
-        SqlConnection conn = new SqlConnection
-        (
-            @"Data Source=(LocalDB)\MSSQLLocalDB;
-            AttachDbFilename=C:\Users\tjerk\Source\Repos\Catan-WebApp\Catan Asp._Net\App_Data\Database1.mdf;
-            Integrated Security=True"
-        );
         // GET: Catan
         public ActionResult Index()
         {
-            //CatanViewmodel viewmodel = new CatanViewmodel
-            //{
-            //    Saves = new List<Save>()
-            //};
-            //using (conn)
-            //{
-            //    conn.Open();
-            //    string query = "SELECT * FROM [Saves]";
-            //    SqlCommand cmd = new SqlCommand(query, conn);
-            //    DataTable dtResult = new DataTable();
-            //    dtResult.Load(cmd.ExecuteReader());
-            //    conn.Close();
-            //    foreach (DataRow dr in dtResult.Rows)
-            //    {
-            //        Save save = new Save();
+            using (SqlConnection sqlCon = new SqlConnection
+            (
+                @"Server=studmysql01.fhict.local;
+                database=dbi404906;
+                UID=dbi404906;
+                password=138751"
+            ))
 
-            //        save.Name = dr[1].ToString();
+            {
+                sqlCon.Open();
+                string query = "SELECT * FROM myquests";
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
-            //        DateTime.TryParse(dr[2].ToString(), out DateTime Date);
-            //        save.Time = Date;
+                CatanViewmodel viewmodel = new CatanViewmodel
+                {
+                    Saves = new List<Save>()
+                };
 
-            //        viewmodel.Saves.Add(save);
-            //    }
-            //}
-            return View(/*viewmodel*/);
+                SqlCommand cmd = new SqlCommand(query, sqlCon);
+                DataTable dtResult = new DataTable();
+                dtResult.Load(cmd.ExecuteReader());
+                sqlCon.Close();
+                foreach (DataRow dr in dtResult.Rows)
+                {
+                    Save save = new Save();
+
+                    save.Name = dr[1].ToString();
+
+                    DateTime.TryParse(dr[2].ToString(), out DateTime Date);
+                    save.Time = Date;
+
+                    viewmodel.Saves.Add(save);
+                }
+                //}
+                return View(viewmodel);
+            }
         }
     }
 }
