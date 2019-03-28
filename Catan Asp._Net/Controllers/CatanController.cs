@@ -16,14 +16,16 @@ namespace Catan_Asp._Net.Controllers
         SqlConnection conn = new SqlConnection
         (
             @"Data Source=(LocalDB)\MSSQLLocalDB;
-            AttachDbFilename=C:\Users\tjerk\source\repos\Catan-WebApp\Catan Asp._Net\App_Data\Database.mdf;
+            AttachDbFilename=C:\Users\tjerk\Source\Repos\Catan-WebApp\Catan Asp._Net\App_Data\Database1.mdf;
             Integrated Security=True"
         );
         // GET: Catan
         public ActionResult Index()
         {
-            CatanViewmodel viewmodel = new CatanViewmodel();
-            viewmodel.Saves = new List<Save>();
+            CatanViewmodel viewmodel = new CatanViewmodel
+            {
+                Saves = new List<Save>()
+            };
             using (conn)
             {
                 conn.Open();
