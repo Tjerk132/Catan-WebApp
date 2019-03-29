@@ -237,6 +237,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                     if (six > 0) { six--; HexagonRandom = 6; }
                     else { goto case 8; }
                     break;
+                case 7: { HexagonRandom = 8; goto case 8; }
                 case 8:
                     if (eight > 0) { eight--; HexagonRandom = 8; }
                     else { goto case 9; }
