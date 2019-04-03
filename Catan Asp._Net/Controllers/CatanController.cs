@@ -29,6 +29,28 @@ namespace Catan_Asp._Net.Controllers
                 Saves = new List<Save>(),
                 Hexagons = new List<HexagonTile>()
             };
+            const string connectionString = @"Server=mssql.fhict.local;Database=dbi386599;User Id=dbi386599;Password=12345;";
+            SqlConnection conn = new SqlConnection(connectionString);
+            using (conn)
+            {
+                conn.Open();
+                string query =  "SELECT * FROM [Saves]";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataTable dtResult = new DataTable();
+                dtResult.Load(cmd.ExecuteReader());
+                conn.Close();
+                foreach (DataRow dr in dtResult.Rows)
+                {
+                    Save save = new Save();
+
+                    save.Name = dr[1].ToString();
+
+                    DateTime.TryParse(dr[2].ToString(), out DateTime Time);
+                    save.Time = Time;
+
+                    viewmodel.Saves.Add(save);
+                }
+            }
 
             List<int> HarborPositions = new List<int>();
             HarborPositions.AddRange(harborhexes);
@@ -36,6 +58,8 @@ namespace Catan_Asp._Net.Controllers
             List<int> PlaygroundHexes = new List<int>();
             PlaygroundHexes.AddRange(playgroundhexes);
 
+            Random r = new Random();
+            int ChooseBestPositions = r.Next(1, 5);
             for(int i = 0; i < 37; i++)
             {
                 HexagonTile hexagon = new HexagonTile
@@ -50,7 +74,8 @@ namespace Catan_Asp._Net.Controllers
                     if (HexagonId != "hexagondesert")
                     {
                         hexagon.Id = HexagonId;
-                        hexagon.Number = drawnumber.MakeNumber();
+
+                        hexagon.Number = drawnumber.MakeNumber(i, ChooseBestPositions);
                         drawnumber.MakeHexagon(hexagon);
                     }
                     else

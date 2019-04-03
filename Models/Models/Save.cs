@@ -8,7 +8,7 @@ namespace Catan_Asp._Net.Models
     public class Save
     {
         public DateTime Time { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } 
 
     }
 }
