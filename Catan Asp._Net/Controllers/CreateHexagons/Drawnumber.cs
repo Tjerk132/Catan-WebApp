@@ -15,90 +15,170 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
         private List<int> topdrie = new List<int>();
         int waarde;
         int position = 1;
+
+
         //Numbers\\
         int two = 1;
         int three = 2;
         int four = 2;
         int five = 2;
         int six = 2;
-        int seven = 1;
+
         int eight = 2;
         int nine = 2;
         int ten = 2;
         int eleven = 2;
         int twelve = 1;
-        int x;
 
-        int LastRandom = 0;
+      
+        public HexagonTile MakeHexagon(int RandomNumber, int i, string HexagonId, List<int>SixAndEightPositions)
+        {
+            HexagonTile hexagon = new HexagonTile
+            {
+                Id = HexagonId
+            };
 
-        //public bool MakeNumber(int number)
-        //{
-        //    if (position == 1)
-        //    {
-        //        numbers.Add(0);
-        //        waardes.Add(0);
-        //    }
+            //Set Number to hexagon \\
+            //only if hexagon is not a desert
+            if (hexagon.Id != "hexagondesert")
+            {
+                //if hexagon is a hexagon for 6 or 8
+                if (SixAndEightPositions.Contains(i))
+                {
+                    Random r = new Random();
+                    RandomNumber = r.Next(6, 9);
+                    
+                    switch (RandomNumber)
+                    {
+                        case 6:
+                            if (six > 0) { RandomNumber = 6; six--; }
+                            else { goto case 8; }
+                            break;
+                        case 7: RandomNumber = 8; goto case 8;
+                        case 8:
+                            if (eight > 0) { RandomNumber = 8; eight--; }
+                            else { goto case 6; }
+                            break;
+                    }
+                }
+                // if hexagon is a hexagon that could have all numbers, except 6 & 8
+                else
+                {
+                    switch (RandomNumber)
+                    {
+                        case 2:
+                            if (two > 0) { two--; }
+                            else { RandomNumber = 3; goto case 3; }
+                            break;
 
+                        case 3:
+                            if (three > 0) { three--; }
+                            else { RandomNumber = 4; goto case 4; }
+                            break;
 
-        //    //numbercircles\\
+                        case 4:
+                            if (four > 0) { four--; }
+                            else { RandomNumber = 5; goto case 5; }
+                            break;
 
-        //    //Make sure all numbers are assigned and 6 and 8 are not next to eachother\\
-        //    while ((number == 7) || (number == 2 && two == 0) || (number == 3 && three == 0) || (number == 4 && four == 0) || (number == 5 && five == 0) || (number == 6 && six == 0) || (number == 8 && eight == 0) || (number == 9 && nine == 0) || (number == 10 && ten == 0) || 
-        //(number == 11 && eleven == 0) || (number == 12 && twelve == 0) || ((number == 6 || number == 8) && (lastnumber == 6 || lastnumber == 8)) || (position == 4 && (number == 6 || number == 8) && (numbers[1] == 6 || numbers[1] == 8)) || (position == 5 && 
-          //  (number == 6 || number == 8) && ((numbers[1] == 6 || numbers[1] == 8) || (numbers[2] == 6 || numbers[2] == 8))) || (position == 6 && (number == 6 || number == 8) && ((numbers[2] == 6 || numbers[2] == 8) || (numbers[3] == 6 || numbers[3] == 8))) || (position == 7 &&
-        //(number == 6 || number == 8) && (numbers[3] == 6 || numbers[3] == 8)) || (position == 8 && (number == 6 || number == 8) && (numbers[4] == 6 || numbers[4] == 8)) || (position == 9 && (number == 6 || number == 8) && ((numbers[4] == 6 || numbers[4] == 8) 
-        //|| (numbers[5] == 6 || numbers[5] == 8))) || (position == 10 && (number == 6 || number == 8) && ((numbers[5] == 6 || numbers[5] == 8) || (numbers[6] == 6 || numbers[6] == 8))) || (position == 11 && (number == 6 || number == 8) && ((numbers[6] == 6 || numbers[6] == 8) || 
-          //  (numbers[7] == 6 || numbers[7] == 8))) || (position == 12 && (number == 6 || number == 8) && (numbers[7] == 6 || numbers[7] == 8)) || (position == 13 && (number == 6 || number == 8) && ((numbers[8] == 6 || numbers[8] == 8) || (numbers[9] == 6 || numbers[9] == 8)))
-        //|| (position == 14 && (number == 6 || number == 8) && ((numbers[9] == 6 || numbers[9] == 8) || (numbers[10] == 6 || numbers[10] == 8))) || (position == 15 && (number == 6 || number == 8) && ((numbers[10] == 6 || numbers[10] == 8) || (numbers[11] == 6 || numbers[11] == 8)))
-        //|| (position == 16 && (number == 6 || number == 8) && ((numbers[11] == 6 || numbers[11] == 8) || (numbers[12] == 6 || numbers[12] == 8))) || (position == 17 && (number == 6 || number == 8) && ((numbers[13] == 6 || numbers[13] == 8) || (numbers[14] == 6 || numbers[14] == 8)))
-        //|| (position == 18 && (number == 6 || number == 8) && ((numbers[14] == 6 || numbers[14] == 8) || (numbers[15] == 6 || numbers[15] == 8))) || (position == 19 && (number == 6 || number == 8) && ((numbers[15] == 6 || numbers[15] == 8) || (numbers[16] == 6 || numbers[16] == 8))))
-        //    {
-        //        x++;
-        //        if (x == 30)
-        //        {
-        //            return true;
-        //        }
-        //        Random r = new Random();
-        //        number = r.Next(2, 13);
-        //        if (two == 0 && three == 0 && four == 0 && five == 0 && six == 0 && eight == 0 && nine == 0 && ten == 0 && eleven == 0 && twelve == 0)
-        //        {
-        //            break;
-        //        }
-        //    }
+                        case 5:
+                            if (five > 0) { five--; }
+                            else { RandomNumber = 6; goto case 6; }
+                            break;
 
-        //    while ((position == 4 && (number == 6 || number == 8) && (numbers[1] == 6 || numbers[1] == 8)))
+                        case 6: RandomNumber = 7; goto case 7;
 
-        //        lastnumber = number;
-        //    numbers.Add(number);
-        //    if (number == 2 || number == 12)
-        //    {
-        //        waarde = 1;
-        //    }
-        //    else if (number == 3 || number == 11)
-        //    {
-        //        waarde = 2;
-        //    }
-        //    else if (number == 4 || number == 10)
-        //    {
-        //        waarde = 3;
-        //    }
-        //    else if (number == 5 || number == 9)
-        //    {
-        //        waarde = 4;
-        //    }
-        //    else if (number == 6 || number == 8)
-        //    {
-        //        waarde = 5;
-        //    }
-        //    else if (number == 7)
-        //    {
-        //        waarde = 0;
-        //    }
-        //    waardes.Add(waarde);
-        //    position++;
-        //    return false;
-        //}
+                        case 7: RandomNumber = 8; goto case 8;
 
+                        case 8: RandomNumber = 9; goto case 9;
+
+                        case 9:
+                            if (nine > 0) { nine--; }
+                            else { RandomNumber = 10; goto case 10; }
+                            break;
+
+                        case 10:
+                            if (ten > 0) { ten--; }
+                            else { RandomNumber = 11; goto case 11; }
+                            break;
+
+                        case 11:
+                            if (eleven > 0) { eleven--; }
+                            else { RandomNumber = 12; goto case 12; }
+                            break;
+                        case 12:
+                            if (twelve > 0) { twelve--; }
+                            else { RandomNumber = 2; goto case 2; }
+                            break;
+                    }
+                }
+                hexagon.Number = RandomNumber;
+            }
+            //if hexagon is desert
+            else
+            {
+                hexagon.Class = "rover";
+            }
+
+            //give circle-text values to hexagon \\
+            //number font-size, number color & hexagonnumber dots
+
+            switch (hexagon.Number)
+            {
+                case 2:
+                    hexagon.Font_size = 16;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "•";
+                    break;
+                case 3:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "••";
+                    break;
+                case 4:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "•••";
+                    break;
+                case 5:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "••••";
+                    break;
+                case 6:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "red";
+                    hexagon.Hexagonnumber = "•••••";
+                    break;
+                case 8:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "red";
+                    hexagon.Hexagonnumber = "•••••";
+                    break;
+                case 9:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "••••";
+                    break;
+                case 10:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "•••";
+                    break;
+                case 11:
+                    hexagon.Font_size = 20;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "••";
+                    break;
+                case 12:
+                    hexagon.Font_size = 16;
+                    hexagon.Color = "black";
+                    hexagon.Hexagonnumber = "•";
+                    break;
+
+            }
+            return hexagon;
+        }
         public void CalculatePoints()
         {
             for (int i = 1; i < 25; i++)
@@ -185,125 +265,6 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                 topdrie.Add(punten.Max());
                 punten.Remove(punten.Max());
             }
-        }
-        public HexagonTile MakeHexagon(HexagonTile hexagon)
-        {
-            if (hexagon.Number != 2 && hexagon.Number != 12)
-            {
-                hexagon.Font_size = 20;
-            }
-            if (hexagon.Number != 6 && hexagon.Number != 8)
-            {
-                hexagon.Color = "black";
-            }
-            if (hexagon.Number == 2 || hexagon.Number == 12)
-            {
-                hexagon.Hexagonnumber = "•";
-                hexagon.Font_size = 16;
-            }
-            if (hexagon.Number == 3 || hexagon.Number == 11)
-            {
-                hexagon.Hexagonnumber = "••";
-            }
-            if (hexagon.Number == 4 || hexagon.Number == 10)
-            {
-                hexagon.Hexagonnumber = "•••";
-            }
-            if (hexagon.Number == 5 || hexagon.Number == 9)
-            {
-                hexagon.Hexagonnumber = "••••";
-            }
-            if (hexagon.Number == 6 || hexagon.Number == 8)
-            {
-                hexagon.Hexagonnumber = "•••••";
-                hexagon.Color = "red";
-            }
-            return hexagon;
-        }
-        public int MakeNumber(int i, int ChooseBestPositions)
-        {
-            //int[] positions = new int[] { };
-
-            //switch (ChooseBestPositions)
-            //{
-            //    case 1:
-            //        positions = new int[]{ 5, 7, 16, 18 };
-            //        break;
-            //    case 2:
-            //        positions = new int[] { 6, 10, 13, 18 };
-            //        break;
-            //    case 3:
-            //        positions = new int[] { 18, 20, 29, 32 };
-            //        break;
-            //    case 4:
-            //        positions = new int[] { 18, 23, 26, 30 };
-            //        break;
-            //}
-
-            //List<int> SixAndEightPositions = new List<int>();
-            //SixAndEightPositions.AddRange(positions);
-
-            Random r = new Random();
-            int HexagonRandom = r.Next(2, 13);
-
-            ////if (!SixAndEightPositions.Contains(i))
-            ////{
-            //    switch (HexagonRandom)
-            //    {
-            //        case 2:
-            //            if (two > 0) { two--; HexagonRandom = 2; }
-            //            else { goto case 3; }
-            //            break;
-            //        case 3:
-            //            if (three > 0) { three--; HexagonRandom = 3; }
-            //            else { goto case 4; }
-            //            break;
-            //        case 4:
-            //            if (four > 0) { four--; HexagonRandom = 4; }
-            //            else { goto case 5; }
-            //            break;
-            //        case 5:
-            //            if (five > 0) { five--; HexagonRandom = 5; }
-            //            else { goto case 9; }
-            //            break;
-            //        case 6:{ goto case 7; }
-            //        case 7: { goto case 8; }
-            //        case 8: { goto case 9; }
-            //        case 9:
-            //            if (nine > 0) { nine--; HexagonRandom = 9; }
-            //            else { goto case 10; }
-            //            break;
-            //        case 10:
-            //            if (ten > 0) { ten--; HexagonRandom = 10; }
-            //            else { goto case 11; }
-            //            break;
-            //        case 11:
-            //            if (eleven > 0) { eleven--; HexagonRandom = 11; }
-            //            else { goto case 12; }
-            //            break;
-            //        case 12:
-            //            if (twelve > 0) { twelve--; HexagonRandom = 12; }
-            //            else { goto case 2; }
-            //            break;
-            //    }
-            ////}
-            ////else
-            ////{
-            ////    HexagonRandom = 6;
-            ////    switch (HexagonRandom)
-            ////    {
-            ////        case 6:
-            ////            if (six > 0) { six--; HexagonRandom = 6; }
-            ////            else { goto case 8; }
-            ////            break;
-            ////        case 8:
-            ////            if (eight > 0) { eight--; HexagonRandom = 8; }
-            ////            else { goto case 6; }
-            ////            break;
-            ////    }
-
-            ////}
-            return HexagonRandom;
         }
     }
 }

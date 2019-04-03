@@ -9,73 +9,52 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
 {
     public class Materials
     {
-        Random R = new Random();
-         string Material;
-        //Materials\\               Randomnumber
-         int Desertcount = 1;     //1
-         int Woodcount = 4;       //2
-         int Orecount = 3;        //3
-         int Stonecount = 3;      //4
-         int Woolcount = 4;       //5
-         int Graincount = 4;      //6
 
-        public string ChooseMaterial()
+        //Materials\\         Randomnumber
+        int Desertcount = 1;     //1
+        int Woodcount = 4;       //2
+        int Orecount = 3;        //3
+        int Stonecount = 3;      //4
+        int Woolcount = 4;       //5
+        int Graincount = 4;      //6
+
+        string HexagonId;
+
+        public string HexagonMaterial(int MaterialChooser, int i, List<int> SixAndEight)
         {
-            int MaterialChooser;
-            MaterialChooser = R.Next(1, 7);
-
-            //Make sure all materials are assigned\\
-            for (int a = 0; a < 2; a++)
+            switch (MaterialChooser)
             {
-                if (MaterialChooser == 1 && Desertcount == 0) { MaterialChooser++;}
-
-                if (MaterialChooser == 2 && Woodcount == 0) {MaterialChooser++; }
-
-                if (MaterialChooser == 3 && Orecount == 0) {MaterialChooser++;}
-
-                if (MaterialChooser == 4 && Stonecount == 0) { MaterialChooser++;}
-
-                if (MaterialChooser == 5 && Woolcount == 0) { MaterialChooser++;}
-
-                if (MaterialChooser == 6 && Graincount == 0) { MaterialChooser = 1;}
+                case 1:
+                    if (Desertcount == 0) { MaterialChooser++; goto case 2; }
+                    if (!SixAndEight.Contains(i))
+                    {
+                        HexagonId = "hexagondesert"; Desertcount--;
+                    }
+                    else { MaterialChooser++; goto case 2; }
+                    break;
+                case 2:
+                    if (Woodcount == 0) { MaterialChooser++; goto case 3; }
+                    else HexagonId = "hexagonwood"; Woodcount--;
+                    break;
+                case 3:
+                    if (Orecount == 0) { MaterialChooser++; goto case 4; }
+                    else HexagonId = "hexagonore"; Orecount--;
+                    break;
+                case 4:
+                    if (Stonecount == 0) { MaterialChooser++; goto case 5; }
+                    else HexagonId = "hexagonstone"; Stonecount--;
+                    break;
+                case 5:
+                    if (Woolcount == 0) { MaterialChooser++; goto case 6; }
+                    else HexagonId = "hexagonwool"; Woolcount--;
+                    break;
+                case 6:
+                    if (Graincount == 0) { MaterialChooser++; goto case 1; }
+                    else HexagonId = "hexagongrain"; Graincount--;
+                    break;
             }
-            if (MaterialChooser == 1) { Material = "hexagondesert"; Desertcount--; }
-            if (MaterialChooser == 2) { Material = "hexagonwood";  Woodcount--; }
-            if (MaterialChooser == 3) { Material = "hexagonore"; Orecount--; }
-            if (MaterialChooser == 4) { Material = "hexagonstone"; Stonecount--;}
-            if (MaterialChooser == 5) { Material = "hexagonwool"; Woolcount--; }
-            if (MaterialChooser == 6) { Material = "hexagongrain"; Graincount--; }
-
-            return Material;
+            return HexagonId;
         }
-        //public string ReturnHexagon(int Materialchooser, HexagonTile hexagon)
-        //{
-        //    //if (MaterialChooser == 1)
-        //    //{
-        //    //    hexagon.Id = "hexagondesert";
-        //    //}
-        //    //if (MaterialChooser == 2)
-        //    //{
-        //    //    hexagon.Id = "hexagonwood";
-        //    //}
-        //    //if (MaterialChooser == 3)
-        //    //{
-        //    //    hexagon.Id = "hexagonore";
-        //    //}
-        //    //if (MaterialChooser == 4)
-        //    //{
-        //    //    hexagon.Id = "hexagonstone";
-        //    //}
-        //    //if (MaterialChooser == 5)
-        //    //{
-        //    //    hexagon.Id = "hexagonwool";
-
-        //    //}
-        //    //if (MaterialChooser == 6)
-        //    //{
-        //    //    hexagon.Id = "hexagongrain";
-        //    //}
-        //    return hexagon.Id;
-        //}
+        
     }
 }

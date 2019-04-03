@@ -40,15 +40,14 @@
             if (hexagon.Id != "hexagonblue")
             {
             <div class="circle-text" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_leftNumbers@px">
+                @if (hexagon.Id != "hexagondesert")
+                {
                 <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@hexagon.Number</p>
+                }
                 <p class="dot_position">@hexagon.Hexagonnumber</p>
                 @if (hexagon.Class == "rover")
                 {
                     <img class="@hexagon.Class" src="~/Images/rover.jpg" alt="rover" width="25" height="40" style="margin-top:14px">
-                }
-                @if (hexagon.Class == "hexagongrain")
-                {
-                    <img class="@hexagon.Class" src="~/Images/Erts.png" alt="rover" width="25" height="40" style="margin-top:14px">
                 }
             </div>
             }
