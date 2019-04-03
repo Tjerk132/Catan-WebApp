@@ -139,6 +139,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\background.jpg" />
+    <Content Include="Images\Erts.png" />
     <Content Include="Images\GeneralDock.png" />
     <Content Include="Images\GrainDock.png" />
     <Content Include="Images\OreDock.png" />
