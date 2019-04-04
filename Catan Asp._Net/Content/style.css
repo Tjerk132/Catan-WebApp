@@ -329,25 +329,25 @@ body, html, canvas {
     float: left;
     width: 300px;
     height: 450px;
-    /*background: black;*/
+    background: purple;
 }
 
 .backgroundHexagonLeft {
     float: left;
-    /*border-right: 117px solid black; /*change*/
+    border-right: 117px solid purple; /*change*/
     border-top: 200px solid transparent;
     border-bottom: 200px solid transparent;
 }
 
 .backgroundHexagonRight {
     float: left;
-    /*border-left: 117px solid black; /*change*/
+    border-left: 117px solid purple; /*change*/
     border-top: 200px solid transparent;
     border-bottom: 192px solid transparent;
 }
 
 .option-menu {
-    border: 1px solid #FBC527;
+    border: 1px solid purple;
     background-color: #333333;
     margin: 4px;
     border-radius: 4px;
@@ -360,7 +360,7 @@ body, html, canvas {
 
 
     .option-menu input {
-        background-color: #FBC527; /* Green */
+        background-color: #FBC527; /* Green 
         border: none;
         color: white;
         padding: 6px 14px;
