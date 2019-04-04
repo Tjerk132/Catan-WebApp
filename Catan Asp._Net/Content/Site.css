@@ -44,12 +44,13 @@ ul {
     margin: 0;
     padding: 0;
     width: 280px;
-    background-color: #8d8b5b;
+    background-color: #5b858d;
     height: 100%;
     float: left;
-    border-right: 1px solid #74734c;
+    border-right: 1px solid #365156;
     box-shadow: 4px 0px 16px rgba(0, 0, 0, 1);
     opacity: 1;
+    transition-duration: .4s;
 }
 
     ul p {
@@ -57,7 +58,6 @@ ul {
         font-family: 'Roman SD';
         margin-top: 40px;
     }
-
 
 li a {
     display: block;
