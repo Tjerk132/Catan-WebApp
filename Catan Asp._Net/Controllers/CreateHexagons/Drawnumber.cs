@@ -37,20 +37,26 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             int[] positions = new int[] { };
 
             Random r = new Random();
-            int ChooseBestPositions = r.Next(1, 5);
+            int ChooseBestPositions = r.Next(1, 7);
             switch (ChooseBestPositions)
             {
                 case 1:
                     positions = new int[] { 5, 7, 16, 18 };
                     break;
                 case 2:
-                    positions = new int[] { 6, 10, 13, 18 };
+                    positions = new int[] { 6, 10, 18, 29 };
                     break;
                 case 3:
-                    positions = new int[] { 18, 20, 29, 31 };
+                    positions = new int[] { 12, 20, 29, 31 };
                     break;
                 case 4:
-                    positions = new int[] { 18, 23, 26, 30 };
+                    positions = new int[] { 6, 13, 23, 26 };
+                    break;
+                case 5:
+                    positions = new int[] { 12, 16, 26, 29 };
+                    break;
+                case 6:
+                    positions = new int[] { 13, 16, 26, 30 };
                     break;
             }
             //List int that contains the hexes for 6 & 8
