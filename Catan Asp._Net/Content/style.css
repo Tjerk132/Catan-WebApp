@@ -322,35 +322,32 @@
 
 
 
-    .backgroundHexagonPosition {
-        position: absolute;
-        top: 128px;
-        left: 445px;
-    }
-    /*
+.backgroundHexagonPosition {
+    position: absolute;
+    top: 92px;
+    left: 600.5px;
+}
+
 .backgroundHexagonMiddle {
     float: left;
     width: 300px;
-    height: 450px;
+    height: 500px;
     background: purple;
 }
 
 .backgroundHexagonLeft {
     float: left;
-    border-right: 117px solid purple; 
-border-top: 200px solid transparent;
-border-bottom: 200px solid transparent;
+    border-right: 148.5px solid purple;
+    border-top: 250px solid transparent;
+    border-bottom: 250px solid transparent;
 }
 
 .backgroundHexagonRight {
     float: left;
-    border-left: 117px solid purple; 
-    border-top: 200px solid transparent;
-    border-bottom: 192px solid transparent;
+    border-left: 148.5px solid purple;
+    border-top: 250px solid transparent;
+    border-bottom: 250px solid transparent;
 }
-
-
-*/
 
     .option-menu {
         border: 1px solid #FBC527;

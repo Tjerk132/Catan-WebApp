@@ -21,16 +21,16 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                     { margin_left = 184; }  //3rd row
                     break;
                 case 15:
-                    { margin_left = 130; }  //4th row
+                    { margin_left = 129; }  //4th row
                     break;
                 case 22:
-                    { margin_left = 183; }  //5th row
+                    { margin_left = 184; }  //5th row
                     break;
                 case 28:
-                    { margin_left = 237; }  //6th row
+                    { margin_left = 239; }  //6th row
                     break;
                 case 33:
-                    { margin_left = 291; }  //7th row
+                    { margin_left = 294; }  //7th row
                     break;
             }
             return margin_left;
