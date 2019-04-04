@@ -311,10 +311,11 @@
     z-index: 0;
     font-family: 'bold_game_font_7';
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    transition-duration: .4s;
 }
 
 .circle-text:hover {
-    transform: scale(1.25);
+    transform: scale(1.4);
     cursor: pointer;
 }
     .number_position {
@@ -405,3 +406,10 @@
                 background-color: #333333;
                 color: #666;
             }
+
+.footer {
+    line-height: 0px;
+    position: absolute;
+    bottom: 10px;
+    width: 270px;
+}

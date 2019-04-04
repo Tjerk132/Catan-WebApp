@@ -48,12 +48,12 @@ ul {
     height: 100%;
     float: left;
     border-right: 1px solid #74734c;
-    box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.9);
+    box-shadow: 4px 0px 16px rgba(0, 0, 0, 1);
     opacity: 1;
 }
 
     ul p {
-        color: #FBC527;
+        color: #ffffff;
         font-family: 'Roman SD';
         margin-top: 40px;
     }
@@ -96,8 +96,8 @@ li a {
 
 
 hr {
-    background-color: #FBC527;
-    border: 2px solid #FBC527;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
     margin-top: -12px;
     margin-bottom: -34px;
     width: 200px;
