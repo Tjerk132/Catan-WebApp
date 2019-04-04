@@ -13,18 +13,7 @@
     <div class="box">
     </div>
 
-    <div class="save-container">
-        @foreach (Save save in Model.Saves)
-            {
-               <div class="saves">
-                   <form>
-                       <p>@save.Name</p>
-                       <p>@save.Time.ToString("dd-MM-yyyy")</p>
-                       <input class="ctn-btn" type="submit" value="Load">
-                   </form>
-               </div>
-            }
-    </div>
+
 
     <div class="backgroundHexagonPosition">
         <div class="backgroundHexagonLeft"></div>
