@@ -25,7 +25,7 @@ namespace Catan_Asp._Net.Controllers
             CatanViewmodel viewmodel = new CatanViewmodel
             {
                 Saves = new List<Save>(),
-                Hexagons = new List<HexagonTile>()
+                Hexagons = new List<HexagonTile>(),
             };
             RetrieveSavesData Retrievedata = new RetrieveSavesData();
             List<Save> saves = Retrievedata.GetSavesInfo();
