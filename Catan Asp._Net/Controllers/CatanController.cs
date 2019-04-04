@@ -15,15 +15,13 @@ namespace Catan_Asp._Net.Controllers
     public class CatanController : Controller
     {
         HexagonPosition position = new HexagonPosition();
+        CreateHexagon createhexagon = new CreateHexagon();
         Materials materialchooser = new Materials();
-        Drawnumber createhexagon = new Drawnumber();
         Docks docks = new Docks();
 
         // GET: Catan
         public ActionResult Index()
         {
-
-
             CatanViewmodel viewmodel = new CatanViewmodel
             {
                 Saves = new List<Save>(),

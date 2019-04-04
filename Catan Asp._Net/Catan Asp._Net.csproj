@@ -186,7 +186,7 @@
     <Compile Include="Models\Viewmodel\CatanViewmodel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\CreateHexagons\Docks.cs" />
-    <Compile Include="Controllers\CreateHexagons\Drawnumber.cs" />
+    <Compile Include="Controllers\CreateHexagons\CreateHexagon.cs" />
     <Compile Include="Controllers\CreateHexagons\HexagonPosition.cs" />
     <Compile Include="Controllers\CreateHexagons\Materials.cs" />
   </ItemGroup>
