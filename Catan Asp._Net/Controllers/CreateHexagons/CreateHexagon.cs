@@ -7,7 +7,7 @@ using Catan_Asp._Net.Models;
 
 namespace Catan_Asp._Net.Controllers.CreateHexagons
 {
-    public class Drawnumber
+    public class CreateHexagon
     {
         private List<int> numbers = new List<int>();
         public List<int> waardes = new List<int>();
@@ -37,20 +37,26 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             int[] positions = new int[] { };
 
             Random r = new Random();
-            int ChooseBestPositions = r.Next(1, 5);
+            int ChooseBestPositions = r.Next(1, 7);
             switch (ChooseBestPositions)
             {
                 case 1:
-                    positions = new int[] { 5, 7, 16, 18 };
+                    positions = new int[] { 5, 7, 16, 19 };
                     break;
                 case 2:
-                    positions = new int[] { 6, 10, 13, 18 };
+                    positions = new int[] { 6, 10, 13, 24 };
                     break;
                 case 3:
-                    positions = new int[] { 18, 20, 29, 31 };
+                    positions = new int[] { 12, 20, 29, 31 };
                     break;
                 case 4:
-                    positions = new int[] { 18, 23, 26, 30 };
+                    positions = new int[] { 10, 23, 26, 30 };
+                    break;
+                case 5:
+                    positions = new int[] { 18, 20, 29, 31 };
+                    break;
+                case 6:
+                    positions = new int[] { 2, 18, 23, 26 };
                     break;
             }
             //List int that contains the hexes for 6 & 8
