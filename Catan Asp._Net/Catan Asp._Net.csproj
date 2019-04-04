@@ -144,6 +144,13 @@
     <Content Include="Images\GeneralDock.png" />
     <Content Include="Images\GrainDock.png" />
     <Content Include="Images\OreDock.png" />
+    <Content Include="Images\Resources\brick-pile.png" />
+    <Content Include="Images\Resources\folded-paper.png" />
+    <Content Include="Images\Resources\rolled-cloth.png" />
+    <Content Include="Images\Resources\sheep.png" />
+    <Content Include="Images\Resources\stone-pile.png" />
+    <Content Include="Images\Resources\wheat.png" />
+    <Content Include="Images\Resources\wood-pile.png" />
     <Content Include="Images\rover.jpg" />
     <Content Include="Images\SheepDock.png" />
     <Content Include="Images\StoneDock.png" />
