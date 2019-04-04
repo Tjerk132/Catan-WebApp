@@ -2,13 +2,9 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-size: cover;
-<<<<<<< HEAD
-    background-color: #f8f8f8;
-    background-image: url('../Images/background.jpg');
-=======
-    background-color: #383838;
+    background-image: url('../Images/backgroundd.jpg');
+    background-color: #44332C;
     /*background-image: url('../Images/background.jpg');*/
->>>>>>> febb528088f7b83f70212c53fbdef0a448d79826
     color: #ffffff;
     font-family: Helvetica;
     margin: 0 auto;
@@ -48,10 +44,10 @@ ul {
     margin: 0;
     padding: 0;
     width: 280px;
-    background-image: linear-gradient(#BF141A, #F46102);
+    background-color: #8d8b5b;
     height: 100%;
     float: left;
-    border-right: 1px solid #BF141A;
+    border-right: 1px solid #74734c;
     box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.9);
     opacity: 1;
 }

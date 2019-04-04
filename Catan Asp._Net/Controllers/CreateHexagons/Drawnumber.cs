@@ -37,26 +37,20 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             int[] positions = new int[] { };
 
             Random r = new Random();
-            int ChooseBestPositions = r.Next(1, 7);
+            int ChooseBestPositions = r.Next(1, 5);
             switch (ChooseBestPositions)
             {
                 case 1:
                     positions = new int[] { 5, 7, 16, 18 };
                     break;
                 case 2:
-                    positions = new int[] { 6, 10, 18, 29 };
+                    positions = new int[] { 6, 10, 13, 18 };
                     break;
                 case 3:
-                    positions = new int[] { 12, 20, 29, 31 };
+                    positions = new int[] { 18, 20, 29, 31 };
                     break;
                 case 4:
-                    positions = new int[] { 6, 13, 23, 26 };
-                    break;
-                case 5:
-                    positions = new int[] { 12, 16, 26, 29 };
-                    break;
-                case 6:
-                    positions = new int[] { 13, 16, 26, 30 };
+                    positions = new int[] { 18, 23, 26, 30 };
                     break;
             }
             //List int that contains the hexes for 6 & 8
@@ -165,56 +159,57 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
 
             //give circle-text values to hexagon \\
             //number font-size, number color & hexagonnumber dots
+            int FontSizeNot2and12 = 28;
 
             switch (hexagon.Number)
             {
                 case 2:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•";
                     break;
                 case 3:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••";
                     break;
                 case 4:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•••";
                     break;
                 case 5:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••••";
                     break;
                 case 6:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "red";
                     hexagon.Hexagonnumber = "•••••";
                     break;
                 case 8:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "red";
                     hexagon.Hexagonnumber = "•••••";
                     break;
                 case 9:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••••";
                     break;
                 case 10:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•••";
                     break;
                 case 11:
-                    hexagon.Font_size = 24;
+                    hexagon.Font_size = 28;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••";
                     break;
                 case 12:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•";
                     break;

@@ -309,6 +309,7 @@
     grid-area: footer;
     z-index: 0;
     font-family: 'bold_game_font_7';
+    text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
 
     .number_position {
@@ -346,7 +347,7 @@
     left: 600.5px;
 }
 
-.backgroundHexagonMiddle {
+/*.backgroundHexagonMiddle {
     float: left;
     width: 300px;
     height: 500px;
@@ -365,7 +366,8 @@
     border-left: 148.5px solid purple;
     border-top: 250px solid transparent;
     border-bottom: 250px solid transparent;
-}
+}*/
+
 
     .option-menu {
         margin: auto;
@@ -390,7 +392,7 @@
             transition-duration: .4s;
             cursor: pointer;
             border-radius: 2px;
-            width: 100px;
+            width: 180px;
         }
 
 
