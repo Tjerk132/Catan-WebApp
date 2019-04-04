@@ -200,6 +200,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{13e0a472-f09b-4715-856a-9e01930d2602}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{15378ad4-8662-4b8b-800b-6c9659c8bc69}</Project>
       <Name>Models</Name>
