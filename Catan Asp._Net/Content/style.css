@@ -95,7 +95,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/wood-pile.png');
-    background-size: 64px 64px;
+    background-size: 52px 52px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -131,7 +131,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/stone-pile.png');
-    background-size: 64px 64px;
+    background-size: 52px 52px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -167,7 +167,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/brick-pile.png');
-    background-size: 64px 64px;
+    background-size: 52px 52px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -203,7 +203,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/sheep.png');
-    background-size: 64px 64px;
+    background-size: 52px 52px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -239,10 +239,11 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/wheat.png');
-    background-size: 64px 64px;
+    background-size: 52px 52px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
     #hexagongrain:before {
         content: "";
@@ -309,9 +310,13 @@
     grid-area: footer;
     z-index: 0;
     font-family: 'bold_game_font_7';
-    text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+.circle-text:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+}
     .number_position {
         margin-top: -13px;
     }
