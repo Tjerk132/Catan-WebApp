@@ -163,52 +163,52 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             switch (hexagon.Number)
             {
                 case 2:
-                    hexagon.Font_size = 16;
+                    hexagon.Font_size = 20;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•";
                     break;
                 case 3:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••";
                     break;
                 case 4:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•••";
                     break;
                 case 5:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••••";
                     break;
                 case 6:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "red";
                     hexagon.Hexagonnumber = "•••••";
                     break;
                 case 8:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "red";
                     hexagon.Hexagonnumber = "•••••";
                     break;
                 case 9:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••••";
                     break;
                 case 10:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•••";
                     break;
                 case 11:
-                    hexagon.Font_size = 20;
+                    hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••";
                     break;
                 case 12:
-                    hexagon.Font_size = 16;
+                    hexagon.Font_size = 20;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•";
                     break;

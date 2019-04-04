@@ -2,8 +2,13 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-size: cover;
+<<<<<<< HEAD
+    background-color: #f8f8f8;
+    background-image: url('../Images/background.jpg');
+=======
     background-color: #383838;
     /*background-image: url('../Images/background.jpg');*/
+>>>>>>> febb528088f7b83f70212c53fbdef0a448d79826
     color: #ffffff;
     font-family: Helvetica;
     margin: 0 auto;
@@ -79,7 +84,7 @@ li a {
     color: #fff;
     font-size: 35px;
     font-weight: bold;
-    padding-bottom: 200px;
+    padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
     line-height: 18px;

@@ -3,6 +3,7 @@
 }
 
 .grid-container {
+    margin-top: 20px;
     margin-left:0px;
     padding: 90px ;
     /*top&bottom, left&right*/
@@ -57,7 +58,7 @@
     #hexagondesert {
         width: 100px;
         height: 60px;
-        background: #FFBD4F;
+        background: #ffc86c;
         position: relative;
         margin: 10px auto; /*color middle*/
     }
@@ -71,7 +72,7 @@
             left: 0;
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
-            border-bottom: 27px solid #FFBD4F; /*color top*/
+            border-bottom: 27px solid #ffc86c; /*color top*/
         }
 
         #hexagondesert:after {
@@ -83,49 +84,57 @@
             left: 0;
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
-            border-top: 27px solid #FFBD4F; /*color bottom*/
+            border-top: 27px solid #ffc86c; /*color bottom*/
         }
 
 
-    #hexagonwood {
-        width: 100px;
-        height: 60px;
-        background: #32d300;
-        position: relative;
-        margin: 10px auto; /*color middle*/
+#hexagonwood {
+    width: 100px;
+    height: 60px;
+    background: #9C5332;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/wood-pile.png');
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #hexagonwood:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #9C5332; /*color top*/
     }
 
-        #hexagonwood:before {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 27px solid #32d300; /*color top*/
-        }
-
-        #hexagonwood:after {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 27px solid #32d300; /*color bottom*/
-        }
-
-    #hexagonore {
-        width: 100px;
-        height: 60px;
-        background: #c9bba0;
-        position: relative;
-        margin: 10px auto; /*color middle*/
+    #hexagonwood:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #9C5332; /*color bottom*/
     }
+
+#hexagonore {
+    width: 100px;
+    height: 60px;
+    background: #c9bba0;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/stone-pile.png');
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
         #hexagonore:before {
             content: "";
@@ -151,106 +160,118 @@
             border-top: 27px solid #c9bba0; /*color bottom*/
         }
 
-    #hexagonstone {
-        width: 100px;
-        height: 60px;
-        background: #ff0000;
-        position: relative;
-        margin: 10px auto; /*color middle*/
+#hexagonstone {
+    width: 100px;
+    height: 60px;
+    background: #D5482D;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/brick-pile.png');
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #hexagonstone:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #D5482D; /*color top*/
     }
 
-        #hexagonstone:before {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 27px solid #ff0000; /*color top*/
-        }
-
-        #hexagonstone:after {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 27px solid #ff0000; /*color bottom*/
-        }
-
-    #hexagonwool {
-        width: 100px;
-        height: 60px;
-        background: #adff00;
-        position: relative;
-        margin: 10px auto; /*color middle*/
+    #hexagonstone:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #D5482D; /*color bottom*/
     }
 
-        #hexagonwool:before {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 27px solid #adff00; /*color top*/
-        }
+#hexagonwool {
+    width: 100px;
+    height: 60px;
+    background: #ABA970;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/sheep.png');
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
-        #hexagonwool:after {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 27px solid #adff00; /*color bottom*/
-        }
-
-    #hexagongrain {
-        width: 100px;
-        height: 60px;
-        background: #FFDA37;
-        position: relative;
-        margin: 10px auto; /*color middle*/
+    #hexagonwool:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #ABA970; /*color top*/
     }
 
-        #hexagongrain:before {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 27px solid #FFDA37; /*color top*/
-        }
+    #hexagonwool:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #ABA970; /*color bottom*/
+    }
 
-        #hexagongrain:after {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -27px;
-            left: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 27px solid #FFDA37; /*color bottom*/
-        }
+#hexagongrain {
+    width: 100px;
+    height: 60px;
+    background: #FC9F28;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/wheat.png');
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #hexagongrain:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #FC9F28; /*color top*/
+    }
+
+    #hexagongrain:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #FC9F28; /*color bottom*/
+    }
 
     #hexagonblue {
         width: 100px;
         height: 60px;
-        background: #00BDFF;
+        background: #5d99ae;
         position: relative;
         margin: 10px auto;
     }
@@ -264,7 +285,7 @@
             left: 0;
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
-            border-bottom: 27px solid #00BDFF;
+            border-bottom: 27px solid #5d99ae;
         }
 
         #hexagonblue:after {
@@ -276,22 +297,19 @@
             left: 0;
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
-            border-top: 27px solid #00BDFF; /*color bottom*/
+            border-top: 27px solid #5d99ae; /*color bottom*/
         }
 
-    .circle-text {
-        display: table-cell;
-        height: 60px;
-        width: 60px;
-        text-align: center;
-        vertical-align: middle;
-        border-radius: 32px;
-        background: #fff;
-        grid-area: footer;
-        border: 2px solid grey;
-        z-index: 0;
-        font-family: 'bold_game_font_7';
-    }
+.circle-text {
+    display: table-cell;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    grid-area: footer;
+    z-index: 0;
+    font-family: 'bold_game_font_7';
+}
 
     .number_position {
         margin-top: -13px;
@@ -299,7 +317,7 @@
 
     .dot_position {
         margin: -20px;
-        font-size: 20px;
+        font-size: 24px;
         color: black;
     }
 
@@ -350,32 +368,33 @@
 }
 
     .option-menu {
-        border: 1px solid #FBC527;
-        background-color: #333333;
-        margin: 4px;
-        border-radius: 4px;
+        margin: auto;
+        border-radius: 2px;
+        width: 240px;
     }
 
         .option-menu p {
             margin-top: 0px;
+            font-size: 16px;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-
         .option-menu input {
-            background-color: #FBC527;
+            background-color: #333;
             border: none;
             color: white;
-            padding: 6px 14px;
+            padding: 6px 18px;
             text-decoration: none;
             font-size: 14px;
             margin: 4px 2px;
             transition-duration: .4s;
             cursor: pointer;
             border-radius: 2px;
+            width: 100px;
         }
 
+
             .option-menu input:hover {
-                background-color: #FBC527;
-                color: black;
+                background-color: #333333;
+                color: #666;
             }
