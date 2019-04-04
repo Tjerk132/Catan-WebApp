@@ -16,6 +16,14 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
         int oreDock = 1;
         int generalDock = 4;
 
+        public List<int> Harborhexes()
+        {
+            int[] harborhexes = new int[] { 0, 2, 8, 9, 21, 22, 32, 33, 35 };
+            List<int> HarborPositions = new List<int>();
+            HarborPositions.AddRange(harborhexes);
+
+            return HarborPositions;
+        }
 
         public string DockType()
         {
