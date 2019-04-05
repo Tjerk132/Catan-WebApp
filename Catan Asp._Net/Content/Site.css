@@ -22,9 +22,7 @@
 
 .zoom{
     zoom: 130%;
-
 }
-
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -44,20 +42,20 @@ ul {
     margin: 0;
     padding: 0;
     width: 280px;
-    background-color: #5b858d;
+    background-color: #8d8b5b;
     height: 100%;
     float: left;
-    border-right: 1px solid #365156;
-    box-shadow: 4px 0px 16px rgba(0, 0, 0, 1);
+    border-right: 1px solid #74734c;
+    box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.9);
     opacity: 1;
-    transition-duration: .4s;
 }
 
     ul p {
-        color: #ffffff;
+        color: #FBC527;
         font-family: 'Roman SD';
         margin-top: 40px;
     }
+
 
 li a {
     display: block;
@@ -96,8 +94,8 @@ li a {
 
 
 hr {
-    background-color: #ffffff;
-    border: 2px solid #ffffff;
+    background-color: #FBC527;
+    border: 2px solid #FBC527;
     margin-top: -12px;
     margin-bottom: -34px;
     width: 200px;

@@ -9,14 +9,15 @@ using System.Data.SqlClient;
 using System.Data;
 using Catan_Asp._Net.Controllers.CreateHexagons;
 using DataLayer;
+using Models.Models;
 
 namespace Catan_Asp._Net.Controllers
 {
     public class CatanController : Controller
     {
         HexagonPosition position = new HexagonPosition();
-        CreateHexagon createhexagon = new CreateHexagon();
         Materials materialchooser = new Materials();
+        Drawnumber createhexagon = new Drawnumber();
         Docks docks = new Docks();
 
         // GET: Catan
@@ -26,11 +27,11 @@ namespace Catan_Asp._Net.Controllers
             {
                 Saves = new List<Save>(),
                 Hexagons = new List<HexagonTile>(),
+                DockLines = new List<DockLines>()
             };
             RetrieveSavesData Retrievedata = new RetrieveSavesData();
             List<Save> saves = Retrievedata.GetSavesInfo();
             viewmodel.Saves = saves;
-
 
             List<int> HarborPositions = docks.Harborhexes();
 
@@ -40,12 +41,10 @@ namespace Catan_Asp._Net.Controllers
 
             Random r = new Random();
 
-
             for (int i = 0; i < 37; i++)
             {
                 if (PlaygroundPositions.Contains(i))
                 {
-
                     int MaterialChooser = r.Next(1, 7);
                     string HexagonId = materialchooser.HexagonMaterial(MaterialChooser, i, SixAndEightPositions);
 
@@ -66,11 +65,21 @@ namespace Catan_Asp._Net.Controllers
                         Margin_top = position.Margin_Top(i),
                         Id = "hexagonblue",
                     };
-                     if (HarborPositions.Contains(i))
-                     {
+
+                    if (HarborPositions.Contains(i))
+                    {
                         hexagon.Image = docks.DockType();
                         hexagon.Image_Margin_left = hexagon.Margin_left + 20;
-                     }
+
+                        int count = 0;
+
+                        for (int j = 0; j < 2; j++)
+                        {
+                            DockLines dockLine = docks.dockLine(i, count);
+                            viewmodel.DockLines.Add(dockLine);
+                            count++;
+                        }
+                    }
 
                     viewmodel.Hexagons.Add(hexagon);
                 }

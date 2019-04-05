@@ -11,17 +11,17 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
         int margin_top = -63;   //Start y-position for 1st row
         public int Margin_Left(int i)
         {
-            margin_left += 110;
+            margin_left += 108;
             switch (i)
             {
                 case 4:
-                    { margin_left = 238; }  //2nd row
+                    { margin_left = 237; }  //2nd row
                     break;
                 case 9:
                     { margin_left = 184; }  //3rd row
                     break;
                 case 15:
-                    { margin_left = 129; }  //4th row
+                    { margin_left = 131; }  //4th row
                     break;
                 case 22:
                     { margin_left = 184; }  //5th row
@@ -49,19 +49,19 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                     { margin_top = 30; }   //2nd row
                     break;
                 case 9:
-                    { margin_top = 124; }  //3rd row
+                    { margin_top = 123; }  //3rd row
                     break;
                 case 15:
                     { margin_top = 217; }  //4th row
                     break;
                 case 22:
-                    { margin_top = 310; }  //5th row
+                    { margin_top = 311; }  //5th row
                     break;
                 case 28:
-                    { margin_top = 403; } //6th row
+                    { margin_top = 405; } //6th row
                     break;
                 case 33:
-                    { margin_top = 496; }  //7th row
+                    { margin_top = 499; }  //7th row
                     break;
             }
             return margin_top;

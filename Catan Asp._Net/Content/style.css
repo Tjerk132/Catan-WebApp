@@ -95,7 +95,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/wood-pile.png');
-    background-size: 52px 52px;
+    background-size: 64px 64px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -131,7 +131,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/stone-pile.png');
-    background-size: 52px 52px;
+    background-size: 64px 64px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -167,7 +167,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/brick-pile.png');
-    background-size: 52px 52px;
+    background-size: 64px 64px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -203,7 +203,7 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/sheep.png');
-    background-size: 52px 52px;
+    background-size: 64px 64px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -239,11 +239,10 @@
     position: relative;
     margin: 10px auto; /*color middle*/
     background-image: url('../Images/Resources/wheat.png');
-    background-size: 52px 52px;
+    background-size: 64px 64px;
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
     #hexagongrain:before {
         content: "";
@@ -310,14 +309,9 @@
     grid-area: footer;
     z-index: 0;
     font-family: 'bold_game_font_7';
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    transition-duration: .4s;
+    text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
 
-.circle-text:hover {
-    transform: scale(1.4);
-    cursor: pointer;
-}
     .number_position {
         margin-top: -13px;
     }
@@ -345,15 +339,14 @@
     }
 
 
-
-
+/*
 .backgroundHexagonPosition {
     position: absolute;
     top: 92px;
     left: 600.5px;
 }
 
-/*.backgroundHexagonMiddle {
+.backgroundHexagonMiddle {
     float: left;
     width: 300px;
     height: 500px;
@@ -374,6 +367,14 @@
     border-bottom: 250px solid transparent;
 }*/
 
+.docks {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #44332C;
+}
 
     .option-menu {
         margin: auto;
@@ -406,10 +407,3 @@
                 background-color: #333333;
                 color: #666;
             }
-
-.footer {
-    line-height: 0px;
-    position: absolute;
-    bottom: 10px;
-    width: 270px;
-}

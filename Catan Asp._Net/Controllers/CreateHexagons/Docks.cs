@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -63,6 +64,157 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                     break;
             }
             return trade;
+        }
+
+        public DockLines dockLine(int i, int count)
+        {
+            DockLines dockLine = new DockLines();
+            dockLine.top = Top(i, count);
+            dockLine.left = Left(i, count);
+            dockLine.degree = Degree(i, count);
+
+            return dockLine;
+        }
+
+        public int Top(int i, int count)
+        {
+            int top = 0;
+
+            switch (i)
+            {
+                case 0:
+                    if (count == 0){ top = 88; }
+                    else { top = 68; }
+                    break;
+                case 2:
+                    if (count == 0) { top = 68; }
+                    else { top = 88; }
+                    break;
+                case 8:
+                    if (count == 0) { top = 161; }
+                    else { top = 181; }
+                    break;
+                case 9:
+                    if (count == 0) { top = 202; }
+                    else { top = 254; }
+                    break;
+                case 21:
+                    if (count == 0) { top = 296; }
+                    else { top = 348; }
+                    break;
+                case 22:
+                    if (count == 0) { top = 390; }
+                    else { top = 442; }
+                    break;
+                case 32:
+                    if (count == 0) { top = 483; }
+                    else { top = 463; }
+                    break;
+                case 33:
+                    if (count == 0) { top = 558; }
+                    else { top = 578; }
+                    break;
+                case 35:
+                    if (count == 0) { top = 578; }
+                    else { top = 558; }
+                    break;
+            }
+
+            return top;
+        }
+
+        public int Left(int i, int count)
+        {
+            int left = 0;
+
+            switch (i)
+            {
+                case 0:
+                    if (count == 0) { left = 432; }
+                    else { left = 474; }
+                    break;
+                case 2:
+                    if (count == 0) { left = 606; }
+                    else { left = 648; }
+                    break;
+                case 8:
+                    if (count == 0) { left = 769; }
+                    else { left = 811; }
+                    break;
+                case 9:
+                    if (count == 0) { left = 367; }
+                    else { left = 367; }
+                    break;
+                case 21:
+                    if (count == 0) { left = 878; }
+                    else { left = 878; }
+                    break;
+                case 22:
+                    if (count == 0) { left = 367; }
+                    else { left = 367; }
+                    break;
+                case 32:
+                    if (count == 0) { left = 769; }
+                    else { left = 811; }
+                    break;
+                case 33:
+                    if (count == 0) { left = 434; }
+                    else { left = 476; }
+                    break;
+                case 35:
+                    if (count == 0) { left = 608; }
+                    else { left = 650; }
+                    break;
+            }
+
+            return left;
+        }
+
+        public int Degree(int i, int count)
+        {
+            int degree = 0;
+
+            switch (i)
+            {
+                case 0:
+                    if (count == 0) { }
+                    else { degree = 118; }
+                    break;
+                case 2:
+                    if (count == 0) { degree = 62; }
+                    else { }
+                    break;
+                case 8:
+                    if (count == 0) { degree = 62; }
+                    else { }
+                    break;
+                case 9:
+                    if (count == 0) { degree = 62; }
+                    else { degree = 118; }
+                    break;
+                case 21:
+                    if (count == 0) { degree = 118; }
+                    else { degree = 62; }
+                    break;
+                case 22:
+                    if (count == 0) { degree = 62; }
+                    else { degree = 118; }
+                    break;
+                case 32:
+                    if (count == 0) { degree = 118; }
+                    else { }
+                    break;
+                case 33:
+                    if (count == 0) { }
+                    else { degree = 62; }
+                    break;
+                case 35:
+                    if (count == 0) { degree = 118; }
+                    else { }
+                    break;
+            }
+
+            return degree;
         }
     }
 }

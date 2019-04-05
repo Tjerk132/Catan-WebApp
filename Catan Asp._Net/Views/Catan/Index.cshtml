@@ -1,10 +1,12 @@
 ﻿<link rel="stylesheet" href="../Content/style.css" type="text/css">
 @using Catan_Asp._Net.Models;
+@using Models.Models;
 @model Catan_Asp._Net.Models.Viewmodel.CatanViewmodel
 @{
     ViewBag.Title = "Catan";
 
     string px = "px";
+    string deg = "deg";
 }
 
 
@@ -15,11 +17,13 @@
 
 
 
-    <div class="backgroundHexagonPosition">
+    @*<div class="backgroundHexagonPosition">
         <div class="backgroundHexagonLeft"></div>
         <div class="backgroundHexagonMiddle"></div>
         <div class="backgroundHexagonRight"></div>
-    </div>
+    </div>*@
+
+
 
     <div class="grid-container">
 
@@ -28,17 +32,17 @@
             <div id="@hexagon.Id" class="item7" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_left@px"></div>
             if (hexagon.Id != "hexagonblue")
             {
-            <div class="circle-text" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_leftNumbers@px">
-                @if (hexagon.Id != "hexagondesert")
-                {
-                <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@hexagon.Number</p>
-                }
-                <p class="dot_position">@hexagon.Hexagonnumber</p>
-                @if (hexagon.Class == "rover")
-                {
-                    <img class="@hexagon.Class" src="~/Images/Resources/folded-paper.png" alt="rover" width="64" height="64" style="background-size: 64px 64px;background-repeat: no-repeat;background-position: center;">
-                }
-            </div>
+                <div class="circle-text" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_leftNumbers@px">
+                    @if (hexagon.Id != "hexagondesert")
+                    {
+                        <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@hexagon.Number</p>
+                    }
+                    <p class="dot_position">@hexagon.Hexagonnumber</p>
+                    @if (hexagon.Class == "rover")
+                    {
+                        <img class="@hexagon.Class" src="~/Images/Resources/folded-paper.png" alt="rover" width="64" height="64" style="background-size: 64px 64px;background-repeat: no-repeat;background-position: center;">
+                    }
+                </div>
             }
             else
             {
@@ -50,5 +54,18 @@
                 }
             }
         }
+
+        @foreach (DockLines dockLine in Model.DockLines)
+        {
+            if (dockLine.degree == null)
+            {
+                <div class="docks" style="top:@dockLine.top@px; left:@dockLine.left@px; "></div>
+            }
+            else
+            {
+                <div class="docks" style="top:@dockLine.top@px; left:@dockLine.left@px; transform:rotate(@dockLine.degree@deg)"></div>
+            }
+        }
+
     </div>
 </body>
