@@ -313,7 +313,7 @@
     text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
     .circle-text:hover {
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
 
     .number_position {

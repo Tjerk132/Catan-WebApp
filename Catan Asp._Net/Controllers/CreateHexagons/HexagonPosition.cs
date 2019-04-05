@@ -30,7 +30,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                     { margin_left = 239; }  //6th row
                     break;
                 case 33:
-                    { margin_left = 294; }  //7th row
+                    { margin_left = 293; }  //7th row
                     break;
             }
             return margin_left;
