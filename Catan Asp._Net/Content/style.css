@@ -308,9 +308,13 @@
     vertical-align: middle;
     grid-area: footer;
     z-index: 0;
+    transition: transform .4s; /* Animation */
     font-family: 'bold_game_font_7';
     text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
+    .circle-text:hover {
+        transform: scale(1.5);
+    }
 
     .number_position {
         margin-top: -13px;
