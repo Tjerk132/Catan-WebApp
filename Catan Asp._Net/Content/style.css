@@ -314,6 +314,7 @@
 }
     .circle-text:hover {
         transform: scale(1.2);
+        cursor: pointer;
     }
 
     .number_position {
@@ -380,17 +381,24 @@
     background-color: #44332C;
 }
 
-    .option-menu {
-        margin: auto;
-        border-radius: 2px;
-        width: 240px;
-    }
+.option-menu {
+    margin: auto;
+    border-radius: 2px;
+    width: 240px;
+    border: 1px solid #FBC527;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    
+}
 
-        .option-menu p {
-            margin-top: 0px;
-            font-size: 16px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    .option-menu p {
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #537278;
+        width: 66px;
+        margin: -32px auto auto auto;
+        border-radius: 180px;
+    }
 
         .option-menu input {
             background-color: #333;
