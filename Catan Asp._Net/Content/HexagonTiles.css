@@ -1,0 +1,302 @@
+﻿.grid-container {
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 90px;
+    display: grid;
+    grid-gap: 5px;
+    position: fixed;
+}
+
+    .grid-container > div {
+        padding: 16px 0;
+        font-size: 16px;
+    }
+
+.item7 {
+    grid-area: footer;
+}
+
+.circle-text {
+    display: table-cell;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    grid-area: footer;
+    z-index: 0;
+    font-family: 'bold_game_font_7';
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    transition-duration: .4s;
+}
+
+    .circle-text:hover {
+        transform: scale(1.4);
+        cursor: pointer; 
+    }
+
+.number_position {
+    margin-top: -13px;
+}
+
+.dot_position {
+    margin: -20px;
+    font-size: 24px;
+    color: black;
+}
+
+.robber {
+    width: 20px;
+    height: 37.5px;
+}
+
+.backgroundHexagonPosition {
+    position: absolute;
+    top: 92px;
+    left: 600.5px;
+}
+
+#hexagondesert {
+    width: 100px;
+    height: 60px;
+    background: #ffc86c;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+}
+
+    #hexagondesert:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #ffc86c; /*color top*/
+    }
+
+    #hexagondesert:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #ffc86c; /*color bottom*/
+    }
+
+
+#hexagonwood {
+    width: 100px;
+    height: 60px;
+    background: #9C5332;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/wood-pile.png');
+    background-size: 52px 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #hexagonwood:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #9C5332; /*color top*/
+    }
+
+    #hexagonwood:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #9C5332; /*color bottom*/
+    }
+
+#hexagonore {
+    width: 100px;
+    height: 60px;
+    background: #c9bba0;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/stone-pile.png');
+    background-size: 52px 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #hexagonore:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #c9bba0; /*color top*/
+    }
+
+    #hexagonore:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #c9bba0; /*color bottom*/
+    }
+
+#hexagonstone {
+    width: 100px;
+    height: 60px;
+    background: #D5482D;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/brick-pile.png');
+    background-size: 52px 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #hexagonstone:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #D5482D; /*color top*/
+    }
+
+    #hexagonstone:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #D5482D; /*color bottom*/
+    }
+
+#hexagonwool {
+    width: 100px;
+    height: 60px;
+    background: #ABA970;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/sheep.png');
+    background-size: 52px 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #hexagonwool:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #ABA970; /*color top*/
+    }
+
+    #hexagonwool:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #ABA970; /*color bottom*/
+    }
+
+#hexagongrain {
+    width: 100px;
+    height: 60px;
+    background: #FC9F28;
+    position: relative;
+    margin: 10px auto; /*color middle*/
+    background-image: url('../Images/Resources/wheat.png');
+    background-size: 52px 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+    #hexagongrain:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #FC9F28; /*color top*/
+    }
+
+    #hexagongrain:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #FC9F28; /*color bottom*/
+    }
+
+#hexagonblue {
+    width: 100px;
+    height: 60px;
+    background: #5d99ae;
+    position: relative;
+    margin: 10px auto;
+}
+
+    #hexagonblue:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 27px solid #5d99ae;
+    }
+
+    #hexagonblue:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 27px solid #5d99ae; /*color bottom*/
+    }
