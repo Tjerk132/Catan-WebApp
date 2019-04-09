@@ -84,38 +84,38 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             {
                 case 0:
                     if (count == 0){ top = 88; }
-                    else { top = 68; }
+                    else { top = 65; }
                     break;
                 case 2:
-                    if (count == 0) { top = 68; }
+                    if (count == 0) { top = 66; }
                     else { top = 88; }
                     break;
                 case 8:
-                    if (count == 0) { top = 161; }
+                    if (count == 0) { top = 158; }
                     else { top = 181; }
                     break;
                 case 9:
-                    if (count == 0) { top = 202; }
-                    else { top = 254; }
+                    if (count == 0) { top = 201; }
+                    else { top = 251; }
                     break;
                 case 21:
-                    if (count == 0) { top = 296; }
-                    else { top = 348; }
+                    if (count == 0) { top = 293; }
+                    else { top = 346; }
                     break;
                 case 22:
-                    if (count == 0) { top = 390; }
-                    else { top = 442; }
+                    if (count == 0) { top = 387; }
+                    else { top = 439; }
                     break;
                 case 32:
-                    if (count == 0) { top = 483; }
+                    if (count == 0) { top = 480; }
                     else { top = 463; }
                     break;
                 case 33:
                     if (count == 0) { top = 558; }
-                    else { top = 578; }
+                    else { top = 575; }
                     break;
                 case 35:
-                    if (count == 0) { top = 578; }
+                    if (count == 0) { top = 575; }
                     else { top = 558; }
                     break;
             }
@@ -130,16 +130,16 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             switch (i)
             {
                 case 0:
-                    if (count == 0) { left = 432; }
+                    if (count == 0) { left = 433; }
                     else { left = 474; }
                     break;
                 case 2:
                     if (count == 0) { left = 606; }
-                    else { left = 648; }
+                    else { left = 649; }
                     break;
                 case 8:
                     if (count == 0) { left = 769; }
-                    else { left = 811; }
+                    else { left = 812; }
                     break;
                 case 9:
                     if (count == 0) { left = 367; }
@@ -155,10 +155,10 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                     break;
                 case 32:
                     if (count == 0) { left = 769; }
-                    else { left = 811; }
+                    else { left = 812; }
                     break;
                 case 33:
-                    if (count == 0) { left = 434; }
+                    if (count == 0) { left = 435; }
                     else { left = 476; }
                     break;
                 case 35:

@@ -302,8 +302,8 @@
 
 .circle-text-playground {
     display: table-cell;
-    height: 65px;
-    width: 65px;
+    height: 60px;
+    width: 60px;
     text-align: center;
     border-radius: 50px;
     vertical-align: middle;
@@ -318,12 +318,12 @@
     }
 .circle-text {
     display: table-cell;
-    height: 62px;
-    width: 62px;
+    height: 60px;
+    width: 60px;
     text-align: center;
     background-color: white;
-    border-radius: 50px;
-    /*border: 2px solid #44332C;*/
+    border-radius: 60px;
+    border: 4px solid #44332C;
     vertical-align: middle;
     grid-area: footer;
     z-index: 2;
@@ -362,40 +362,11 @@
         height: 37.5px;
     }
 
-
-/*
-.backgroundHexagonPosition {
-    position: absolute;
-    top: 92px;
-    left: 600.5px;
-}
-
-.backgroundHexagonMiddle {
-    float: left;
-    width: 300px;
-    height: 500px;
-    background: purple;
-}
-
-.backgroundHexagonLeft {
-    float: left;
-    border-right: 148.5px solid purple;
-    border-top: 250px solid transparent;
-    border-bottom: 250px solid transparent;
-}
-
-.backgroundHexagonRight {
-    float: left;
-    border-left: 148.5px solid purple;
-    border-top: 250px solid transparent;
-    border-bottom: 250px solid transparent;
-}*/
-
 .docks {
     position: absolute;
     z-index: 1;
-    width: 8px;
-    height: 40px;
+    width: 7px;
+    height: 45px;
     border-radius: 30px;
     background-color: #44332C;
 }
