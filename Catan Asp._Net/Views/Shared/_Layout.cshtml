@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" src="~/Scripts/html2canvas.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Map Generator</title>
@@ -12,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lusitana:700" rel="stylesheet">
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
-<body>
+<body id="container">
     <ul class="unselectable">
         <div class="title">
             <p style="font-size:55px; font-family: 'Lusitana', serif;">CATAN</p><br>
@@ -27,7 +28,7 @@
                 <input onClick="window.location.reload()" value="Generate" type="submit">
             </form>
             <form>
-                <input onClick="window.location.reload()" value="Save" type="submit">
+                <input onClick="screenshot();" value="Save" type="button">
             </form>
             <form>
                 <input onClick="window.location.reload()" value="Load" type="submit">
@@ -38,7 +39,14 @@
             <p>&copy;Alle rechten voorbehouden.</p>
         </div>
     </ul>
-
+    <!-- Script -->
+    <script type='text/javascript'>
+        function screenshot() {
+            html2canvas(document.getElementById('container')).then(function (canvas) {
+                document.body.appendChild(canvas);
+            });
+        }
+    </script>
     <div class="container body-content">
         @RenderBody()
     </div>
