@@ -146,6 +146,8 @@
     <Content Include="Images\OreDock.png" />
     <Content Include="Images\Resources\brick-pile.png" />
     <Content Include="Images\Resources\folded-paper.png" />
+    <Content Include="Images\Resources\KapiteinCactus.png" />
+    <Content Include="Images\Resources\pawn.png" />
     <Content Include="Images\Resources\rolled-cloth.png" />
     <Content Include="Images\Resources\sheep.png" />
     <Content Include="Images\Resources\stone-pile.png" />
