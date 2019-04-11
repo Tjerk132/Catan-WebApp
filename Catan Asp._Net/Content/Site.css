@@ -51,7 +51,7 @@ ul {
 }
 
     ul p {
-        color: #FBC527;
+        color: #ffffff;
         font-family: 'Roman SD';
         margin-top: 40px;
     }
@@ -82,7 +82,12 @@ li a {
     padding-top: 20px;
     text-align: center;
     line-height: 18px;
+    
 }
+
+    .title p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
 .unselectable {
     -webkit-touch-callout: none;
@@ -94,11 +99,10 @@ li a {
 
 
 hr {
-    background-color: #FBC527;
-    border: 2px solid #FBC527;
+    background-color: #ffffff;
     margin-top: -12px;
     margin-bottom: -34px;
-    width: 200px;
+    width: 260px;
     border-radius: 1px;
     box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -108,10 +112,13 @@ hr {
     bottom: 4px;
     width: 300px;
 }
-    .footer p {
+    .footer a {
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         line-height: 0px;
-
-        
     }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: none;
+        }
