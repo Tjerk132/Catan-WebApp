@@ -12,10 +12,9 @@
 
 
 <body>
-    <div class="box">
-    </div>
+    <div class="box"></div>
 
-    <div class="grid-container">
+    <div class="grid-container" id="grid-container">
 
         @foreach (HexagonTile hexagon in Model.Hexagons)
         {
@@ -56,6 +55,5 @@
                 <div class="docks" style="top:@dockLine.top@px; left:@dockLine.left@px; transform:rotate(@dockLine.degree@deg)"></div>
             }
         }
-
     </div>
 </body>
