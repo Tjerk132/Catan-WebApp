@@ -12,6 +12,7 @@
     <link href="~/Content/MediaQueries.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lusitana:700" rel="stylesheet">
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
 </head>
 <body id="container">
     <ul class="unselectable">
@@ -28,23 +29,52 @@
                 <input onClick="window.location.reload()" value="Generate" type="submit">
             </form>
             <form>
-                <input onClick="screenshot();" value="Save" type="button">
+                <input id="download" value="Save" type="button">
             </form>
             <form>
                 <input onClick="window.location.reload()" value="Load" type="submit">
             </form>
         </div>
         <div class="footer">
-            <a>&copy; 2019 Proftaak groep 3</a><br/>
+            <a>&copy; 2019 Proftaak groep 3</a><br />
             <a>Alle rechten voorbehouden</a>
         </div>
     </ul>
     <!-- Script -->
     <script type='text/javascript'>
-        function screenshot() {
-            html2canvas(document.getElementById('grid-container')).then(function (canvas) {
-                document.body.appendChild(canvas);
+        document.getElementById("download").addEventListener("click", function () {
+
+            html2canvas(document.querySelector('#grid-container')).then(function (canvas) {
+
+                console.log(canvas);
+                saveAs(canvas.toDataURL(), 'Catan.png');
             });
+        });
+
+
+        function saveAs(uri, filename) {
+
+            var link = document.createElement('a');
+
+            if (typeof link.download === 'string') {
+
+                link.href = uri;
+                link.download = filename;
+
+                //Firefox requires the link to be in the body
+                document.body.appendChild(link);
+
+                //simulate click
+                link.click();
+
+                //remove the link when done
+                document.body.removeChild(link);
+
+            } else {
+
+                window.open(uri);
+
+            }
         }
     </script>
     <div class="container body-content">
