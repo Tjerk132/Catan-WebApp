@@ -131,40 +131,40 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             switch (i)
             {
                 case 0:
-                    if (count == 0) { left = 433; }
-                    else { left = 474; }
+                    if (count == 0) { left = 250; }
+                    else { left = 291; }
                     break;
                 case 2:
-                    if (count == 0) { left = 606; }
-                    else { left = 649; }
+                    if (count == 0) { left = 422; }
+                    else { left = 465; }
                     break;
                 case 8:
-                    if (count == 0) { left = 769; }
-                    else { left = 812; }
+                    if (count == 0) { left = 585; }
+                    else { left = 628; }
                     break;
                 case 9:
-                    if (count == 0) { left = 367; }
-                    else { left = 367; }
+                    if (count == 0) { left = 183; }
+                    else { left = 183; }
                     break;
                 case 21:
-                    if (count == 0) { left = 878; }
-                    else { left = 878; }
+                    if (count == 0) { left = 695; }
+                    else { left = 694; }
                     break;
                 case 22:
-                    if (count == 0) { left = 367; }
-                    else { left = 367; }
+                    if (count == 0) { left = 183; }
+                    else { left = 183; }
                     break;
                 case 32:
-                    if (count == 0) { left = 770; }
-                    else { left = 812; }
+                    if (count == 0) { left = 586; }
+                    else { left = 628; }
                     break;
                 case 33:
-                    if (count == 0) { left = 435; }
-                    else { left = 476; }
+                    if (count == 0) { left = 251; }
+                    else { left = 295; }
                     break;
                 case 35:
-                    if (count == 0) { left = 608; }
-                    else { left = 650; }
+                    if (count == 0) { left = 424; }
+                    else { left = 467; }
                     break;
             }
 
