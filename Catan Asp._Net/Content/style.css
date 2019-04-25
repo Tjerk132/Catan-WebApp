@@ -308,6 +308,7 @@
     vertical-align: middle;
     grid-area: footer;
     z-index: 2;
+    position: sticky;
     transition: transform .4s; /* Animation */
     font-family: 'bold_game_font_7';
     text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
@@ -327,6 +328,7 @@
     vertical-align: middle;
     grid-area: footer;
     z-index: 3;
+    position: sticky;
     transition: transform .4s; /* Animation */
 }
     .circle-text:hover {
