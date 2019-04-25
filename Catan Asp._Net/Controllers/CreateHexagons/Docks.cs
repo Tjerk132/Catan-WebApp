@@ -8,13 +8,13 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
 {
     public class Docks
     {
-        int randomDock;
-        int woodDock = 1;
-        int stoneDock = 1;
-        int sheepDock = 1;
-        int grainDock = 1;
-        int oreDock = 1;
-        int generalDock = 4;
+        private int randomDock;
+        private int woodDock = 1;
+        private int stoneDock = 1;
+        private int sheepDock = 1;
+        private int grainDock = 1;
+        private int oreDock = 1;
+        private int generalDock = 4;
 
         public List<int> Harborhexes()
         {

@@ -7,8 +7,8 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
 {
     public class HexagonPosition
     {
-        int margin_left = 183;  //Start x-position for 1st row
-        int margin_top = -63;   //Start y-position for 1st row
+        private int margin_left = 183;  //Start x-position for 1st row
+        private int margin_top = -63;   //Start y-position for 1st row
         public int Margin_Left(int i)
         {
             margin_left += 108;
