@@ -4,8 +4,9 @@
 
 .grid-container {
     margin-top: 20px;
-    margin-left:0px;
-    padding: 90px ;
+    margin-left: 0px;
+    padding: 90px;
+    background-color: #44332C;
     /*top&bottom, left&right*/
     display: grid;
     grid-gap: 5px;
@@ -390,7 +391,7 @@
         margin: -32px auto auto auto;
     }
 
-        .option-menu input {
+        .option-menu input, textarea {
             background-color: #333;
             border: none;
             color: white;
@@ -402,10 +403,16 @@
             cursor: pointer;
             border-radius: 2px;
             width: 180px;
+            height: 32px;
         }
 
 
             .option-menu input:hover {
                 background-color: #333333;
                 color: #666;
+            }
+            .option-menu textarea:hover {
+                background-color: #333333;
+                color: #666;
+                
             }

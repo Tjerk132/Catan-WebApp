@@ -29,18 +29,37 @@
                 <input onClick="window.location.reload()" value="Generate" type="submit">
             </form>
             <form>
-                <input id="download" value="Save" type="button">
+                <input id="download" value="Download Image" type="button">
+            </form>
+            <form>
+                <input onClick="window.location.reload()" value="Save" type="submit">
             </form>
             <form>
                 <input onClick="window.location.reload()" value="Load" type="submit">
             </form>
+            <form action="/action_page.php">
+                <textarea id="#textarea" style="background-color:#DDDDDD; color:#333"></textarea>    Copy/Paste your unique Code<br>
+
+            </form>
         </div>
         <div class="footer">
             <a>&copy; 2019 Proftaak groep 3</a><br />
-            <a>Alle rechten voorbehouden</a>
+            <a>All rights reserved</a>
         </div>
     </ul>
     <!-- Script -->
+
+    <script>
+        var input = document.getElementById("#textarea");
+        var button = document.getElementById("#textarea");
+
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            input.select();
+            document.execCommand("copy");
+        });
+    </script>
+
     <script type='text/javascript'>
         document.getElementById("download").addEventListener("click", function () {
 
