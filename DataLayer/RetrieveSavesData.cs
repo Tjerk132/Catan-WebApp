@@ -13,35 +13,41 @@ namespace DataLayer
     {
         public List<Save> GetSavesInfo()
         {
-            SqlConnection conn = new SqlConnection(
-                @"Server=mssql.fhict.local;
-                Database=dbi386599;
-                User Id=dbi386599;
-                Password=12345;"
-             );
             List<Save> saves = new List<Save>();
-            using (conn)
+            try
             {
-                conn.Open();
-                string query = "SELECT * FROM [Saves]";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                DataTable dtResult = new DataTable();
-                dtResult.Load(cmd.ExecuteReader());
-                conn.Close();
-                foreach (DataRow dr in dtResult.Rows)
+                SqlConnection conn = new SqlConnection(
+                    @"Server=mssql.fhict.local;
+                    Database=dbi386599;
+                    User Id=dbi386599;
+                    Password=12345;"
+                 );
+                using (conn)
                 {
-                    Save save = new Save();
+                    conn.Open();
+                    string query = "SELECT * FROM [Saves]";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    DataTable dtResult = new DataTable();
+                    dtResult.Load(cmd.ExecuteReader());
+                    conn.Close();
+                    foreach (DataRow dr in dtResult.Rows)
+                    {
+                        Save save = new Save();
 
-                    save.Name = dr[1].ToString();
+                        save.Name = dr[1].ToString();
 
-                    DateTime.TryParse(dr[2].ToString(), out DateTime Time);
-                    save.Time = Time;
+                        DateTime.TryParse(dr[2].ToString(), out DateTime Time);
+                        save.Time = Time;
 
-                    saves.Add(save);
+                        saves.Add(save);
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }         
             return saves;
         }
-
     }
 }

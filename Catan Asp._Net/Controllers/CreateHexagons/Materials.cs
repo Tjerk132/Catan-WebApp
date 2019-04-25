@@ -11,14 +11,14 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
     {
 
         //Materials\\         Randomnumber
-        int Desertcount = 1;     //1
-        int Woodcount = 4;       //2
-        int Orecount = 3;        //3
-        int Stonecount = 3;      //4
-        int Woolcount = 4;       //5
-        int Graincount = 4;      //6
+        private int Desertcount = 1;     //1
+        private int Woodcount = 4;       //2
+        private int Orecount = 3;        //3
+        private int Stonecount = 3;      //4
+        private int Woolcount = 4;       //5
+        private int Graincount = 4;      //6
 
-        string HexagonId;
+        private string HexagonId;
 
         public string HexagonMaterial(int MaterialChooser, int i, List<int> SixAndEight)
         {

@@ -10,7 +10,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
     public class CreateHexagon
     {
         private List<int> numbers = new List<int>();
-        public List<int> waardes = new List<int>();
+        private List<int> waardes = new List<int>();
         private List<int> punten = new List<int>();
         private List<int> topdrie = new List<int>();
         int waarde;
@@ -18,17 +18,17 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
 
 
         //Numbers\\
-        int two = 1;
-        int three = 2;
-        int four = 2;
-        int five = 2;
-        int six = 2;
+        private int two = 1;
+        private int three = 2;
+        private int four = 2;
+        private int five = 2;
+        private int six = 2;
 
-        int eight = 2;
-        int nine = 2;
-        int ten = 2;
-        int eleven = 2;
-        int twelve = 1;
+        private int eight = 2;
+        private int nine = 2;
+        private int ten = 2;
+        private int eleven = 2;
+        private int twelve = 1;
 
 
         public List<int> ChooseBestPositions()

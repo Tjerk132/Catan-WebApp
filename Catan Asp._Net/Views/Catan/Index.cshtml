@@ -9,8 +9,6 @@
     string deg = "deg";
 }
 
-
-
 <body>
     <div class="box">
     </div>
@@ -18,20 +16,20 @@
     <div class="grid-container">
 
         @foreach (HexagonTile hexagon in Model.Hexagons)
-        {
+         {
             <div id="@hexagon.Id" class="item7" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_left@px"></div>
             if (hexagon.Id != "hexagonblue")
             {
                 <div class="circle-text-playground" style="margin-top:@hexagon.Margin_top@px; margin-left:@hexagon.Margin_leftNumbers@px">
                     @if (hexagon.Id != "hexagondesert")
-                    {
+                     {   
                         <p class="number_position" style="font-size:@hexagon.Font_size@px; color:@hexagon.Color">@hexagon.Number</p>
-                    }
+                     }
                     <p class="dot_position">@hexagon.Hexagonnumber</p>
                     @if (hexagon.Class == "rover")
-                    {
+                     {
                         <img class="@hexagon.Class" src="~/Images/Resources/pawn.png" alt="rover" width="64" height="64" style="background-size: 64px 64px;background-repeat: no-repeat;background-position: center;">
-                    }
+                     }
                 </div>
             }
             else
@@ -43,11 +41,11 @@
                     </div>
                 }
             }
-        }
+         }
 
         @foreach (DockLines dockLine in Model.DockLines)
         {
-            if (dockLine.degree == null)
+            if (dockLine.degree == 0)
             {
                 <div class="docks" style="top:@dockLine.top@px; left:@dockLine.left@px; "></div>
             }
