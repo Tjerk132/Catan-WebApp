@@ -143,6 +143,7 @@
     <Content Include="Images\Erts.png" />
     <Content Include="Images\GeneralDock.png" />
     <Content Include="Images\GrainDock.png" />
+    <Content Include="Images\Logo 2.png" />
     <Content Include="Images\OreDock.png" />
     <Content Include="Images\Resources\brick-pile.png" />
     <Content Include="Images\Resources\folded-paper.png" />
