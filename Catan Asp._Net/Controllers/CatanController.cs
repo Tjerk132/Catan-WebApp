@@ -41,15 +41,23 @@ namespace Catan_Asp._Net.Controllers
 
             Random r = new Random();
 
+            int BestNumber;
             for (int i = 0; i < 37; i++)
             {
                 if (PlaygroundPositions.Contains(i))
                 {
+                    BestNumber = 6;
                     int MaterialChooser = r.Next(1, 7);
                     string HexagonId = materialchooser.HexagonMaterial(MaterialChooser, i, SixAndEightPositions);
 
                     int RandomNumber = r.Next(2, 13);
                     HexagonTile hexagon = createhexagon.MakeHexagon(RandomNumber, i, HexagonId, SixAndEightPositions);
+                    if (i != 16 && i != 20 && i != 23 && i != 26 && i != 29 && i != 30 && i != 31)
+                    {
+                        hexagon.BestNumber = BestNumber;
+                        hexagon.BestNumber_Margin_Top = position.MarginBestNumber_Top(hexagon.Margin_top);
+                    }
+                    else hexagon.BestNumber = 0;
 
                     hexagon.Margin_left = position.Margin_Left(i);
                     hexagon.Margin_top = position.Margin_Top(i);

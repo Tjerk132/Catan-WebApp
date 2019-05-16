@@ -41,6 +41,10 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             margin_leftnumber = margin_left + 20;
             return margin_leftnumber;
         }
+        public int MarginBestNumber_Top(int margin_top)
+        {
+            return margin_top + 100; 
+        }
         public int Margin_Top(int i)
         {
             switch (i)
