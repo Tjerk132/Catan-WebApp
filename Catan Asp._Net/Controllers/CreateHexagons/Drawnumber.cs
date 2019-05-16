@@ -36,7 +36,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             score[2, 0] = 1; score[2, 1] = 4; score[2, 2] = 5; score[2, 3] = hexWaarde[1] + hexWaarde[4] + hexWaarde[5];
             score[3, 0] = 1; score[3, 1] = 2; score[3, 2] = 5; score[3, 3] = hexWaarde[1] + hexWaarde[2] + hexWaarde[5];
             score[4, 0] = 2; score[4, 1] = 5; score[4, 2] = 6; score[4, 3] = hexWaarde[2] + hexWaarde[5] + hexWaarde[6];
-            score[5, 0] = 3; score[5, 1] = 7; score[5, 2] = 9; score[5, 3] = hexWaarde[3] + hexWaarde[7] + hexWaarde[9];
+            score[5, 0] = 3; score[5, 1] = 7; score[5, 2] = 9; score[5, 3] = hexWaarde[3] + hexWaarde[7] + hexWaarde[8];
             score[6, 0] = 3; score[6, 1] = 4; score[6, 2] = 8; score[6, 3] = hexWaarde[3] + hexWaarde[4] + hexWaarde[8];
             score[7, 0] = 4; score[7, 1] = 8; score[7, 2] = 9; score[7, 3] = hexWaarde[4] + hexWaarde[8] + hexWaarde[9];
             score[8, 0] = 4; score[8, 1] = 5; score[8, 2] = 9; score[8, 3] = hexWaarde[4] + hexWaarde[5] + hexWaarde[9];
@@ -61,7 +61,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             topDrieWaarde.Add(hexWaarde[1] + hexWaarde[4] + hexWaarde[5]);
             topDrieWaarde.Add(hexWaarde[1] + hexWaarde[2] + hexWaarde[5]);
             topDrieWaarde.Add(hexWaarde[2] + hexWaarde[5] + hexWaarde[6]);
-            topDrieWaarde.Add(hexWaarde[3] + hexWaarde[7] + hexWaarde[9]);
+            topDrieWaarde.Add(hexWaarde[3] + hexWaarde[7] + hexWaarde[8]);
             topDrieWaarde.Add(hexWaarde[3] + hexWaarde[4] + hexWaarde[8]);
             topDrieWaarde.Add(hexWaarde[4] + hexWaarde[8] + hexWaarde[9]);
             topDrieWaarde.Add(hexWaarde[4] + hexWaarde[5] + hexWaarde[9]);
@@ -84,7 +84,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             List<Toppunt> topDrie = new List<Toppunt>();
             for (int i = 0; i < 3; i++)
             {
-                Toppunt toppunt = new Toppunt(topDrieWaarde.Max(),topDrieWaarde.IndexOf(topDrieWaarde.Max()));
+                Toppunt toppunt = new Toppunt(topDrieWaarde.IndexOf(topDrieWaarde.Max()), topDrieWaarde.Max());
 
                 topDrie.Add(toppunt);
                 topDrieWaarde[topDrieWaarde.IndexOf(topDrieWaarde.Max())] = 0;

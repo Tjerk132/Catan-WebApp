@@ -354,6 +354,11 @@
     transition: transform .4s; /* Animation */
 }
 
+    .topDrie:hover {
+        transform: scale(1.25);
+        cursor: pointer;
+    }
+
 .value-text {
     height: 30px;
     width: 30px;

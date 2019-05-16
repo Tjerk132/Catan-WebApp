@@ -14,10 +14,14 @@
 
     <div class="grid-container" id="grid-container">
 
-        
-            <div style="position:absolute; left:292px; top:180px;">
-                <div class="topDrie">10</div>
+
+        @foreach (Toppunt toppunt in Model.topDrie)
+        {
+            <div style="position:absolute; left:@toppunt.Left@px; top:@toppunt.Top@px;">
+                <div class="topDrie">@toppunt.Waarde</div>
             </div>
+        }
+
 
         @foreach (HexagonTile hexagon in Model.Hexagons)
         {

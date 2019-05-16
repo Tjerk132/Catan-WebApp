@@ -15,100 +15,100 @@ namespace Models.Models
             switch (plaats)
             {
                 case 0:
-                    Left = 275;
-                    Top = 280;
+                    Left = 292;
+                    Top = 180;
                     break;
                 case 1:
-                    Left = 275;
-                    Top = 280;
+                    Left = 345;
+                    Top = 160;
                     break;
                 case 2:
-                    Left = 275;
-                    Top = 280;
+                    Left = 398;
+                    Top = 180;
                     break;
                 case 3:
-                    Left = 275;
-                    Top = 280;
+                    Left = 451;
+                    Top = 160;
                     break;
                 case 4:
-                    Left = 275;
-                    Top = 280;
+                    Left = 510;
+                    Top = 180;
                     break;
                 case 5:
-                    Left = 275;
-                    Top = 280;
+                    Left = 238;
+                    Top = 270;
                     break;
                 case 6:
-                    Left = 275;
-                    Top = 280;
+                    Left = 292;
+                    Top = 250;
                     break;
                 case 7:
-                    Left = 275;
-                    Top = 280;
+                    Left = 345;
+                    Top = 270;
                     break;
                 case 8:
-                    Left = 275;
-                    Top = 280;
+                    Left = 398;
+                    Top = 250;
                     break;
                 case 9:
-                    Left = 275;
-                    Top = 280;
+                    Left = 451;
+                    Top = 270;
                     break;
                 case 10:
-                    Left = 275;
-                    Top = 280;
+                    Left = 510;
+                    Top = 250;
                     break;
                 case 11:
-                    Left = 275;
-                    Top = 280;
+                    Left = 564;
+                    Top = 270;
                     break;
                 case 12:
-                    Left = 275;
-                    Top = 280;
+                    Left = 238;
+                    Top = 350;
                     break;
                 case 13:
-                    Left = 275;
-                    Top = 280;
+                    Left = 292;
+                    Top = 370;
                     break;
                 case 14:
-                    Left = 275;
-                    Top = 280;
+                    Left = 345;
+                    Top = 350;
                     break;
                 case 15:
-                    Left = 275;
-                    Top = 280;
+                    Left = 398;
+                    Top = 370;
                     break;
                 case 16:
-                    Left = 275;
-                    Top = 280;
+                    Left = 451;
+                    Top = 350;
                     break;
                 case 17:
-                    Left = 275;
-                    Top = 280;
+                    Left = 510;
+                    Top = 370;
                     break;
                 case 18:
-                    Left = 275;
-                    Top = 280;
+                    Left = 564;
+                    Top = 350;
                     break;
                 case 19:
-                    Left = 275;
-                    Top = 280;
+                    Left = 292;
+                    Top = 440;
                     break;
                 case 20:
-                    Left = 275;
-                    Top = 280;
+                    Left = 346;
+                    Top = 460;
                     break;
                 case 21:
-                    Left = 275;
-                    Top = 280;
+                    Left = 400;
+                    Top = 440;
                     break;
                 case 22:
-                    Left = 275;
-                    Top = 280;
+                    Left = 455;
+                    Top = 460;
                     break;
                 case 23:
-                    Left = 275;
-                    Top = 280;
+                    Left = 510;
+                    Top = 440;
                     break;
 
             }
