@@ -9,9 +9,9 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
 {
     public class Drawnumber
     {
-        private List<int> hexGetal = new List<int>();
+        private List<int> hexWaarde = new List<int>();
         private int[,] score = new int[24, 5];
-        private List<int> waarde = new List<int>();
+        private List<int> topDrieWaarde = new List<int>();
         private int[,] topDrie = new int[2, 3];
 
 
@@ -30,60 +30,60 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
 
         public int[,] TopDrie()
         {
-            score[0, 0] = 0; score[0, 1] = 3; score[0, 2] = 4; score[0, 3] = hexGetal[0] + hexGetal[3] + hexGetal[4];
-            score[1, 0] = 0; score[1, 1] = 1; score[1, 2] = 4; score[1, 3] = hexGetal[0] + hexGetal[1] + hexGetal[4];
-            score[2, 0] = 1; score[2, 1] = 4; score[2, 2] = 5; score[2, 3] = hexGetal[1] + hexGetal[4] + hexGetal[5];
-            score[3, 0] = 1; score[3, 1] = 2; score[3, 2] = 5; score[3, 3] = hexGetal[1] + hexGetal[2] + hexGetal[5];
-            score[4, 0] = 2; score[4, 1] = 5; score[4, 2] = 6; score[4, 3] = hexGetal[2] + hexGetal[5] + hexGetal[6];
-            score[5, 0] = 3; score[5, 1] = 7; score[5, 2] = 9; score[5, 3] = hexGetal[3] + hexGetal[7] + hexGetal[9];
-            score[6, 0] = 3; score[6, 1] = 4; score[6, 2] = 8; score[6, 3] = hexGetal[3] + hexGetal[4] + hexGetal[8];
-            score[7, 0] = 4; score[7, 1] = 8; score[7, 2] = 9; score[7, 3] = hexGetal[4] + hexGetal[8] + hexGetal[9];
-            score[8, 0] = 4; score[8, 1] = 5; score[8, 2] = 9; score[8, 3] = hexGetal[4] + hexGetal[5] + hexGetal[9];
-            score[9, 0] = 5; score[9, 1] = 9; score[9, 2] = 10; score[9, 3] = hexGetal[5] + hexGetal[9] + hexGetal[10];
-            score[10, 0] = 5; score[10, 1] = 6; score[10, 2] = 10; score[10, 3] = hexGetal[5] + hexGetal[6] + hexGetal[10];
-            score[11, 0] = 6; score[11, 1] = 10; score[11, 2] = 11; score[11, 3] = hexGetal[6] + hexGetal[10] + hexGetal[11];
-            score[12, 0] = 7; score[12, 1] = 8; score[12, 2] = 12; score[12, 3] = hexGetal[7] + hexGetal[8] + hexGetal[12];
-            score[13, 0] = 8; score[13, 1] = 12; score[13, 2] = 13; score[13, 3] = hexGetal[8] + hexGetal[12] + hexGetal[13];
-            score[14, 0] = 8; score[14, 1] = 9; score[14, 2] = 13; score[14, 3] = hexGetal[8] + hexGetal[9] + hexGetal[13];
-            score[15, 0] = 9; score[15, 1] = 13; score[15, 2] = 14; score[15, 3] = hexGetal[9] + hexGetal[13] + hexGetal[14];
-            score[16, 0] = 9; score[16, 1] = 10; score[16, 2] = 14; score[16, 3] = hexGetal[9] + hexGetal[10] + hexGetal[14];
-            score[17, 0] = 10; score[17, 1] = 14; score[17, 2] = 15; score[17, 3] = hexGetal[10] + hexGetal[14] + hexGetal[15];
-            score[18, 0] = 10; score[18, 1] = 11; score[18, 2] = 15; score[18, 3] = hexGetal[10] + hexGetal[11] + hexGetal[15];
-            score[19, 0] = 12; score[19, 1] = 13; score[19, 2] = 16; score[19, 3] = hexGetal[12] + hexGetal[13] + hexGetal[16];
-            score[20, 0] = 13; score[20, 1] = 16; score[20, 2] = 17; score[20, 3] = hexGetal[13] + hexGetal[16] + hexGetal[17];
-            score[21, 0] = 13; score[21, 1] = 14; score[21, 2] = 17; score[21, 3] = hexGetal[13] + hexGetal[14] + hexGetal[17];
-            score[22, 0] = 14; score[22, 1] = 17; score[22, 2] = 18; score[22, 3] = hexGetal[14] + hexGetal[17] + hexGetal[18];
-            score[23, 0] = 14; score[23, 1] = 15; score[23, 2] = 18; score[23, 3] = hexGetal[14] + hexGetal[15] + hexGetal[18];
+            score[0, 0] = 0; score[0, 1] = 3; score[0, 2] = 4; score[0, 3] = hexWaarde[0] + hexWaarde[3] + hexWaarde[4];
+            score[1, 0] = 0; score[1, 1] = 1; score[1, 2] = 4; score[1, 3] = hexWaarde[0] + hexWaarde[1] + hexWaarde[4];
+            score[2, 0] = 1; score[2, 1] = 4; score[2, 2] = 5; score[2, 3] = hexWaarde[1] + hexWaarde[4] + hexWaarde[5];
+            score[3, 0] = 1; score[3, 1] = 2; score[3, 2] = 5; score[3, 3] = hexWaarde[1] + hexWaarde[2] + hexWaarde[5];
+            score[4, 0] = 2; score[4, 1] = 5; score[4, 2] = 6; score[4, 3] = hexWaarde[2] + hexWaarde[5] + hexWaarde[6];
+            score[5, 0] = 3; score[5, 1] = 7; score[5, 2] = 9; score[5, 3] = hexWaarde[3] + hexWaarde[7] + hexWaarde[9];
+            score[6, 0] = 3; score[6, 1] = 4; score[6, 2] = 8; score[6, 3] = hexWaarde[3] + hexWaarde[4] + hexWaarde[8];
+            score[7, 0] = 4; score[7, 1] = 8; score[7, 2] = 9; score[7, 3] = hexWaarde[4] + hexWaarde[8] + hexWaarde[9];
+            score[8, 0] = 4; score[8, 1] = 5; score[8, 2] = 9; score[8, 3] = hexWaarde[4] + hexWaarde[5] + hexWaarde[9];
+            score[9, 0] = 5; score[9, 1] = 9; score[9, 2] = 10; score[9, 3] = hexWaarde[5] + hexWaarde[9] + hexWaarde[10];
+            score[10, 0] = 5; score[10, 1] = 6; score[10, 2] = 10; score[10, 3] = hexWaarde[5] + hexWaarde[6] + hexWaarde[10];
+            score[11, 0] = 6; score[11, 1] = 10; score[11, 2] = 11; score[11, 3] = hexWaarde[6] + hexWaarde[10] + hexWaarde[11];
+            score[12, 0] = 7; score[12, 1] = 8; score[12, 2] = 12; score[12, 3] = hexWaarde[7] + hexWaarde[8] + hexWaarde[12];
+            score[13, 0] = 8; score[13, 1] = 12; score[13, 2] = 13; score[13, 3] = hexWaarde[8] + hexWaarde[12] + hexWaarde[13];
+            score[14, 0] = 8; score[14, 1] = 9; score[14, 2] = 13; score[14, 3] = hexWaarde[8] + hexWaarde[9] + hexWaarde[13];
+            score[15, 0] = 9; score[15, 1] = 13; score[15, 2] = 14; score[15, 3] = hexWaarde[9] + hexWaarde[13] + hexWaarde[14];
+            score[16, 0] = 9; score[16, 1] = 10; score[16, 2] = 14; score[16, 3] = hexWaarde[9] + hexWaarde[10] + hexWaarde[14];
+            score[17, 0] = 10; score[17, 1] = 14; score[17, 2] = 15; score[17, 3] = hexWaarde[10] + hexWaarde[14] + hexWaarde[15];
+            score[18, 0] = 10; score[18, 1] = 11; score[18, 2] = 15; score[18, 3] = hexWaarde[10] + hexWaarde[11] + hexWaarde[15];
+            score[19, 0] = 12; score[19, 1] = 13; score[19, 2] = 16; score[19, 3] = hexWaarde[12] + hexWaarde[13] + hexWaarde[16];
+            score[20, 0] = 13; score[20, 1] = 16; score[20, 2] = 17; score[20, 3] = hexWaarde[13] + hexWaarde[16] + hexWaarde[17];
+            score[21, 0] = 13; score[21, 1] = 14; score[21, 2] = 17; score[21, 3] = hexWaarde[13] + hexWaarde[14] + hexWaarde[17];
+            score[22, 0] = 14; score[22, 1] = 17; score[22, 2] = 18; score[22, 3] = hexWaarde[14] + hexWaarde[17] + hexWaarde[18];
+            score[23, 0] = 14; score[23, 1] = 15; score[23, 2] = 18; score[23, 3] = hexWaarde[14] + hexWaarde[15] + hexWaarde[18];
 
-            waarde[0] = hexGetal[0] + hexGetal[3] + hexGetal[4];
-            waarde[1] = hexGetal[0] + hexGetal[1] + hexGetal[4];
-            waarde[2] = hexGetal[1] + hexGetal[4] + hexGetal[5];
-            waarde[3] = hexGetal[1] + hexGetal[2] + hexGetal[5];
-            waarde[4] = hexGetal[2] + hexGetal[5] + hexGetal[6];
-            waarde[5] = hexGetal[3] + hexGetal[7] + hexGetal[9];
-            waarde[6] = hexGetal[3] + hexGetal[4] + hexGetal[8];
-            waarde[7] = hexGetal[4] + hexGetal[8] + hexGetal[9];
-            waarde[8] = hexGetal[4] + hexGetal[5] + hexGetal[9];
-            waarde[9] = hexGetal[5] + hexGetal[9] + hexGetal[10];
-            waarde[10] = hexGetal[5] + hexGetal[6] + hexGetal[10];
-            waarde[11] = hexGetal[6] + hexGetal[10] + hexGetal[11];
-            waarde[12] = hexGetal[7] + hexGetal[8] + hexGetal[12];
-            waarde[13] = hexGetal[8] + hexGetal[12] + hexGetal[13];
-            waarde[14] = hexGetal[8] + hexGetal[9] + hexGetal[13];
-            waarde[15] = hexGetal[9] + hexGetal[13] + hexGetal[14];
-            waarde[16] = hexGetal[9] + hexGetal[10] + hexGetal[14];
-            waarde[17] = hexGetal[10] + hexGetal[14] + hexGetal[15];
-            waarde[18] = hexGetal[10] + hexGetal[11] + hexGetal[15];
-            waarde[19] = hexGetal[12] + hexGetal[13] + hexGetal[16];
-            waarde[20] = hexGetal[13] + hexGetal[16] + hexGetal[17];
-            waarde[21] = hexGetal[13] + hexGetal[14] + hexGetal[17];
-            waarde[22] = hexGetal[14] + hexGetal[17] + hexGetal[18];
-            waarde[23] = hexGetal[14] + hexGetal[15] + hexGetal[18];
+            topDrieWaarde[0] = hexWaarde[0] + hexWaarde[3] + hexWaarde[4];
+            topDrieWaarde[1] = hexWaarde[0] + hexWaarde[1] + hexWaarde[4];
+            topDrieWaarde[2] = hexWaarde[1] + hexWaarde[4] + hexWaarde[5];
+            topDrieWaarde[3] = hexWaarde[1] + hexWaarde[2] + hexWaarde[5];
+            topDrieWaarde[4] = hexWaarde[2] + hexWaarde[5] + hexWaarde[6];
+            topDrieWaarde[5] = hexWaarde[3] + hexWaarde[7] + hexWaarde[9];
+            topDrieWaarde[6] = hexWaarde[3] + hexWaarde[4] + hexWaarde[8];
+            topDrieWaarde[7] = hexWaarde[4] + hexWaarde[8] + hexWaarde[9];
+            topDrieWaarde[8] = hexWaarde[4] + hexWaarde[5] + hexWaarde[9];
+            topDrieWaarde[9] = hexWaarde[5] + hexWaarde[9] + hexWaarde[10];
+            topDrieWaarde[10] = hexWaarde[5] + hexWaarde[6] + hexWaarde[10];
+            topDrieWaarde[11] = hexWaarde[6] + hexWaarde[10] + hexWaarde[11];
+            topDrieWaarde[12] = hexWaarde[7] + hexWaarde[8] + hexWaarde[12];
+            topDrieWaarde[13] = hexWaarde[8] + hexWaarde[12] + hexWaarde[13];
+            topDrieWaarde[14] = hexWaarde[8] + hexWaarde[9] + hexWaarde[13];
+            topDrieWaarde[15] = hexWaarde[9] + hexWaarde[13] + hexWaarde[14];
+            topDrieWaarde[16] = hexWaarde[9] + hexWaarde[10] + hexWaarde[14];
+            topDrieWaarde[17] = hexWaarde[10] + hexWaarde[14] + hexWaarde[15];
+            topDrieWaarde[18] = hexWaarde[10] + hexWaarde[11] + hexWaarde[15];
+            topDrieWaarde[19] = hexWaarde[12] + hexWaarde[13] + hexWaarde[16];
+            topDrieWaarde[20] = hexWaarde[13] + hexWaarde[16] + hexWaarde[17];
+            topDrieWaarde[21] = hexWaarde[13] + hexWaarde[14] + hexWaarde[17];
+            topDrieWaarde[22] = hexWaarde[14] + hexWaarde[17] + hexWaarde[18];
+            topDrieWaarde[23] = hexWaarde[14] + hexWaarde[15] + hexWaarde[18];
 
             for (int i = 0; i < 3; i++)
             {
-                topDrie[i, 0] = waarde.Max(); topDrie[i, 1] = waarde.IndexOf(waarde.Max());
-                waarde[waarde.IndexOf(waarde.Max())] = 0;
+                topDrie[i, 0] = topDrieWaarde.Max(); topDrie[i, 1] = topDrieWaarde.IndexOf(topDrieWaarde.Max());
+                topDrieWaarde[topDrieWaarde.IndexOf(topDrieWaarde.Max())] = 0;
             }
 
             return topDrie;
@@ -213,7 +213,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             else
             {
                 hexagon.Class = "rover";
-                hexGetal.Add(0);
+                hexWaarde.Add(0);
             }
 
             //give circle-text values to hexagon \\
@@ -226,61 +226,61 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
                     hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•";
-                    hexGetal.Add(1);
+                    hexWaarde.Add(1);
                     break;
                 case 3:
                     hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••";
-                    hexGetal.Add(2);
+                    hexWaarde.Add(2);
                     break;
                 case 4:
                     hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•••";
-                    hexGetal.Add(3);
+                    hexWaarde.Add(3);
                     break;
                 case 5:
                     hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••••";
-                    hexGetal.Add(4);
+                    hexWaarde.Add(4);
                     break;
                 case 6:
                     hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "red";
                     hexagon.Hexagonnumber = "•••••";
-                    hexGetal.Add(5);
+                    hexWaarde.Add(5);
                     break;
                 case 8:
                     hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "red";
                     hexagon.Hexagonnumber = "•••••";
-                    hexGetal.Add(5);
+                    hexWaarde.Add(5);
                     break;
                 case 9:
                     hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••••";
-                    hexGetal.Add(4);
+                    hexWaarde.Add(4);
                     break;
                 case 10:
                     hexagon.Font_size = FontSizeNot2and12;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•••";
-                    hexGetal.Add(3);
+                    hexWaarde.Add(3);
                     break;
                 case 11:
                     hexagon.Font_size = 28;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "••";
-                    hexGetal.Add(2);
+                    hexWaarde.Add(2);
                     break;
                 case 12:
                     hexagon.Font_size = 24;
                     hexagon.Color = "black";
                     hexagon.Hexagonnumber = "•";
-                    hexGetal.Add(1);
+                    hexWaarde.Add(1);
                     break;
 
             }
