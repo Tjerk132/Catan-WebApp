@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
-using Catan_Asp._Net.Models;
+//using Catan_Asp._Net.Models;
+using Models.Models;
 
 namespace Catan_Asp._Net.Controllers.CreateHexagons
 {
@@ -28,7 +29,7 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
         int eleven = 2;
         int twelve = 1;
 
-        public int[,] TopDrie()
+        public List<Toppunt> TopDrie()
         {
             score[0, 0] = 0; score[0, 1] = 3; score[0, 2] = 4; score[0, 3] = hexWaarde[0] + hexWaarde[3] + hexWaarde[4];
             score[1, 0] = 0; score[1, 1] = 1; score[1, 2] = 4; score[1, 3] = hexWaarde[0] + hexWaarde[1] + hexWaarde[4];
@@ -55,34 +56,37 @@ namespace Catan_Asp._Net.Controllers.CreateHexagons
             score[22, 0] = 14; score[22, 1] = 17; score[22, 2] = 18; score[22, 3] = hexWaarde[14] + hexWaarde[17] + hexWaarde[18];
             score[23, 0] = 14; score[23, 1] = 15; score[23, 2] = 18; score[23, 3] = hexWaarde[14] + hexWaarde[15] + hexWaarde[18];
 
-            topDrieWaarde[0] = hexWaarde[0] + hexWaarde[3] + hexWaarde[4];
-            topDrieWaarde[1] = hexWaarde[0] + hexWaarde[1] + hexWaarde[4];
-            topDrieWaarde[2] = hexWaarde[1] + hexWaarde[4] + hexWaarde[5];
-            topDrieWaarde[3] = hexWaarde[1] + hexWaarde[2] + hexWaarde[5];
-            topDrieWaarde[4] = hexWaarde[2] + hexWaarde[5] + hexWaarde[6];
-            topDrieWaarde[5] = hexWaarde[3] + hexWaarde[7] + hexWaarde[9];
-            topDrieWaarde[6] = hexWaarde[3] + hexWaarde[4] + hexWaarde[8];
-            topDrieWaarde[7] = hexWaarde[4] + hexWaarde[8] + hexWaarde[9];
-            topDrieWaarde[8] = hexWaarde[4] + hexWaarde[5] + hexWaarde[9];
-            topDrieWaarde[9] = hexWaarde[5] + hexWaarde[9] + hexWaarde[10];
-            topDrieWaarde[10] = hexWaarde[5] + hexWaarde[6] + hexWaarde[10];
-            topDrieWaarde[11] = hexWaarde[6] + hexWaarde[10] + hexWaarde[11];
-            topDrieWaarde[12] = hexWaarde[7] + hexWaarde[8] + hexWaarde[12];
-            topDrieWaarde[13] = hexWaarde[8] + hexWaarde[12] + hexWaarde[13];
-            topDrieWaarde[14] = hexWaarde[8] + hexWaarde[9] + hexWaarde[13];
-            topDrieWaarde[15] = hexWaarde[9] + hexWaarde[13] + hexWaarde[14];
-            topDrieWaarde[16] = hexWaarde[9] + hexWaarde[10] + hexWaarde[14];
-            topDrieWaarde[17] = hexWaarde[10] + hexWaarde[14] + hexWaarde[15];
-            topDrieWaarde[18] = hexWaarde[10] + hexWaarde[11] + hexWaarde[15];
-            topDrieWaarde[19] = hexWaarde[12] + hexWaarde[13] + hexWaarde[16];
-            topDrieWaarde[20] = hexWaarde[13] + hexWaarde[16] + hexWaarde[17];
-            topDrieWaarde[21] = hexWaarde[13] + hexWaarde[14] + hexWaarde[17];
-            topDrieWaarde[22] = hexWaarde[14] + hexWaarde[17] + hexWaarde[18];
-            topDrieWaarde[23] = hexWaarde[14] + hexWaarde[15] + hexWaarde[18];
+            topDrieWaarde.Add(hexWaarde[0] + hexWaarde[3] + hexWaarde[4]);
+            topDrieWaarde.Add(hexWaarde[0] + hexWaarde[1] + hexWaarde[4]);
+            topDrieWaarde.Add(hexWaarde[1] + hexWaarde[4] + hexWaarde[5]);
+            topDrieWaarde.Add(hexWaarde[1] + hexWaarde[2] + hexWaarde[5]);
+            topDrieWaarde.Add(hexWaarde[2] + hexWaarde[5] + hexWaarde[6]);
+            topDrieWaarde.Add(hexWaarde[3] + hexWaarde[7] + hexWaarde[9]);
+            topDrieWaarde.Add(hexWaarde[3] + hexWaarde[4] + hexWaarde[8]);
+            topDrieWaarde.Add(hexWaarde[4] + hexWaarde[8] + hexWaarde[9]);
+            topDrieWaarde.Add(hexWaarde[4] + hexWaarde[5] + hexWaarde[9]);
+            topDrieWaarde.Add(hexWaarde[5] + hexWaarde[9] + hexWaarde[10]);
+            topDrieWaarde.Add(hexWaarde[5] + hexWaarde[6] + hexWaarde[10]);
+            topDrieWaarde.Add(hexWaarde[6] + hexWaarde[10] + hexWaarde[11]);
+            topDrieWaarde.Add(hexWaarde[7] + hexWaarde[8] + hexWaarde[12]);
+            topDrieWaarde.Add(hexWaarde[8] + hexWaarde[12] + hexWaarde[13]);
+            topDrieWaarde.Add(hexWaarde[8] + hexWaarde[9] + hexWaarde[13]);
+            topDrieWaarde.Add(hexWaarde[9] + hexWaarde[13] + hexWaarde[14]);
+            topDrieWaarde.Add(hexWaarde[9] + hexWaarde[10] + hexWaarde[14]);
+            topDrieWaarde.Add(hexWaarde[10] + hexWaarde[14] + hexWaarde[15]);
+            topDrieWaarde.Add(hexWaarde[10] + hexWaarde[11] + hexWaarde[15]);
+            topDrieWaarde.Add(hexWaarde[12] + hexWaarde[13] + hexWaarde[16]);
+            topDrieWaarde.Add(hexWaarde[13] + hexWaarde[16] + hexWaarde[17]);
+            topDrieWaarde.Add(hexWaarde[13] + hexWaarde[14] + hexWaarde[17]);
+            topDrieWaarde.Add(hexWaarde[14] + hexWaarde[17] + hexWaarde[18]);
+            topDrieWaarde.Add(hexWaarde[14] + hexWaarde[15] + hexWaarde[18]);
 
+            List<Toppunt> topDrie = new List<Toppunt>();
             for (int i = 0; i < 3; i++)
             {
-                topDrie[i, 0] = topDrieWaarde.Max(); topDrie[i, 1] = topDrieWaarde.IndexOf(topDrieWaarde.Max());
+                Toppunt toppunt = new Toppunt(topDrieWaarde.Max(),topDrieWaarde.IndexOf(topDrieWaarde.Max()));
+
+                topDrie.Add(toppunt);
                 topDrieWaarde[topDrieWaarde.IndexOf(topDrieWaarde.Max())] = 0;
             }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Catan_Asp._Net.Models
+namespace Models.Models
 {
     public class HexagonTile
     {

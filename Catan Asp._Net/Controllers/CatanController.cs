@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Catan_Asp._Net.Models.Viewmodel;
-using Catan_Asp._Net.Models;
+using Models.Models;
 using System.Data.SqlClient;
 using System.Data;
 using Catan_Asp._Net.Controllers.CreateHexagons;
@@ -30,8 +30,8 @@ namespace Catan_Asp._Net.Controllers
                 DockLines = new List<DockLines>()
             };
             RetrieveSavesData Retrievedata = new RetrieveSavesData();
-            List<Save> saves = Retrievedata.GetSavesInfo();
-            viewmodel.Saves = saves;
+            //List<Save> saves = Retrievedata.GetSavesInfo();
+            //viewmodel.Saves = saves;
 
             List<int> HarborPositions = docks.Harborhexes();
 
@@ -92,6 +92,7 @@ namespace Catan_Asp._Net.Controllers
                     viewmodel.Hexagons.Add(hexagon);
                 }
             }
+            viewmodel.topDrie = createhexagon.TopDrie();
             return View(viewmodel);         
         }
     }
