@@ -19,15 +19,15 @@ namespace Models.Models
                     Top = 180;
                     break;
                 case 1:
-                    Left = 345;
+                    Left = 347;
                     Top = 160;
                     break;
                 case 2:
-                    Left = 398;
+                    Left = 400;
                     Top = 180;
                     break;
                 case 3:
-                    Left = 451;
+                    Left = 455;
                     Top = 160;
                     break;
                 case 4:
@@ -35,7 +35,7 @@ namespace Models.Models
                     Top = 180;
                     break;
                 case 5:
-                    Left = 238;
+                    Left = 239;
                     Top = 270;
                     break;
                 case 6:
@@ -43,15 +43,15 @@ namespace Models.Models
                     Top = 250;
                     break;
                 case 7:
-                    Left = 345;
+                    Left = 347;
                     Top = 270;
                     break;
                 case 8:
-                    Left = 398;
+                    Left = 400;
                     Top = 250;
                     break;
                 case 9:
-                    Left = 451;
+                    Left = 455;
                     Top = 270;
                     break;
                 case 10:
@@ -59,11 +59,11 @@ namespace Models.Models
                     Top = 250;
                     break;
                 case 11:
-                    Left = 564;
+                    Left = 565;
                     Top = 270;
                     break;
                 case 12:
-                    Left = 238;
+                    Left = 239;
                     Top = 350;
                     break;
                 case 13:
@@ -71,15 +71,15 @@ namespace Models.Models
                     Top = 370;
                     break;
                 case 14:
-                    Left = 345;
+                    Left = 347;
                     Top = 350;
                     break;
                 case 15:
-                    Left = 398;
+                    Left = 400;
                     Top = 370;
                     break;
                 case 16:
-                    Left = 451;
+                    Left = 455;
                     Top = 350;
                     break;
                 case 17:
@@ -87,7 +87,7 @@ namespace Models.Models
                     Top = 370;
                     break;
                 case 18:
-                    Left = 564;
+                    Left = 565;
                     Top = 350;
                     break;
                 case 19:
@@ -95,7 +95,7 @@ namespace Models.Models
                     Top = 440;
                     break;
                 case 20:
-                    Left = 346;
+                    Left = 347;
                     Top = 460;
                     break;
                 case 21:
