@@ -18,8 +18,6 @@ namespace Models.Models
         public int Number { get; set; }
         public string Image { get; set; }
         public int Image_Margin_left { get; set; }
-        public int BestNumber { get; set; }
-        public int BestNumber_Margin_Top { get; set; }
     }
 
 }

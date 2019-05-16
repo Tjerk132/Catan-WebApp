@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Catan_Asp._Net.Controllers.CreateHexagons
+namespace HexagonLogic.CreateHexagons
 {
     public class HexagonPosition
     {

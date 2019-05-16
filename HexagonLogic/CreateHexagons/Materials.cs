@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI.WebControls;
-using Catan_Asp._Net.Models;
-using Catan_Asp._Net.Controllers;
-
-namespace Catan_Asp._Net.Controllers.CreateHexagons
+namespace HexagonLogic.CreateHexagons
 {
     public class Materials
     {

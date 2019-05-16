@@ -15,10 +15,10 @@
     <div class="grid-container" id="grid-container">
 
 
-        @foreach (Toppunt toppunt in Model.topDrie)
+        @foreach (BestPoint bestpoint in Model.BestPositions)
         {
-            <div style="position:absolute; left:@toppunt.Left@px; top:@toppunt.Top@px;">
-                <div class="topDrie">@toppunt.Waarde</div>
+            <div style="position:absolute; left:@bestpoint.Left@px; top:@bestpoint.Top@px;">
+                <div class="topDrie">@bestpoint.Waarde</div>
             </div>
         }
 

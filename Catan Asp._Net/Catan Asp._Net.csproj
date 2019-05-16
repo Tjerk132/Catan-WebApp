@@ -189,10 +189,6 @@
     </Compile>
     <Compile Include="Models\Viewmodel\CatanViewmodel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\CreateHexagons\Docks.cs" />
-    <Compile Include="Controllers\CreateHexagons\Drawnumber.cs" />
-    <Compile Include="Controllers\CreateHexagons\HexagonPosition.cs" />
-    <Compile Include="Controllers\CreateHexagons\Materials.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -215,6 +211,10 @@
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{13e0a472-f09b-4715-856a-9e01930d2602}</Project>
       <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HexagonLogic\HexagonLogic.csproj">
+      <Project>{8f648515-ab92-4b3e-87a1-bca195ca6e19}</Project>
+      <Name>HexagonLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{15378ad4-8662-4b8b-800b-6c9659c8bc69}</Project>

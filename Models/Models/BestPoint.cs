@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models.Models
 {
-    public class Toppunt
+    public class BestPoint
     {
-        public Toppunt(int plaats, int waarde)
+        public BestPoint(int plaats, int waarde)
         {
             Plaats = plaats;
             Waarde = waarde;

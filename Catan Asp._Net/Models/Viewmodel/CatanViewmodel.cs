@@ -12,6 +12,6 @@ namespace Catan_Asp._Net.Models.Viewmodel
         public List<Save> Saves { get; set; }
         public List<HexagonTile> Hexagons { get; set; }
         public List<DockLines> DockLines { get; set; }
-        public List<Toppunt> topDrie { get; set; }
+        public List<BestPoint> BestPositions { get; set; }
     }
 }
