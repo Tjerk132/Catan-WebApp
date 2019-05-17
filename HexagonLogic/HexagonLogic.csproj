@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateDocks\Docks.cs" />
+    <Compile Include="CreateDocks\Docktype.cs" />
     <Compile Include="CreateHexagons\HexagonPosition.cs" />
     <Compile Include="CreateHexagons\MakeHexagon.cs" />
     <Compile Include="CreateHexagons\Materials.cs" />

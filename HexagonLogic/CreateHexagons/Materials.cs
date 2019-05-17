@@ -6,7 +6,6 @@ namespace HexagonLogic.CreateHexagons
 {
     public class Materials
     {
-
         //Materials\\         Randomnumber
         private int Desertcount = 1;     //1
         private int Woodcount = 4;       //2
@@ -15,10 +14,11 @@ namespace HexagonLogic.CreateHexagons
         private int Woolcount = 4;       //5
         private int Graincount = 4;      //6
 
-        private string HexagonId;
 
         public string HexagonMaterial(int MaterialChooser, int i, List<int> SixAndEight)
         {
+            string HexagonId = "";
+
             switch (MaterialChooser)
             {
                 case 1:

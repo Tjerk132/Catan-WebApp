@@ -18,7 +18,7 @@ namespace Catan_Asp._Net.Controllers
             {
                 Hexagons = getmap.GetHexagons(),
                 DockLines = getmap.GetDockLines(),
-                BestPositions = getmap.TopPositions()
+                BestPositions = getmap.GetTopPositions()
             };
             //RetrieveSavesData Retrievedata = new RetrieveSavesData();
             //List<Save> saves = Retrievedata.GetSavesInfo();

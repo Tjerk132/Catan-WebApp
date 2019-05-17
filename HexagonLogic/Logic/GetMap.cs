@@ -11,15 +11,16 @@ namespace HexagonLogic.Logic
 {
     public class GetMap
     {
-        HexagonPosition position = new HexagonPosition();
+        HexagonPosition HexagonPosition = new HexagonPosition();
         Materials materialchooser = new Materials();
         MakeHexagon createhexagon = new MakeHexagon();
         Docks docks = new Docks();
+        Docktype docktype = new Docktype();
         Positions positions = new Positions();
 
         public List<HexagonTile> GetHexagons()
         {
-            List<int> HarborPositions = docks.Harborhexes();
+            List<int> HarborPositions =  positions.Harborhexes();
 
             List<int> PlaygroundPositions = positions.Playgroundhexes();
 
@@ -39,8 +40,8 @@ namespace HexagonLogic.Logic
                     int RandomNumber = r.Next(2, 13);
                     HexagonTile hexagon = createhexagon.CreateHexagon(RandomNumber, i, HexagonId, SixAndEightPositions);
 
-                    hexagon.Margin_left = position.Margin_Left(i);
-                    hexagon.Margin_top = position.Margin_Top(i);
+                    hexagon.Margin_left = HexagonPosition.Margin_Left(i);
+                    hexagon.Margin_top = HexagonPosition.Margin_Top(i);
                     hexagon.Margin_leftNumbers = hexagon.Margin_left + 20;
 
                     hexagons.Add(hexagon);
@@ -49,14 +50,14 @@ namespace HexagonLogic.Logic
                 {
                     HexagonTile hexagon = new HexagonTile
                     {
-                        Margin_left = position.Margin_Left(i),
-                        Margin_top = position.Margin_Top(i),
+                        Margin_left = HexagonPosition.Margin_Left(i),
+                        Margin_top = HexagonPosition.Margin_Top(i),
                         Id = "hexagonblue",
                     };
 
                     if (HarborPositions.Contains(i))
                     {
-                        hexagon.Image = docks.DockType();
+                        hexagon.Image = docktype.DockType();
                         hexagon.Image_Margin_left = hexagon.Margin_left + 20;
                     }
                     hexagons.Add(hexagon);
@@ -64,7 +65,7 @@ namespace HexagonLogic.Logic
             }
             return hexagons;
         }
-        public List<BestPoint> TopPositions()
+        public List<BestPoint> GetTopPositions()
         {
             return createhexagon.TopDrie();
         }
