@@ -39,7 +39,7 @@ namespace Catan
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
 
-            app.UseStatusCodePagesWithReExecute("/Error/Index", "?statusCode={0}");
+            app.UseStatusCodePagesWithReExecute("/Error/Error", "?statusCode={0}");
 
             app.UseHttpsRedirection();
 

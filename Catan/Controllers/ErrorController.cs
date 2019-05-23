@@ -11,7 +11,7 @@ namespace Catan_Asp._Net.Controllers
     public class ErrorController : Controller
     {
         // GET: Error
-        public ActionResult Index(int? statusCode = null)
+        public ActionResult Error(int? statusCode = null)
         {
             if (statusCode.HasValue)
             {

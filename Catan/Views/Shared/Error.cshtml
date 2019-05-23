@@ -1,0 +1,26 @@
+﻿@model Catan.Models.Viewmodel.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<div style="background-color:white;">
+    <div style="border: 2px 2px 2px rgba(0, 0, 0, 1.4);"  class="text-danger">
+
+        <h1>Error @Model.StatusCode</h1>
+        <h2>An error occurred while processing your request.</h2>
+       
+            @if (Model.ShowRequestId)
+            {
+                <p>
+                    <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                </p>
+                <h4>
+                    The server has not found anything matching the Request-URI.
+                </h4>
+                <h4>
+                    No indication is given of whether the condition is temporary or permanent.
+                </h4>
+            }
+    </div>
+</div>
+
+
