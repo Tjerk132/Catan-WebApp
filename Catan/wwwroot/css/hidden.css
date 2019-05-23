@@ -1,0 +1,61 @@
+﻿ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+    ul p {
+        position: absolute;
+        visibility: hidden;
+    }
+
+li a {
+    position: absolute;
+    visibility: hidden;
+}
+
+
+    li a:hover {
+        position: absolute;
+        visibility: hidden;
+    }
+
+.title {
+    position: absolute;
+    visibility: hidden;
+}
+
+.unselectable {
+    position: absolute;
+    visibility: hidden;
+}
+
+.option-menu {
+    position: absolute;
+    visibility: hidden;
+}
+
+    .option-menu p {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .option-menu input {
+        position: absolute;
+        visibility: hidden;
+    }
+
+
+        .option-menu input:hover {
+            position: absolute;
+            visibility: hidden;
+        }
+
+.footer {
+    position: absolute;
+    visibility: hidden;
+}
+
+hr {
+    position: absolute;
+    visibility: hidden;
+}

@@ -123,3 +123,13 @@ hr {
             color: white;
             text-decoration: none;
         }
+
+.error {
+    width: 100vw;
+    text-align: center;
+    background-color: #5d99ae;
+    margin-left: -14px;
+    box-shadow: 4px 0px 16px rgba(0, 0, 0, .6);
+    margin-top: 20px;
+    padding: 8px;
+}
