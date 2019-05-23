@@ -1,0 +1,125 @@
+﻿body, html {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-size: cover;
+    background-image: url('../Images/backgroundd.jpg');
+    background-color: #44332C;
+    /*background-image: url('../Images/background.jpg');*/
+    color: #ffffff;
+    font-family: Helvetica;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.zoom{
+    zoom: 130%;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+textarea,
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*Vertical menu*/
+@font-face {
+    font-family: 'Roman SD';
+    src: url('../fonts/Roman SD.ttf') format('truetype');
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #5d99ae;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #476267;
+    box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.9);
+    opacity: 1;
+}
+
+    ul p {
+        color: #ffffff;
+        font-family: 'Roman SD';
+        margin-top: 40px;
+    }
+
+
+li a {
+    display: block;
+    padding: 12px 12px;
+    margin-left: 14px;
+    margin-right: 14px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+    li a:hover {
+        background-color: white;
+        color: black;
+        border-radius: 6px;
+    }
+
+.title {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    line-height: 18px;
+    
+}
+
+    .title p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+hr {
+    background-color: #ffffff;
+    margin-top: -12px;
+    margin-bottom: -34px;
+    width: 260px;
+    border-radius: 1px;
+    box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    position: absolute;
+    bottom: 4px;
+    width: 300px;
+}
+    .footer a {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 0px;
+    }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: none;
+        }

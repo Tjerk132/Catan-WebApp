@@ -8,11 +8,15 @@ namespace Models.Models
 {
     public class BestPoint
     {
-        public BestPoint(int plaats, int waarde)
+        public int Place { get; set; }
+        public int Value { get; set; }
+        public int Left { get; set; }
+        public int Top { get; set; }
+        public BestPoint(int place, int value)
         {
-            Plaats = plaats;
-            Waarde = waarde;
-            switch (plaats)
+            Place = place;
+            Value = value;
+            switch (place)
             {
                 case 0:
                     Left = 292;
@@ -113,10 +117,5 @@ namespace Models.Models
 
             }
         }
-
-        public int Plaats { get; set; }
-        public int Waarde { get; set; }
-        public int Left { get; set; }
-        public int Top { get; set; }
     }
 }

@@ -16,8 +16,9 @@ namespace Catan_Asp._Net
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Catan", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Catan", action = "Index", id = UrlParameter.Optional }            
             );
+
         }
     }
 }

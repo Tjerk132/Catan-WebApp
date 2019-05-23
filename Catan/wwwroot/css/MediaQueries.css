@@ -1,0 +1,41 @@
+﻿@media (max-width: 1500px) {
+    .grid-container {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 1350px) {
+    .grid-container {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 1150px) {
+    .grid-container {
+        zoom: 0.7;
+    }
+}
+
+@media (max-width: 1050px) {
+    .grid-container {
+        zoom: 0.6;
+    }
+}
+
+@media (max-width: 950px) {
+    .grid-container {
+        zoom: 0.5;
+    }
+}
+
+@media (max-width: 850px) {
+    .grid-container {
+        zoom: 0.4;
+    }
+}
+
+@media (max-width: 750px) {
+    .grid-container {
+        zoom: 0.3;
+    }
+}
