@@ -15,7 +15,11 @@ namespace HexagonLogic.CreateDocks
         private int sheepDock = 1;
         private int grainDock = 1;
         private int oreDock = 1;
-        private int generalDock = 4;
+        //private int generalDock = 4;
+        private int generalDock1 = 1;
+        private int generalDock2 = 1;
+        private int generalDock3 = 1;
+        private int generalDock4 = 1;
 
         public string DockType()
         {
@@ -50,9 +54,29 @@ namespace HexagonLogic.CreateDocks
                     if (oreDock == 1) { HarborKind = "OreDock"; oreDock--; }
                     break;
 
+                //case 6:
+                //    if (generalDock == 0) { randomDock = 6; goto case 1; }
+                //    if (generalDock > 0) { HarborKind = "GeneralDock"; generalDock--; }
+                //    break;
+
                 case 6:
-                    if (generalDock == 0) { randomDock = 6; goto case 1; }
-                    if (generalDock > 0) { HarborKind = "GeneralDock"; generalDock--; }
+                    if (generalDock1 < 1) { randomDock = 6; goto case 7; }
+                    if (generalDock1 == 1) { HarborKind = "GeneralDock"; generalDock1--; }
+                    break;
+
+                case 7:
+                    if (generalDock2 < 1) { randomDock = 7; goto case 8; }
+                    if (generalDock2 == 1) { HarborKind = "GeneralDock"; generalDock2--; }
+                    break;
+
+                case 8:
+                    if (generalDock3 < 1) { randomDock = 8; goto case 9; }
+                    if (generalDock3 == 1) { HarborKind = "GeneralDock"; generalDock3--; }
+                    break;
+
+                case 9:
+                    if (generalDock4 < 1) { randomDock = 9; goto case 1; }
+                    if (generalDock4 == 1) { HarborKind = "GeneralDock"; generalDock4--; }
                     break;
             }
             return $"../Images/{HarborKind}.png";
