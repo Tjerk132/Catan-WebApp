@@ -9,4 +9,8 @@
     <h2>Error @Model.StatusCode</h2>
     <h2>An error occurred while processing your request.</h2>
     <p>Request ID: @Model.RequestId</p>
+
+    <form action="@Url.Action("Index","Catan")">
+        <button class="ErrorButton">Go Back</button>
+    </form>
 </div>
