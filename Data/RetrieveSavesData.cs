@@ -10,13 +10,21 @@ namespace Data
 {
     public class RetrieveSavesData
     {
+        SqlConnection conn = new SqlConnection
+        (
+            @"Server=mssql.fhict.local;
+            Database=dbi386599;
+            User Id=dbi386599;
+            Password=12345;"
+         );
         public List<Save> GetSavesInfo()
         {
             List<Save> saves = new List<Save>();
-            SqlConnection conn = new SqlConnection(
+            using (conn)
+            {
 
-                @""
-                );
+            }
+
 
             return saves;
         }
