@@ -269,13 +269,14 @@
         border-top: 27px solid #FC9F28; /*color bottom*/
     }
 
-    #hexagonblue {
-        width: 100px;
-        height: 60px;
-        background: #5d99ae;
-        position: relative;
-        margin: 10px auto;
-    }
+#hexagonblue {
+    width: 100px;
+    height: 60px;
+    background: #5d99ae;
+    position: relative;
+    margin: 10px auto;
+}
+
 
         #hexagonblue:before {
             content: "";
@@ -416,22 +417,22 @@
         color: white;
         font-size: 16px;
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #5d99ae;
+        background-color: #5b7f85;
         width: 60px;
         margin: -32px auto auto auto;
     }
 
         .option-menu input, textarea {
             background-color: #333;
-            border: none;
+            border: 1px solid white;
             color: white;
             padding: 6px 18px;
             text-decoration: none;
             font-size: 14px;
             margin: 4px 2px;
-            transition-duration: .4s;
+            transition-duration: .2s;
             cursor: pointer;
-            border-radius: 2px;
+            border-radius: 3px;
             width: 180px;
             height: 32px;
         }
@@ -439,6 +440,7 @@
 
             .option-menu input:hover {
                 background-color: #333333;
+                border: 1px solid #666;
                 color: #666;
             }
             .option-menu textarea:hover {

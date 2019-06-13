@@ -43,7 +43,7 @@ ul {
     margin: 0;
     padding: 0;
     width: 300px;
-    background-color: #5d99ae;
+    background-color: #5b7f85;
     height: 100%;
     float: left;
     border-right: 1px solid #476267;
@@ -86,8 +86,20 @@ li a {
     
 }
 
+
     .title p {
         font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .title img {
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+        transition: transform 1s ease-in-out;
+    }
+
+    .title img:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 
 .unselectable {
@@ -127,7 +139,7 @@ hr {
 .error {
     width: 100vw;
     text-align: center;
-    background-color: #5d99ae;
+    background-color: #5b7f85;
     margin-left: -14px;
     box-shadow: 4px 0px 16px rgba(0, 0, 0, .6);
     margin-top: 20px;

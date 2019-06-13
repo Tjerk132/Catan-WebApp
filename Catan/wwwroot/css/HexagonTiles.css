@@ -275,6 +275,7 @@
     background: #5d99ae;
     position: relative;
     margin: 10px auto;
+
 }
 
     #hexagonblue:before {
@@ -300,3 +301,5 @@
         border-right: 50px solid transparent;
         border-top: 27px solid #5d99ae; /*color bottom*/
     }
+
+
