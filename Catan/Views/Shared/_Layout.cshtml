@@ -54,12 +54,20 @@
     </script>
 
     <script type='text/javascript'>
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = dd + '/' + mm + '/' + yyyy;
+
+        var dwnldString = "Catan_" + today + ".png";
         document.getElementById("download").addEventListener("click", function () {
 
             html2canvas(document.querySelector('#grid-container')).then(function (canvas) {
 
                 console.log(canvas);
-                saveAs(canvas.toDataURL(), 'Catan.png');
+                saveAs(canvas.toDataURL(), dwnldString);
             });
         });
 
