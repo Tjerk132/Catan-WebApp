@@ -91,17 +91,6 @@ li a {
         font-family: Arial, Helvetica, sans-serif;
     }
 
-
-    .title img {
-        -webkit-transition: -webkit-transform 1s ease-in-out;
-        transition: transform 1s ease-in-out;
-    }
-
-    .title img:hover {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

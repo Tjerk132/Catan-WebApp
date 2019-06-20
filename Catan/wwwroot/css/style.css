@@ -405,9 +405,10 @@
 
 .option-menu {
     margin: auto;
-    width: 240px;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    border-top: 1px solid #6fa3ad;
+    border-bottom: 1px solid #6fa3ad;
+    border-left: 8px solid #ABA970;
     padding-bottom: 10px;
     padding-top: 20px;
     margin-top: 100px;
@@ -424,8 +425,8 @@
 
         .option-menu input, textarea {
             background-color: #333;
-            border: 1px solid white;
-            color: white;
+            border: 1px solid #ABA970;
+            color: #ABA970;
             padding: 6px 18px;
             text-decoration: none;
             font-size: 14px;

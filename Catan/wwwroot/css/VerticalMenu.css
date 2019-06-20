@@ -7,6 +7,7 @@
     height: 100%;
     float: left;
     border-right: 1px solid #365156;
+
     box-shadow: 4px 0px 16px rgba(0, 0, 0, 1);
     opacity: 1;
     transition-duration: .4s;
